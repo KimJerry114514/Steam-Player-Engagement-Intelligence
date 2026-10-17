@@ -1,0 +1,40 @@
+{
+  "data_checks": {
+    "train_rows_match_model_metadata": true,
+    "train_rows": 10763783,
+    "train_positive_rows": 5876345,
+    "val_rows": 2783134,
+    "test_rows": 2154782,
+    "nlp_missing_rows": 0,
+    "unknown_language_rows": 0
+  },
+  "sanity_train_sample_in_sample": {
+    "rows": 500000,
+    "actual_rate": 0.5473,
+    "mean_pred": 0.5469,
+    "auc": 0.8537,
+    "ap": 0.8813,
+    "log_loss": 0.4694,
+    "brier": 0.155
+  },
+  "val_2022_all": {
+    "rows": 2783134,
+    "actual_rate": 0.4729,
+    "mean_pred": 0.5153,
+    "auc": 0.8244,
+    "ap": 0.8097,
+    "log_loss": 0.5165,
+    "brier": 0.1727
+  },
+  "val_2022_unedited": {
+    "rows": 2396461,
+    "actual_rate": 0.4328,
+    "mean_pred": 0.5028,
+    "auc": 0.8241,
+    "ap": 0.7851,
+    "log_loss": 0.5215,
+    "brier": 0.1743
+  },
+  "test_2023": "scored, not evaluated (rules not frozen yet)",
+  "seconds": 90.8
+}

@@ -1,0 +1,21 @@
+{
+  "purpose": "descriptive coverage, not business or predictive optimality",
+  "recommended": {
+    "prior_percentile": 55.0,
+    "score_percentile": 55.0,
+    "hours_cutoff": 11.78,
+    "raw_score_cutoff": 0.5637073779609005,
+    "smallest_group_share": 0.07631396835366173,
+    "largest_group_share": 0.4674956362144259,
+    "distance_from_medians": 10.0,
+    "Hardcore_share": 0.3736859238541874,
+    "Dropout_share": 0.08250447157772496,
+    "New Blood_share": 0.07631396835366173,
+    "Nobody_share": 0.4674956362144259
+  },
+  "selection_rule": "Choose the exact maximin-coverage grid winner",
+  "outcome_labels_used_for_selection": false,
+  "test_rows_used_for_selection": false,
+  "retrospective_analysis_after_prior_test_exposure": true,
+  "source_predictions_sha256": "82523ca89379fcbacf18bfb7f407cc21552836e392bf06d6e444c6797765b7d9"
+}

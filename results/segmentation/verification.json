@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "rows_checked": 4937916,
+  "original_prediction_columns_unchanged": true,
+  "every_assignment_independently_verified": true,
+  "training_rows": 10763783,
+  "candidate_rules": 121,
+  "outcome_labels_used_for_threshold_selection": false,
+  "test_rows_used_for_threshold_selection": false
+}

@@ -1,0 +1,68 @@
+{
+  "frozen_at_utc": "2026-10-06T16:30:18+00:00",
+  "note": "Fixed on 2022 validation data only, before any 2023 label was read.",
+  "model": {
+    "file": "training_full_model.txt",
+    "sha256": "2051bcc60a21ab7812333623df8b5bf758153799acfa5f64a023df5dc80e8078"
+  },
+  "predictions_file_sha256": "3b787d52da1f59b392f8e831c3ae03b0c1f0161cdf1bf85a9516958b92a2aecc",
+  "cohort": "review date in range, still_playing_d30 in {0,1}, edited reviews included (same as the final model)",
+  "platt": {
+    "formula": "p_cal = 1 / (1 + exp(-(a + b * logit(p_raw))))",
+    "a": -0.247413,
+    "b": 0.937779,
+    "fitted_on": "2022 validation, all rows",
+    "logit_clip_eps": 1e-06
+  },
+  "segments": {
+    "prior_engagement_cut_hours": 8.42,
+    "prior_engagement_rule": "High if hours_at_review > cut (cut = median of the 2010-2021 training cohort)",
+    "later_engagement_rule": "High if predicted probability >= the median prediction of the same period (top 50% within 2022, top 50% within 2023); rank-based, unaffected by Platt",
+    "labels": {
+      "High prior + High later": "Hardcore",
+      "High prior + Low later": "Dropout",
+      "Low prior + High later": "New Blood",
+      "Low prior + Low later": "Nobody"
+    }
+  },
+  "test_metrics_planned": [
+    "AUC",
+    "AP",
+    "log loss",
+    "Brier",
+    "mean prediction vs actual (raw and Platt)",
+    "calibration by decile",
+    "precision/recall/lift at top 10%/20%/50%",
+    "same metrics on unedited reviews only"
+  ],
+  "validation_evidence": {
+    "rows": 2783134,
+    "actual_rate": 0.4729,
+    "mean_pred_raw": 0.5153,
+    "mean_pred_platt": 0.473,
+    "auc": 0.8244,
+    "log_loss_raw": 0.5165,
+    "log_loss_platt": 0.5106,
+    "brier_raw": 0.1727,
+    "brier_platt": 0.1707,
+    "median_pred_2022": 0.5092,
+    "segments_2022": {
+      "Dropout": {
+        "share": 0.0875,
+        "actual_d30": 0.3191
+      },
+      "Hardcore": {
+        "share": 0.4253,
+        "actual_d30": 0.748
+      },
+      "New Blood": {
+        "share": 0.0747,
+        "actual_d30": 0.534
+      },
+      "Nobody": {
+        "share": 0.4125,
+        "actual_d30": 0.2109
+      }
+    }
+  }
+}

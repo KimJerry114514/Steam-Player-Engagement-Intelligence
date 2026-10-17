@@ -1,0 +1,5 @@
+# Optional pretrained NLP inference. Not needed for supplied NLP scores or downstream stages.
+-r ../requirements.txt
+torch==2.14.1
+transformers==5.19.0
+sentencepiece==0.2.2

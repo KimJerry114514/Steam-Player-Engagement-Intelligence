@@ -1,0 +1,42 @@
+[
+  {
+    "policy": "selected",
+    "quarter": 1,
+    "records": 694002,
+    "smallest_share": 0.07743061259189454,
+    "Hardcore_share": 0.3585076123699932,
+    "Dropout_share": 0.09986426552084865,
+    "New Blood_share": 0.07743061259189454,
+    "Nobody_share": 0.46419750951726363
+  },
+  {
+    "policy": "selected",
+    "quarter": 2,
+    "records": 616113,
+    "smallest_share": 0.07358228117244726,
+    "Hardcore_share": 0.41892802132076423,
+    "Dropout_share": 0.0750576598773277,
+    "New Blood_share": 0.07358228117244726,
+    "Nobody_share": 0.4324320376294608
+  },
+  {
+    "policy": "selected",
+    "quarter": 3,
+    "records": 628287,
+    "smallest_share": 0.07478429443868805,
+    "Hardcore_share": 0.38101695562696664,
+    "Dropout_share": 0.07967696291662886,
+    "New Blood_share": 0.07478429443868805,
+    "Nobody_share": 0.4645217870177164
+  },
+  {
+    "policy": "selected",
+    "quarter": 4,
+    "records": 844732,
+    "smallest_share": 0.0757766960408745,
+    "Hardcore_share": 0.3477055444803796,
+    "Dropout_share": 0.0757766960408745,
+    "New Blood_share": 0.07852668065137819,
+    "Nobody_share": 0.4979910788273677
+  }
+]

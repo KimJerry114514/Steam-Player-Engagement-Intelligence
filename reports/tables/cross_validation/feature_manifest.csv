@@ -1,0 +1,160 @@
+feature_name,source,dtype,designation,intended_model_group,status,available_at_review_posting,exclusion_reason,missingness_rate
+appid,negative_reviews_merged.parquet,int64,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+author_num_reviews,negative_reviews_merged.parquet,int64,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+comment_count,negative_reviews_merged.parquet,int64,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+days_from_review_to_last_play,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+edited,negative_reviews_merged.parquet,int32,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+extra_hours_after_review_NOT_WINDOWED,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+flag_business_account_security,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_business_paid_advantage,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_business_paywall,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_business_price_value,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_business_sales_pressure,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_content_narrative,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_content_scope_variety,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_content_world_level,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_gameplay_balance,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_gameplay_challenge,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_gameplay_core_loop,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_gameplay_randomness,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_progression_effort_reward,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_service_maintenance,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_service_marketing_trust,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_service_release_readiness,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_service_support,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_service_update_regression,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_social_cheating,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_social_conduct,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_social_match_availability,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_social_sanctions,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_social_skill_matchmaking,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_tech_functionality,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_tech_network_responsiveness,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_tech_network_session_access,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_tech_performance,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_tech_platform_compatibility,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_tech_save_integrity,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_tech_stability,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_ux_accessibility,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_ux_controls,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_ux_interface,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_ux_localization,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+flag_ux_onboarding,negative_reviews_merged.parquet,int8,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+game,negative_reviews_merged.parquet,large_string,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+genre_Action,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Adventure,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Arcade,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Building,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Card & Board Game,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Casual,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Combat,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Comedy,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Detective-mystery,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Early Access,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Exploration,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_FPP,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Fantasy,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Fighting,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Free to Play,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Gore,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Hack and slash/Beat 'em up,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Historical,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Horror,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Indie,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_JRPG,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Managerial,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Massively Multiplayer,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Modern,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Music,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Mystery,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Narrative,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Nudity,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Open World,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Pinball,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Platformer,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Point-and-click,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Puzzle,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Quiz/Trivia,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Racing,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Real-time,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Roguelike,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Role-playing (RPG),negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Sci-fi,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Sexual Content,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Shooter,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Simulation,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Sports,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Strategy,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Survival,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_TPP,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Tactical,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Turn-based,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Violent,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_Visual Novel,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+genre_other,negative_reviews_merged.parquet,uint8,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+hours_at_review,negative_reviews_merged.parquet,double,structured/metadata,logistic_structured_nlp;lightgbm_structured,included,available at posting time on primary unedited cohort,,0.0
+hours_forever_at_snapshot,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+hours_last_2w_at_snapshot,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+language,negative_reviews_merged.parquet,large_string,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+last_played_utc,negative_reviews_merged.parquet,"timestamp[us, tz=UTC]",structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+log1p_hours_at_review,derived from hours_at_review,float32,structured,logistic_structured,included,available at posting time,,0.0
+log_hours_at_review,derived from hours_at_review,float32,structured,lightgbm_structured_nlp,included,available at posting time,,0.0
+n_factors_flagged,negative_reviews_merged.parquet,int16,NLP,logistic_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+no_play_after_review,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+num_games_owned,negative_reviews_merged.parquet,int64,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+p_business_account_security,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_business_paid_advantage,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_business_paywall,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_business_price_value,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_business_sales_pressure,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_content_narrative,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_content_scope_variety,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_content_world_level,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_gameplay_balance,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_gameplay_challenge,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_gameplay_core_loop,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_gameplay_randomness,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_progression_effort_reward,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_service_maintenance,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_service_marketing_trust,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_service_release_readiness,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_service_support,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_service_update_regression,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_social_cheating,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_social_conduct,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_social_match_availability,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_social_sanctions,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_social_skill_matchmaking,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_tech_functionality,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_tech_network_responsiveness,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_tech_network_session_access,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_tech_performance,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_tech_platform_compatibility,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_tech_save_integrity,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_tech_stability,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_ux_accessibility,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_ux_controls,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_ux_interface,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_ux_localization,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+p_ux_onboarding,negative_reviews_merged.parquet,float,NLP,lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+received_for_free,negative_reviews_merged.parquet,int32,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+recommendationid,negative_reviews_merged.parquet,int64,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+review_age_days_at_snapshot,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+review_created_utc,negative_reviews_merged.parquet,"timestamp[us, tz=UTC]",structured/metadata,,excluded,not used,not in an explicit submitted-model allowlist,0.0
+review_dayofweek,derived from review_created_utc,float32,structured,lightgbm_structured_nlp,included,available at posting time,,0.0
+review_length_chars,negative_reviews_merged.parquet,double,structured/metadata,logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+review_month,derived from review_created_utc,float32,structured,lightgbm_structured;lightgbm_structured_nlp,included,available at posting time,,0.0
+review_quarter,negative_reviews_merged.parquet,date32[day],structured/metadata,,excluded,not used,not in an explicit submitted-model allowlist,0.0
+review_quarter_of_year,derived from review_created_utc,float32,structured,lightgbm_structured;lightgbm_structured_nlp,included,available at posting time,,0.0
+review_updated_utc,negative_reviews_merged.parquet,"timestamp[us, tz=UTC]",structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+review_year,derived from review_created_utc,float32,structured,lightgbm_structured;lightgbm_structured_nlp,included,available at posting time,,0.0
+snapshot_date,negative_reviews_merged.parquet,date32[day],structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+steam_purchase,negative_reviews_merged.parquet,int32,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0
+still_playing_d180,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0006156480769421483
+still_playing_d30,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+still_playing_d7,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+still_playing_d90,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.00031452933969349
+votes_funny,negative_reviews_merged.parquet,int64,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+votes_up,negative_reviews_merged.parquet,int64,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+weighted_vote_score,negative_reviews_merged.parquet,double,structured/metadata,,excluded,not available or not defensibly fixed at review posting,global leakage/identifier denylist,0.0
+written_during_early_access,negative_reviews_merged.parquet,int32,structured/metadata,logistic_structured;logistic_structured_nlp;lightgbm_structured;lightgbm_structured_nlp,included,available at posting time on primary unedited cohort,,0.0

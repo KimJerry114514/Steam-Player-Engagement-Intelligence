@@ -1,0 +1,5 @@
+classification,candidate_group_count,instance_count,analytically_redundant_count
+exact_duplicate,101,287.0,186.0
+likely_updated_version,24,93.0,69.0
+other_payload_variant_ambiguous,82,236.0,154.0
+text_variant_same_update_time,4,47.0,43.0

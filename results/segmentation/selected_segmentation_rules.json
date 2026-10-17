@@ -1,0 +1,22 @@
+{
+  "version": "Final P55 2026-10-09",
+  "prior_percentile": 55,
+  "score_percentile": 55,
+  "prior_cutoff_hours": 11.78,
+  "prior_operator": ">",
+  "score_operator": ">=",
+  "score_reference": "Same-period score percentile, separately for validation and test; approximately top 45 percent for P55",
+  "selection_cohort": "2022 validation scores; prior cutoffs from eligible 2010-2021 training hours",
+  "objective": "Maximize the smallest 2022 quadrant share over the P25 to P75 grid in steps of five",
+  "tie_break": "Closest to the medians, then lower prior and score percentiles",
+  "model_or_calibration_retrained": false,
+  "test_used_in_selection": false,
+  "actual_outcomes_used_in_selection": false,
+  "retrospective_revision_after_prior_test_exposure": true,
+  "labels": {
+    "high_high": "Hardcore",
+    "high_low": "Dropout",
+    "low_high": "New Blood",
+    "low_low": "Nobody"
+  }
+}

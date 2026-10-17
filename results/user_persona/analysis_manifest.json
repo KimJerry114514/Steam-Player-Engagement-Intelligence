@@ -1,0 +1,207 @@
+{
+  "analysis": "All-history complaint prevalence by extended P55 segment",
+  "date": "2026-10-10",
+  "primary_scope": "all_history_2010_2023",
+  "scopes": [
+    "all_history_2010_2023",
+    "history_2010_2021",
+    "validation_2022",
+    "test_2023"
+  ],
+  "unit": "negative-review player-game record",
+  "prevalence_denominator": "all segment records within scope",
+  "domain_definition": "any mapped frozen binary factor flag equals one",
+  "top5_ranking": "descending prevalence; factor ID for ties",
+  "inputs": [
+    {
+      "path": "data/processed/negative_reviews_cleaned.parquet",
+      "sha256": "9d196c7dc70e04dd911dcf12c2956100afc940ab1d5371eeb5d7cfe7c0afb5f0"
+    },
+    {
+      "path": "data/processed/nlp/nlp_factor_scores_2023.parquet",
+      "sha256": "f942334c49606cb445d1909ffef4cc4166bada0c0f98e3b55e5b0de4439d6d40"
+    },
+    {
+      "path": "results/segmentation/review_segments_p55.parquet",
+      "sha256": "3b1e84424083a49566ce93c8ed6ce500b800c09dd2cb1f9befaae03c7e110e7e"
+    },
+    {
+      "path": "models/lightgbm/training_full_model.txt",
+      "sha256": "2051bcc60a21ab7812333623df8b5bf758153799acfa5f64a023df5dc80e8078"
+    },
+    {
+      "path": "models/lightgbm/training_full_model.json",
+      "sha256": "d938e86da51cbabcb0cb8c879a8ab2ef1e27b9fd88ffbf65d3ceddb5bae5ec87"
+    },
+    {
+      "path": "results/segmentation/applied_thresholds.json",
+      "sha256": "975696b111369a20bd292380a51e6f5bad191cc32dabe8d4a09fdb5a8a1b9f2a"
+    },
+    {
+      "path": "results/segmentation/selected_segmentation_rules.json",
+      "sha256": "de181ef29cd82cbc6965a6f7a581ba2002f68b9cb1cd84c638138c12065448b0"
+    },
+    {
+      "path": "data/processed/segmentation/review_segments_all_history.parquet",
+      "sha256": "4e81185a856b2552ee71f1c9b18b92469b323e77cf87aff412f4649240201a54"
+    },
+    {
+      "path": "results/user_persona/historical_segmentation_audit.json",
+      "sha256": "8185f99aa2857854ea8066a5683cbcb7d8d130ed8abf1f8f5c47f4cad5451057"
+    },
+    {
+      "path": "reports/tables/nlp/nlp_35_factors_dictionary.csv",
+      "sha256": "c49c09dbbf1b0b2de9f1d39e0ebb455aab3625f2d0b0a39e4467a2104b4449a9"
+    },
+    {
+      "path": "reports/tables/nlp/nlp_domain_mapping.csv",
+      "sha256": "5b205c1aa4ec433479b8849c3a4bebe58c0aef08afdeb1fd376aea807ba7ba82"
+    },
+    {
+      "path": "results/segmentation/segment_summary.json",
+      "sha256": "b80b8462f6d1a6a31610083fc8b34a4e4774b9509a3b3072f00553e614f5a039"
+    }
+  ],
+  "source_code": [
+    {
+      "path": "src/steam_reviews/persona/__init__.py",
+      "sha256": "9d8385a7b5b4605f3b0126a451351106d45f8d7e24abb0c7e00a10250903e4b4"
+    },
+    {
+      "path": "src/steam_reviews/persona/build_complaint_profiles.py",
+      "sha256": "b731f1bf691410bfb72baac8c14df3b7b25a6d5d77574b56125037d07abd666c"
+    },
+    {
+      "path": "src/steam_reviews/persona/build_historical_segments.py",
+      "sha256": "d75952e5334448d43c9a1e91ecd8feff0747556a75cf8986e38eb8d6377a8fe9"
+    },
+    {
+      "path": "src/steam_reviews/persona/paths.py",
+      "sha256": "e13abcb6bc59d8b35824991aec03899e8f939137028655a2f3d2f7bfebc2ce2f"
+    },
+    {
+      "path": "src/steam_reviews/persona/verify_complaint_profiles.py",
+      "sha256": "82ac8f63a86ef0c4f905d04919e7e9ff9629e5a08ee7b70374e413b42a05ca44"
+    }
+  ],
+  "checks": {
+    "source_segment_rows": 16412862,
+    "unique_segment_join_keys": 16412862,
+    "joined_rows": 16412862,
+    "unmatched_nlp_records": 0,
+    "null_or_nonbinary_factor_records": 0,
+    "inconsistent_stored_factor_counts": 0,
+    "segment_definition_errors": 0,
+    "factor_count": 35,
+    "domain_count": 8,
+    "domain_mapping_is_complete_and_disjoint": true,
+    "segment_counts_match_full_history": true,
+    "archived_4937916_assignments_preserved": true,
+    "full_history_rows": 16412862,
+    "records_without_binary_d30_included": 711163,
+    "date_range_utc": [
+      "2010-10-15 23:40:51+00",
+      "2023-11-03 15:21:26+00"
+    ],
+    "raw_score_cutoffs": {
+      "val": 0.5637073779609005,
+      "test": 0.5315348887810566,
+      "train": 0.6038751510202826
+    },
+    "period_and_model_cohort_counts": [
+      {
+        "split": "test",
+        "model_cohort": "test",
+        "rows": 2154782
+      },
+      {
+        "split": "test",
+        "model_cohort": "unlabeled",
+        "rows": 657632
+      },
+      {
+        "split": "train",
+        "model_cohort": "train",
+        "rows": 10763783
+      },
+      {
+        "split": "train",
+        "model_cohort": "unlabeled",
+        "rows": 38109
+      },
+      {
+        "split": "val",
+        "model_cohort": "unlabeled",
+        "rows": 15422
+      },
+      {
+        "split": "val",
+        "model_cohort": "val",
+        "rows": 2783134
+      }
+    ],
+    "table_rows": {
+      "domain_prevalence": 128,
+      "factor_prevalence": 560,
+      "top5": 80
+    },
+    "independent_full_cohort_recount_passed": true
+  },
+  "outputs": [
+    "data/processed/segmentation/review_segments_all_history.parquet",
+    "docs/user_persona.md",
+    "docs/user_persona_data.md",
+    "reports/figures/user_persona/domain_difference_heatmap.pdf",
+    "reports/figures/user_persona/domain_difference_heatmap.png",
+    "reports/figures/user_persona/domain_prevalence_heatmap.pdf",
+    "reports/figures/user_persona/domain_prevalence_heatmap.png",
+    "reports/figures/user_persona/factor_difference_heatmap.pdf",
+    "reports/figures/user_persona/factor_difference_heatmap.png",
+    "reports/figures/user_persona/factor_prevalence_heatmap.pdf",
+    "reports/figures/user_persona/factor_prevalence_heatmap.png",
+    "reports/figures/user_persona/history_2010_2021/domain_prevalence_heatmap.pdf",
+    "reports/figures/user_persona/history_2010_2021/domain_prevalence_heatmap.png",
+    "reports/figures/user_persona/history_2010_2021/factor_prevalence_heatmap.pdf",
+    "reports/figures/user_persona/history_2010_2021/factor_prevalence_heatmap.png",
+    "reports/figures/user_persona/history_2010_2021/top5_complaints_by_segment.pdf",
+    "reports/figures/user_persona/history_2010_2021/top5_complaints_by_segment.png",
+    "reports/figures/user_persona/test_2023/domain_prevalence_heatmap.pdf",
+    "reports/figures/user_persona/test_2023/domain_prevalence_heatmap.png",
+    "reports/figures/user_persona/test_2023/factor_prevalence_heatmap.pdf",
+    "reports/figures/user_persona/test_2023/factor_prevalence_heatmap.png",
+    "reports/figures/user_persona/test_2023/top5_complaints_by_segment.pdf",
+    "reports/figures/user_persona/test_2023/top5_complaints_by_segment.png",
+    "reports/figures/user_persona/top5_complaints_by_segment.pdf",
+    "reports/figures/user_persona/top5_complaints_by_segment.png",
+    "reports/figures/user_persona/validation_2022/domain_prevalence_heatmap.pdf",
+    "reports/figures/user_persona/validation_2022/domain_prevalence_heatmap.png",
+    "reports/figures/user_persona/validation_2022/factor_prevalence_heatmap.pdf",
+    "reports/figures/user_persona/validation_2022/factor_prevalence_heatmap.png",
+    "reports/figures/user_persona/validation_2022/top5_complaints_by_segment.pdf",
+    "reports/figures/user_persona/validation_2022/top5_complaints_by_segment.png",
+    "reports/sections/complaint_profiles.md",
+    "reports/tables/user_persona/coverage_by_period_and_model_cohort.csv",
+    "reports/tables/user_persona/domain_mapping.csv",
+    "reports/tables/user_persona/domain_prevalence.csv",
+    "reports/tables/user_persona/domain_prevalence_matrix_all_history_2010_2023.csv",
+    "reports/tables/user_persona/domain_prevalence_matrix_history_2010_2021.csv",
+    "reports/tables/user_persona/domain_prevalence_matrix_test_2023.csv",
+    "reports/tables/user_persona/domain_prevalence_matrix_validation_2022.csv",
+    "reports/tables/user_persona/factor_dictionary.csv",
+    "reports/tables/user_persona/factor_prevalence.csv",
+    "reports/tables/user_persona/factor_prevalence_matrix_all_history_2010_2023.csv",
+    "reports/tables/user_persona/factor_prevalence_matrix_history_2010_2021.csv",
+    "reports/tables/user_persona/factor_prevalence_matrix_test_2023.csv",
+    "reports/tables/user_persona/factor_prevalence_matrix_validation_2022.csv",
+    "reports/tables/user_persona/overall_prevalence.csv",
+    "reports/tables/user_persona/segment_overview.csv",
+    "reports/tables/user_persona/top5_complaints.csv",
+    "results/user_persona/historical_segmentation_audit.json",
+    "results/user_persona/verification.json",
+    "src/steam_reviews/persona/build_complaint_profiles.py",
+    "src/steam_reviews/persona/build_historical_segments.py",
+    "src/steam_reviews/persona/verify_complaint_profiles.py"
+  ],
+  "path_base": "final project root for all paths",
+  "integration_note": "Completed numerical analysis preserved; source, provenance paths, documentation, and report links adapted to the standalone final project. See docs/provenance/user_persona_integration.json for execution evidence."
+}

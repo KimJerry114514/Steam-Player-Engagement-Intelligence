@@ -1,0 +1,596 @@
+[
+  {
+    "percentile": 1,
+    "training_hours": 0.0,
+    "validation_raw_score": 0.0006434173556712855,
+    "validation_calibrated_score": 0.0007934851975678738
+  },
+  {
+    "percentile": 2,
+    "training_hours": 0.0,
+    "validation_raw_score": 0.0014919119644862307,
+    "validation_calibrated_score": 0.0017458013872320105
+  },
+  {
+    "percentile": 3,
+    "training_hours": 0.08,
+    "validation_raw_score": 0.057567570958926055,
+    "validation_calibrated_score": 0.053708534164176744
+  },
+  {
+    "percentile": 4,
+    "training_hours": 0.1,
+    "validation_raw_score": 0.0793978727299063,
+    "validation_calibrated_score": 0.07272983360691294
+  },
+  {
+    "percentile": 5,
+    "training_hours": 0.13,
+    "validation_raw_score": 0.09300786164223186,
+    "validation_calibrated_score": 0.0844660663162776
+  },
+  {
+    "percentile": 6,
+    "training_hours": 0.15,
+    "validation_raw_score": 0.10433866278499643,
+    "validation_calibrated_score": 0.09418593556565774
+  },
+  {
+    "percentile": 7,
+    "training_hours": 0.18,
+    "validation_raw_score": 0.11417289794656539,
+    "validation_calibrated_score": 0.1025927995720463
+  },
+  {
+    "percentile": 8,
+    "training_hours": 0.22,
+    "validation_raw_score": 0.1230618480347446,
+    "validation_calibrated_score": 0.11017292618969317
+  },
+  {
+    "percentile": 9,
+    "training_hours": 0.25,
+    "validation_raw_score": 0.1312631235390073,
+    "validation_calibrated_score": 0.11715395626026029
+  },
+  {
+    "percentile": 10,
+    "training_hours": 0.28,
+    "validation_raw_score": 0.1390543147154656,
+    "validation_calibrated_score": 0.12377683930195292
+  },
+  {
+    "percentile": 11,
+    "training_hours": 0.33,
+    "validation_raw_score": 0.14667155312596947,
+    "validation_calibrated_score": 0.13024505617564103
+  },
+  {
+    "percentile": 12,
+    "training_hours": 0.37,
+    "validation_raw_score": 0.15420428309918627,
+    "validation_calibrated_score": 0.1366364041034903
+  },
+  {
+    "percentile": 13,
+    "training_hours": 0.42,
+    "validation_raw_score": 0.16148415587626305,
+    "validation_calibrated_score": 0.1428096515766461
+  },
+  {
+    "percentile": 14,
+    "training_hours": 0.47,
+    "validation_raw_score": 0.16877554977945278,
+    "validation_calibrated_score": 0.14899030104364958
+  },
+  {
+    "percentile": 15,
+    "training_hours": 0.52,
+    "validation_raw_score": 0.17601175226348575,
+    "validation_calibrated_score": 0.15512285341419282
+  },
+  {
+    "percentile": 16,
+    "training_hours": 0.57,
+    "validation_raw_score": 0.18326209868421128,
+    "validation_calibrated_score": 0.16126703848031754
+  },
+  {
+    "percentile": 17,
+    "training_hours": 0.62,
+    "validation_raw_score": 0.19057389516049095,
+    "validation_calibrated_score": 0.16746385021393245
+  },
+  {
+    "percentile": 18,
+    "training_hours": 0.68,
+    "validation_raw_score": 0.19781920766485528,
+    "validation_calibrated_score": 0.17360571179703185
+  },
+  {
+    "percentile": 19,
+    "training_hours": 0.75,
+    "validation_raw_score": 0.20538776488274418,
+    "validation_calibrated_score": 0.18002393597766747
+  },
+  {
+    "percentile": 20,
+    "training_hours": 0.83,
+    "validation_raw_score": 0.21290978399576047,
+    "validation_calibrated_score": 0.18640590793427583
+  },
+  {
+    "percentile": 21,
+    "training_hours": 0.92,
+    "validation_raw_score": 0.22061124886653746,
+    "validation_calibrated_score": 0.19294428312535705
+  },
+  {
+    "percentile": 22,
+    "training_hours": 1.0,
+    "validation_raw_score": 0.22851106630035128,
+    "validation_calibrated_score": 0.19965627114481102
+  },
+  {
+    "percentile": 23,
+    "training_hours": 1.08,
+    "validation_raw_score": 0.2365751633102354,
+    "validation_calibrated_score": 0.20651415077479973
+  },
+  {
+    "percentile": 24,
+    "training_hours": 1.18,
+    "validation_raw_score": 0.24469837701431504,
+    "validation_calibrated_score": 0.21342961334834096
+  },
+  {
+    "percentile": 25,
+    "training_hours": 1.3,
+    "validation_raw_score": 0.2530280860706031,
+    "validation_calibrated_score": 0.2205293619900158
+  },
+  {
+    "percentile": 26,
+    "training_hours": 1.42,
+    "validation_raw_score": 0.2615288963376395,
+    "validation_calibrated_score": 0.22778470556372524
+  },
+  {
+    "percentile": 27,
+    "training_hours": 1.55,
+    "validation_raw_score": 0.2701602224464443,
+    "validation_calibrated_score": 0.23516243559800484
+  },
+  {
+    "percentile": 28,
+    "training_hours": 1.68,
+    "validation_raw_score": 0.2789947991671043,
+    "validation_calibrated_score": 0.24272629889799108
+  },
+  {
+    "percentile": 29,
+    "training_hours": 1.85,
+    "validation_raw_score": 0.28793039858442293,
+    "validation_calibrated_score": 0.2503903602866522
+  },
+  {
+    "percentile": 30,
+    "training_hours": 2.02,
+    "validation_raw_score": 0.2970672954042244,
+    "validation_calibrated_score": 0.25824229710955043
+  },
+  {
+    "percentile": 31,
+    "training_hours": 2.2,
+    "validation_raw_score": 0.3062666788146395,
+    "validation_calibrated_score": 0.2661644594450169
+  },
+  {
+    "percentile": 32,
+    "training_hours": 2.4,
+    "validation_raw_score": 0.3156337534633597,
+    "validation_calibrated_score": 0.27424906684635314
+  },
+  {
+    "percentile": 33,
+    "training_hours": 2.63,
+    "validation_raw_score": 0.32530058487693275,
+    "validation_calibrated_score": 0.28261252186531466
+  },
+  {
+    "percentile": 34,
+    "training_hours": 2.87,
+    "validation_raw_score": 0.33506186686303313,
+    "validation_calibrated_score": 0.291079522348598
+  },
+  {
+    "percentile": 35,
+    "training_hours": 3.1,
+    "validation_raw_score": 0.34486436754897554,
+    "validation_calibrated_score": 0.2996054401858137
+  },
+  {
+    "percentile": 36,
+    "training_hours": 3.3,
+    "validation_raw_score": 0.3550236046949899,
+    "validation_calibrated_score": 0.30846728421296626
+  },
+  {
+    "percentile": 37,
+    "training_hours": 3.53,
+    "validation_raw_score": 0.3651804421476403,
+    "validation_calibrated_score": 0.31735430368679235
+  },
+  {
+    "percentile": 38,
+    "training_hours": 3.78,
+    "validation_raw_score": 0.37559941592722984,
+    "validation_calibrated_score": 0.32650024553246393
+  },
+  {
+    "percentile": 39,
+    "training_hours": 4.03,
+    "validation_raw_score": 0.3860961938992503,
+    "validation_calibrated_score": 0.3357460170777959
+  },
+  {
+    "percentile": 40,
+    "training_hours": 4.32,
+    "validation_raw_score": 0.39693878379299435,
+    "validation_calibrated_score": 0.3453309660348886
+  },
+  {
+    "percentile": 41,
+    "training_hours": 4.6,
+    "validation_raw_score": 0.4078213663865212,
+    "validation_calibrated_score": 0.3549879959928969
+  },
+  {
+    "percentile": 42,
+    "training_hours": 4.93,
+    "validation_raw_score": 0.4190481732523494,
+    "validation_calibrated_score": 0.3649905365381735
+  },
+  {
+    "percentile": 43,
+    "training_hours": 5.27,
+    "validation_raw_score": 0.4303752343923496,
+    "validation_calibrated_score": 0.37512518002669276
+  },
+  {
+    "percentile": 44,
+    "training_hours": 5.62,
+    "validation_raw_score": 0.44166149781281966,
+    "validation_calibrated_score": 0.3852676419965508
+  },
+  {
+    "percentile": 45,
+    "training_hours": 6.02,
+    "validation_raw_score": 0.45305249112870366,
+    "validation_calibrated_score": 0.39555069668376963
+  },
+  {
+    "percentile": 46,
+    "training_hours": 6.43,
+    "validation_raw_score": 0.4644062209163149,
+    "validation_calibrated_score": 0.4058482054935169
+  },
+  {
+    "percentile": 47,
+    "training_hours": 6.88,
+    "validation_raw_score": 0.4756859202026238,
+    "validation_calibrated_score": 0.4161277446070699
+  },
+  {
+    "percentile": 48,
+    "training_hours": 7.35,
+    "validation_raw_score": 0.4869499113372573,
+    "validation_calibrated_score": 0.42644351182694284
+  },
+  {
+    "percentile": 49,
+    "training_hours": 7.87,
+    "validation_raw_score": 0.49814760983043654,
+    "validation_calibrated_score": 0.4367502627530469
+  },
+  {
+    "percentile": 50,
+    "training_hours": 8.42,
+    "validation_raw_score": 0.5092056435650439,
+    "validation_calibrated_score": 0.4469806564797725
+  },
+  {
+    "percentile": 51,
+    "training_hours": 9.02,
+    "validation_raw_score": 0.5201757936542525,
+    "validation_calibrated_score": 0.4571825922684575
+  },
+  {
+    "percentile": 52,
+    "training_hours": 9.65,
+    "validation_raw_score": 0.5310327018637793,
+    "validation_calibrated_score": 0.46733262163484
+  },
+  {
+    "percentile": 53,
+    "training_hours": 10.3,
+    "validation_raw_score": 0.5419419127926067,
+    "validation_calibrated_score": 0.4775866710143072
+  },
+  {
+    "percentile": 54,
+    "training_hours": 11.0,
+    "validation_raw_score": 0.5528621777426932,
+    "validation_calibrated_score": 0.48790810024189024
+  },
+  {
+    "percentile": 55,
+    "training_hours": 11.78,
+    "validation_raw_score": 0.5637073779609005,
+    "validation_calibrated_score": 0.498216686967055
+  },
+  {
+    "percentile": 56,
+    "training_hours": 12.62,
+    "validation_raw_score": 0.5747449795540345,
+    "validation_calibrated_score": 0.508769375603766
+  },
+  {
+    "percentile": 57,
+    "training_hours": 13.52,
+    "validation_raw_score": 0.5856166394969218,
+    "validation_calibrated_score": 0.5192255725403326
+  },
+  {
+    "percentile": 58,
+    "training_hours": 14.5,
+    "validation_raw_score": 0.5964058056329814,
+    "validation_calibrated_score": 0.529665218832302
+  },
+  {
+    "percentile": 59,
+    "training_hours": 15.58,
+    "validation_raw_score": 0.6071794519984696,
+    "validation_calibrated_score": 0.540154097578673
+  },
+  {
+    "percentile": 60,
+    "training_hours": 16.75,
+    "validation_raw_score": 0.617978851277563,
+    "validation_calibrated_score": 0.550734376765667
+  },
+  {
+    "percentile": 61,
+    "training_hours": 18.03,
+    "validation_raw_score": 0.6287516483655773,
+    "validation_calibrated_score": 0.5613567103477592
+  },
+  {
+    "percentile": 62,
+    "training_hours": 19.43,
+    "validation_raw_score": 0.6394739071692618,
+    "validation_calibrated_score": 0.5719987724301516
+  },
+  {
+    "percentile": 63,
+    "training_hours": 20.95,
+    "validation_raw_score": 0.650223303847924,
+    "validation_calibrated_score": 0.5827395133046863
+  },
+  {
+    "percentile": 64,
+    "training_hours": 22.63,
+    "validation_raw_score": 0.6609701599463828,
+    "validation_calibrated_score": 0.593551691659772
+  },
+  {
+    "percentile": 65,
+    "training_hours": 24.5,
+    "validation_raw_score": 0.6719275817566552,
+    "validation_calibrated_score": 0.6046542133760323
+  },
+  {
+    "percentile": 66,
+    "training_hours": 26.57,
+    "validation_raw_score": 0.6830189132740224,
+    "validation_calibrated_score": 0.6159756797141517
+  },
+  {
+    "percentile": 67,
+    "training_hours": 28.85,
+    "validation_raw_score": 0.6941445640623819,
+    "validation_calibrated_score": 0.6274190583250174
+  },
+  {
+    "percentile": 68,
+    "training_hours": 31.27,
+    "validation_raw_score": 0.7052180625140999,
+    "validation_calibrated_score": 0.6388980554497936
+  },
+  {
+    "percentile": 69,
+    "training_hours": 33.93,
+    "validation_raw_score": 0.7163579859275941,
+    "validation_calibrated_score": 0.6505387957520788
+  },
+  {
+    "percentile": 70,
+    "training_hours": 36.97,
+    "validation_raw_score": 0.7274468947116454,
+    "validation_calibrated_score": 0.6622219388359526
+  },
+  {
+    "percentile": 71,
+    "training_hours": 40.38,
+    "validation_raw_score": 0.7383179626999115,
+    "validation_calibrated_score": 0.6737715101322533
+  },
+  {
+    "percentile": 72,
+    "training_hours": 44.2,
+    "validation_raw_score": 0.749175616695051,
+    "validation_calibrated_score": 0.6854050223376463
+  },
+  {
+    "percentile": 73,
+    "training_hours": 48.57,
+    "validation_raw_score": 0.7599218880711294,
+    "validation_calibrated_score": 0.6970193190298278
+  },
+  {
+    "percentile": 74,
+    "training_hours": 53.45,
+    "validation_raw_score": 0.7705655721835276,
+    "validation_calibrated_score": 0.7086245666157776
+  },
+  {
+    "percentile": 75,
+    "training_hours": 59.07,
+    "validation_raw_score": 0.7810949383758714,
+    "validation_calibrated_score": 0.7202086507504093
+  },
+  {
+    "percentile": 76,
+    "training_hours": 65.48,
+    "validation_raw_score": 0.7915392774599191,
+    "validation_calibrated_score": 0.7318048132988398
+  },
+  {
+    "percentile": 77,
+    "training_hours": 72.83,
+    "validation_raw_score": 0.8017837253799611,
+    "validation_calibrated_score": 0.7432852913484606
+  },
+  {
+    "percentile": 78,
+    "training_hours": 81.27,
+    "validation_raw_score": 0.8119979534954097,
+    "validation_calibrated_score": 0.75484094426668
+  },
+  {
+    "percentile": 79,
+    "training_hours": 91.0,
+    "validation_raw_score": 0.8220655335843676,
+    "validation_calibrated_score": 0.7663417216619726
+  },
+  {
+    "percentile": 80,
+    "training_hours": 102.08,
+    "validation_raw_score": 0.8319775468952005,
+    "validation_calibrated_score": 0.7777771631656576
+  },
+  {
+    "percentile": 81,
+    "training_hours": 114.83,
+    "validation_raw_score": 0.8416071862163107,
+    "validation_calibrated_score": 0.7889983974322694
+  },
+  {
+    "percentile": 82,
+    "training_hours": 129.62,
+    "validation_raw_score": 0.850982424999364,
+    "validation_calibrated_score": 0.8000336812065433
+  },
+  {
+    "percentile": 83,
+    "training_hours": 146.72,
+    "validation_raw_score": 0.860000847868138,
+    "validation_calibrated_score": 0.8107566836212106
+  },
+  {
+    "percentile": 84,
+    "training_hours": 166.37,
+    "validation_raw_score": 0.8687564324001961,
+    "validation_calibrated_score": 0.8212730959785391
+  },
+  {
+    "percentile": 85,
+    "training_hours": 189.12,
+    "validation_raw_score": 0.877314425794732,
+    "validation_calibrated_score": 0.8316580449219153
+  },
+  {
+    "percentile": 86,
+    "training_hours": 214.83,
+    "validation_raw_score": 0.8855045600720179,
+    "validation_calibrated_score": 0.8416996318397516
+  },
+  {
+    "percentile": 87,
+    "training_hours": 244.72,
+    "validation_raw_score": 0.893522517578839,
+    "validation_calibrated_score": 0.8516329217772456
+  },
+  {
+    "percentile": 88,
+    "training_hours": 279.353200000003,
+    "validation_raw_score": 0.9015103008055709,
+    "validation_calibrated_score": 0.8616356136480944
+  },
+  {
+    "percentile": 89,
+    "training_hours": 319.07,
+    "validation_raw_score": 0.9094320772262301,
+    "validation_calibrated_score": 0.8716671964337181
+  },
+  {
+    "percentile": 90,
+    "training_hours": 365.99600000001493,
+    "validation_raw_score": 0.9174003035030733,
+    "validation_calibrated_score": 0.881876932778706
+  },
+  {
+    "percentile": 91,
+    "training_hours": 421.1,
+    "validation_raw_score": 0.9255607083099091,
+    "validation_calibrated_score": 0.892465872875984
+  },
+  {
+    "percentile": 92,
+    "training_hours": 487.52,
+    "validation_raw_score": 0.93386084091954,
+    "validation_calibrated_score": 0.9033853839709005
+  },
+  {
+    "percentile": 93,
+    "training_hours": 567.9,
+    "validation_raw_score": 0.9420563346760783,
+    "validation_calibrated_score": 0.9143286588131236
+  },
+  {
+    "percentile": 94,
+    "training_hours": 668.03,
+    "validation_raw_score": 0.949579251586817,
+    "validation_calibrated_score": 0.9245297192894616
+  },
+  {
+    "percentile": 95,
+    "training_hours": 797.37,
+    "validation_raw_score": 0.9566621899553661,
+    "validation_calibrated_score": 0.93428618766327
+  },
+  {
+    "percentile": 96,
+    "training_hours": 969.17,
+    "validation_raw_score": 0.9632148532675786,
+    "validation_calibrated_score": 0.9434600440297206
+  },
+  {
+    "percentile": 97,
+    "training_hours": 1149.67,
+    "validation_raw_score": 0.9695252614591159,
+    "validation_calibrated_score": 0.9524482177892474
+  },
+  {
+    "percentile": 98,
+    "training_hours": 1475.4,
+    "validation_raw_score": 0.9759224478981303,
+    "validation_calibrated_score": 0.9617400892244264
+  },
+  {
+    "percentile": 99,
+    "training_hours": 2119.2717999999973,
+    "validation_raw_score": 0.9822274678441556,
+    "validation_calibrated_score": 0.971114780355468
+  }
+]

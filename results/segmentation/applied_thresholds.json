@@ -1,0 +1,26 @@
+[
+  {
+    "split": "val",
+    "prior_cutoff_hours": 11.78,
+    "prior_operator": ">",
+    "prior_percentile": 55.0,
+    "raw_score_cutoff": 0.5637073779609005,
+    "calibrated_score_cutoff": 0.498216686967055,
+    "score_operator": ">=",
+    "score_percentile": 55.0,
+    "score_reference": "same-period score distribution",
+    "score_cutoff_ties": 0
+  },
+  {
+    "split": "test",
+    "prior_cutoff_hours": 11.78,
+    "prior_operator": ">",
+    "prior_percentile": 55.0,
+    "raw_score_cutoff": 0.5315348887810566,
+    "calibrated_score_cutoff": 0.4678034236322774,
+    "score_operator": ">=",
+    "score_percentile": 55.0,
+    "score_reference": "same-period score distribution",
+    "score_cutoff_ties": 0
+  }
+]

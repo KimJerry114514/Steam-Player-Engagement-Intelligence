@@ -1,0 +1,173 @@
+scope,metric_type,metric_id,domain,label,total_reviews,flagged_reviews,prevalence,prevalence_pct
+all_history_2010_2023,domain,technical,technical,Technical,16412862,4078186,0.248475006979,24.8475006979
+all_history_2010_2023,domain,gameplay,gameplay,Gameplay,16412862,2736625,0.166736611811,16.6736611811
+all_history_2010_2023,domain,progression,progression,Progression,16412862,850988,0.051848848787,5.1848848787
+all_history_2010_2023,domain,content,content,Content,16412862,2057627,0.125366739817,12.5366739817
+all_history_2010_2023,domain,social,social,Social,16412862,1842765,0.112275665268,11.2275665268
+all_history_2010_2023,domain,user experience,user experience,User experience,16412862,1324523,0.0807003068691,8.07003068691
+all_history_2010_2023,domain,business,business,Business,16412862,1467952,0.0894391240236,8.94391240236
+all_history_2010_2023,domain,service,service,Service,16412862,2071178,0.126192372787,12.6192372787
+all_history_2010_2023,factor,business.price_value,business,Price and value,16412862,1087485,0.0662580968511,6.62580968511
+all_history_2010_2023,factor,business.account_security,business,Account security and recovery,16412862,106384,0.00648174584055,0.648174584055
+all_history_2010_2023,factor,business.sales_pressure,business,Intrusive selling,16412862,42772,0.00260600497342,0.260600497342
+all_history_2010_2023,factor,business.paid_advantage,business,Paid power and boosts,16412862,187618,0.0114311568573,1.14311568573
+all_history_2010_2023,factor,business.paywall,business,Paid access barriers,16412862,181793,0.0110762522709,1.10762522709
+all_history_2010_2023,factor,content.narrative,content,Story and characters,16412862,656355,0.0399902832303,3.99902832303
+all_history_2010_2023,factor,content.scope_variety,content,Content breadth and availability,16412862,1527893,0.0930911988415,9.30911988415
+all_history_2010_2023,factor,content.world_level,content,World and level design,16412862,301367,0.0183616361363,1.83616361363
+all_history_2010_2023,factor,gameplay.balance,gameplay,Balance and counterplay,16412862,563447,0.0343296007729,3.43296007729
+all_history_2010_2023,factor,gameplay.core_loop,gameplay,Interaction and play rhythm,16412862,2087627,0.127194574596,12.7194574596
+all_history_2010_2023,factor,gameplay.challenge,gameplay,Difficulty and encounter fairness,16412862,691309,0.0421199544601,4.21199544601
+all_history_2010_2023,factor,gameplay.randomness,gameplay,Nonpaid randomness,16412862,128741,0.0078439092463,0.78439092463
+all_history_2010_2023,factor,progression.effort_reward,progression,"Effort, rewards, and loss",16412862,850988,0.051848848787,5.1848848787
+all_history_2010_2023,factor,service.marketing_trust,service,Misleading product claims,16412862,248335,0.0151305116682,1.51305116682
+all_history_2010_2023,factor,service.update_regression,service,Updates made it worse,16412862,462099,0.028154687464,2.8154687464
+all_history_2010_2023,factor,service.maintenance,service,Perceived maintenance neglect,16412862,1112109,0.0677583836384,6.77583836384
+all_history_2010_2023,factor,service.release_readiness,service,Unfinished release,16412862,339133,0.0206626364128,2.06626364128
+all_history_2010_2023,factor,service.support,service,Support and remedies,16412862,209424,0.012759749031,1.2759749031
+all_history_2010_2023,factor,social.cheating,social,Cheating and failed enforcement,16412862,913728,0.0556714605899,5.56714605899
+all_history_2010_2023,factor,social.sanctions,social,Disputed punishments,16412862,344945,0.0210167489375,2.10167489375
+all_history_2010_2023,factor,social.skill_matchmaking,social,Skill and team matching,16412862,174712,0.0106448223351,1.06448223351
+all_history_2010_2023,factor,social.conduct,social,Disruptive player conduct,16412862,294041,0.0179152788831,1.79152788831
+all_history_2010_2023,factor,social.match_availability,social,Human-match availability,16412862,363693,0.0221590238192,2.21590238192
+all_history_2010_2023,factor,tech.stability,technical,Launch and crash failures,16412862,1337290,0.0814781724236,8.14781724236
+all_history_2010_2023,factor,tech.performance,technical,Performance and loading,16412862,971182,0.0591720079045,5.91720079045
+all_history_2010_2023,factor,tech.platform_compatibility,technical,Compatibility failures,16412862,195882,0.0119346644114,1.19346644114
+all_history_2010_2023,factor,tech.functionality,technical,Broken functions,16412862,1364916,0.0831613645445,8.31613645445
+all_history_2010_2023,factor,tech.network.session_access,technical,Connection failures,16412862,702825,0.0428215993043,4.28215993043
+all_history_2010_2023,factor,tech.save_integrity,technical,Save and data loss,16412862,248078,0.0151148532169,1.51148532169
+all_history_2010_2023,factor,tech.network.responsiveness,technical,Network delay and desync,16412862,127705,0.00778078801857,0.778078801857
+all_history_2010_2023,factor,ux.localization,user experience,Language and localization,16412862,227453,0.0138582168058,1.38582168058
+all_history_2010_2023,factor,ux.controls,user experience,Controls and input devices,16412862,544355,0.033166366719,3.3166366719
+all_history_2010_2023,factor,ux.onboarding,user experience,Guidance and goals,16412862,343982,0.0209580754411,2.09580754411
+all_history_2010_2023,factor,ux.accessibility,user experience,Perception and comfort,16412862,86110,0.00524649509635,0.524649509635
+all_history_2010_2023,factor,ux.interface,user experience,Interface and workflow,16412862,448324,0.0273154066609,2.73154066609
+history_2010_2021,domain,technical,technical,Technical,10801892,2703462,0.250276710784,25.0276710784
+history_2010_2021,domain,gameplay,gameplay,Gameplay,10801892,1862338,0.172408500289,17.2408500289
+history_2010_2021,domain,progression,progression,Progression,10801892,549558,0.0508760872632,5.08760872632
+history_2010_2021,domain,content,content,Content,10801892,1367272,0.126577084829,12.6577084829
+history_2010_2021,domain,social,social,Social,10801892,1372664,0.127076256641,12.7076256641
+history_2010_2021,domain,user experience,user experience,User experience,10801892,920445,0.0852114611033,8.52114611033
+history_2010_2021,domain,business,business,Business,10801892,1020920,0.0945130723395,9.45130723395
+history_2010_2021,domain,service,service,Service,10801892,1401710,0.129765230017,12.9765230017
+history_2010_2021,factor,business.price_value,business,Price and value,10801892,752830,0.0696942720775,6.96942720775
+history_2010_2021,factor,business.account_security,business,Account security and recovery,10801892,75614,0.00700006998774,0.700006998774
+history_2010_2021,factor,business.sales_pressure,business,Intrusive selling,10801892,29097,0.00269369477125,0.269369477125
+history_2010_2021,factor,business.paid_advantage,business,Paid power and boosts,10801892,130288,0.0120615906917,1.20615906917
+history_2010_2021,factor,business.paywall,business,Paid access barriers,10801892,128793,0.0119231890117,1.19231890117
+history_2010_2021,factor,content.narrative,content,Story and characters,10801892,439009,0.0406418616294,4.06418616294
+history_2010_2021,factor,content.scope_variety,content,Content breadth and availability,10801892,1014588,0.0939268787357,9.39268787357
+history_2010_2021,factor,content.world_level,content,World and level design,10801892,200440,0.0185560085215,1.85560085215
+history_2010_2021,factor,gameplay.balance,gameplay,Balance and counterplay,10801892,363153,0.033619388159,3.3619388159
+history_2010_2021,factor,gameplay.core_loop,gameplay,Interaction and play rhythm,10801892,1440025,0.133312293809,13.3312293809
+history_2010_2021,factor,gameplay.challenge,gameplay,Difficulty and encounter fairness,10801892,455589,0.04217677792,4.217677792
+history_2010_2021,factor,gameplay.randomness,gameplay,Nonpaid randomness,10801892,83508,0.0077308678887,0.77308678887
+history_2010_2021,factor,progression.effort_reward,progression,"Effort, rewards, and loss",10801892,549558,0.0508760872632,5.08760872632
+history_2010_2021,factor,service.marketing_trust,service,Misleading product claims,10801892,164848,0.0152610301973,1.52610301973
+history_2010_2021,factor,service.update_regression,service,Updates made it worse,10801892,305921,0.0283210570889,2.83210570889
+history_2010_2021,factor,service.maintenance,service,Perceived maintenance neglect,10801892,756307,0.0700161601319,7.00161601319
+history_2010_2021,factor,service.release_readiness,service,Unfinished release,10801892,233413,0.0216085293206,2.16085293206
+history_2010_2021,factor,service.support,service,Support and remedies,10801892,147548,0.013659458917,1.3659458917
+history_2010_2021,factor,social.cheating,social,Cheating and failed enforcement,10801892,713822,0.0660830528578,6.60830528578
+history_2010_2021,factor,social.sanctions,social,Disputed punishments,10801892,273423,0.0253125100677,2.53125100677
+history_2010_2021,factor,social.skill_matchmaking,social,Skill and team matching,10801892,113451,0.0105028822728,1.05028822728
+history_2010_2021,factor,social.conduct,social,Disruptive player conduct,10801892,210312,0.0194699224914,1.94699224914
+history_2010_2021,factor,social.match_availability,social,Human-match availability,10801892,247212,0.0228859907135,2.28859907135
+history_2010_2021,factor,tech.stability,technical,Launch and crash failures,10801892,861851,0.079787041011,7.9787041011
+history_2010_2021,factor,tech.performance,technical,Performance and loading,10801892,646671,0.0598664567281,5.98664567281
+history_2010_2021,factor,tech.platform_compatibility,technical,Compatibility failures,10801892,138781,0.012847841841,1.2847841841
+history_2010_2021,factor,tech.functionality,technical,Broken functions,10801892,921081,0.0852703396775,8.52703396775
+history_2010_2021,factor,tech.network.session_access,technical,Connection failures,10801892,469071,0.0434248926021,4.34248926021
+history_2010_2021,factor,tech.save_integrity,technical,Save and data loss,10801892,153583,0.0142181573376,1.42181573376
+history_2010_2021,factor,tech.network.responsiveness,technical,Network delay and desync,10801892,95056,0.00879993986239,0.879993986239
+history_2010_2021,factor,ux.localization,user experience,Language and localization,10801892,165246,0.0152978755944,1.52978755944
+history_2010_2021,factor,ux.controls,user experience,Controls and input devices,10801892,389667,0.0360739581547,3.60739581547
+history_2010_2021,factor,ux.onboarding,user experience,Guidance and goals,10801892,232385,0.0215133608075,2.15133608075
+history_2010_2021,factor,ux.accessibility,user experience,Perception and comfort,10801892,58140,0.00538239041827,0.538239041827
+history_2010_2021,factor,ux.interface,user experience,Interface and workflow,10801892,300892,0.0278554905011,2.78554905011
+validation_2022,domain,technical,technical,Technical,2798556,682724,0.243955811497,24.3955811497
+validation_2022,domain,gameplay,gameplay,Gameplay,2798556,446335,0.15948760718,15.948760718
+validation_2022,domain,progression,progression,Progression,2798556,154695,0.0552767212805,5.52767212805
+validation_2022,domain,content,content,Content,2798556,347731,0.124253722277,12.4253722277
+validation_2022,domain,social,social,Social,2798556,243430,0.0869841446803,8.69841446803
+validation_2022,domain,user experience,user experience,User experience,2798556,208990,0.0746777981216,7.46777981216
+validation_2022,domain,business,business,Business,2798556,222521,0.0795127915968,7.95127915968
+validation_2022,domain,service,service,Service,2798556,337562,0.120620062632,12.0620062632
+validation_2022,factor,business.price_value,business,Price and value,2798556,167422,0.0598244237385,5.98244237385
+validation_2022,factor,business.account_security,business,Account security and recovery,2798556,14956,0.00534418464379,0.534418464379
+validation_2022,factor,business.sales_pressure,business,Intrusive selling,2798556,6162,0.00220184981112,0.220184981112
+validation_2022,factor,business.paid_advantage,business,Paid power and boosts,2798556,28757,0.0102756564457,1.02756564457
+validation_2022,factor,business.paywall,business,Paid access barriers,2798556,25573,0.00913792684513,0.913792684513
+validation_2022,factor,content.narrative,content,Story and characters,2798556,107437,0.0383901554945,3.83901554945
+validation_2022,factor,content.scope_variety,content,Content breadth and availability,2798556,259037,0.0925609492896,9.25609492896
+validation_2022,factor,content.world_level,content,World and level design,2798556,49870,0.0178199042649,1.78199042649
+validation_2022,factor,gameplay.balance,gameplay,Balance and counterplay,2798556,101046,0.0361064777692,3.61064777692
+validation_2022,factor,gameplay.core_loop,gameplay,Interaction and play rhythm,2798556,331109,0.118314230625,11.8314230625
+validation_2022,factor,gameplay.challenge,gameplay,Difficulty and encounter fairness,2798556,120463,0.0430446987661,4.30446987661
+validation_2022,factor,gameplay.randomness,gameplay,Nonpaid randomness,2798556,23628,0.0084429255659,0.84429255659
+validation_2022,factor,progression.effort_reward,progression,"Effort, rewards, and loss",2798556,154695,0.0552767212805,5.52767212805
+validation_2022,factor,service.marketing_trust,service,Misleading product claims,2798556,44298,0.0158288774639,1.58288774639
+validation_2022,factor,service.update_regression,service,Updates made it worse,2798556,74877,0.0267555839512,2.67555839512
+validation_2022,factor,service.maintenance,service,Perceived maintenance neglect,2798556,180625,0.0645422139132,6.45422139132
+validation_2022,factor,service.release_readiness,service,Unfinished release,2798556,53023,0.0189465567243,1.89465567243
+validation_2022,factor,service.support,service,Support and remedies,2798556,33167,0.0118514691148,1.18514691148
+validation_2022,factor,social.cheating,social,Cheating and failed enforcement,2798556,105223,0.0375990332157,3.75990332157
+validation_2022,factor,social.sanctions,social,Disputed punishments,2798556,34175,0.0122116548677,1.22116548677
+validation_2022,factor,social.skill_matchmaking,social,Skill and team matching,2798556,28841,0.0103056719251,1.03056719251
+validation_2022,factor,social.conduct,social,Disruptive player conduct,2798556,42680,0.0152507221581,1.52507221581
+validation_2022,factor,social.match_availability,social,Human-match availability,2798556,63448,0.0226716921155,2.26716921155
+validation_2022,factor,tech.stability,technical,Launch and crash failures,2798556,243270,0.0869269723386,8.69269723386
+validation_2022,factor,tech.performance,technical,Performance and loading,2798556,149620,0.0534632860661,5.34632860661
+validation_2022,factor,tech.platform_compatibility,technical,Compatibility failures,2798556,28477,0.0101756048476,1.01756048476
+validation_2022,factor,tech.functionality,technical,Broken functions,2798556,227537,0.0813051445102,8.13051445102
+validation_2022,factor,tech.network.session_access,technical,Connection failures,2798556,116086,0.0414806778925,4.14806778925
+validation_2022,factor,tech.save_integrity,technical,Save and data loss,2798556,47197,0.0168647688308,1.68647688308
+validation_2022,factor,tech.network.responsiveness,technical,Network delay and desync,2798556,16843,0.00601846094915,0.601846094915
+validation_2022,factor,ux.localization,user experience,Language and localization,2798556,31484,0.0112500875451,1.12500875451
+validation_2022,factor,ux.controls,user experience,Controls and input devices,2798556,82351,0.0294262469645,2.94262469645
+validation_2022,factor,ux.onboarding,user experience,Guidance and goals,2798556,57848,0.0206706601547,2.06706601547
+validation_2022,factor,ux.accessibility,user experience,Perception and comfort,2798556,14355,0.00512943103515,0.512943103515
+validation_2022,factor,ux.interface,user experience,Interface and workflow,2798556,74857,0.0267484374084,2.67484374084
+test_2023,domain,technical,technical,Technical,2812414,692000,0.246051968167,24.6051968167
+test_2023,domain,gameplay,gameplay,Gameplay,2812414,427952,0.15216536399,15.216536399
+test_2023,domain,progression,progression,Progression,2812414,146735,0.0521740398106,5.21740398106
+test_2023,domain,content,content,Content,2812414,342624,0.121825591823,12.1825591823
+test_2023,domain,social,social,Social,2812414,226671,0.0805965977982,8.05965977982
+test_2023,domain,user experience,user experience,User experience,2812414,195088,0.0693667433031,6.93667433031
+test_2023,domain,business,business,Business,2812414,224511,0.0798285743137,7.98285743137
+test_2023,domain,service,service,Service,2812414,331906,0.118014630847,11.8014630847
+test_2023,factor,business.price_value,business,Price and value,2812414,167233,0.0594624404515,5.94624404515
+test_2023,factor,business.account_security,business,Account security and recovery,2812414,15814,0.00562292749218,0.562292749218
+test_2023,factor,business.sales_pressure,business,Intrusive selling,2812414,7513,0.00267137057346,0.267137057346
+test_2023,factor,business.paid_advantage,business,Paid power and boosts,2812414,28573,0.0101595995469,1.01595995469
+test_2023,factor,business.paywall,business,Paid access barriers,2812414,27427,0.00975212042039,0.975212042039
+test_2023,factor,content.narrative,content,Story and characters,2812414,109909,0.0390799505336,3.90799505336
+test_2023,factor,content.scope_variety,content,Content breadth and availability,2812414,254268,0.0904091645113,9.04091645113
+test_2023,factor,content.world_level,content,World and level design,2812414,51057,0.0181541551137,1.81541551137
+test_2023,factor,gameplay.balance,gameplay,Balance and counterplay,2812414,99248,0.0352892568448,3.52892568448
+test_2023,factor,gameplay.core_loop,gameplay,Interaction and play rhythm,2812414,316493,0.112534285493,11.2534285493
+test_2023,factor,gameplay.challenge,gameplay,Difficulty and encounter fairness,2812414,115257,0.0409815197905,4.09815197905
+test_2023,factor,gameplay.randomness,gameplay,Nonpaid randomness,2812414,21605,0.00768201267665,0.768201267665
+test_2023,factor,progression.effort_reward,progression,"Effort, rewards, and loss",2812414,146735,0.0521740398106,5.21740398106
+test_2023,factor,service.marketing_trust,service,Misleading product claims,2812414,39189,0.0139342927464,1.39342927464
+test_2023,factor,service.update_regression,service,Updates made it worse,2812414,81301,0.0289079061618,2.89079061618
+test_2023,factor,service.maintenance,service,Perceived maintenance neglect,2812414,175177,0.0622870601554,6.22870601554
+test_2023,factor,service.release_readiness,service,Unfinished release,2812414,52697,0.0187372840556,1.87372840556
+test_2023,factor,service.support,service,Support and remedies,2812414,28709,0.0102079565811,1.02079565811
+test_2023,factor,social.cheating,social,Cheating and failed enforcement,2812414,94683,0.0336660961011,3.36660961011
+test_2023,factor,social.sanctions,social,Disputed punishments,2812414,37347,0.013279339386,1.3279339386
+test_2023,factor,social.skill_matchmaking,social,Skill and team matching,2812414,32420,0.0115274635953,1.15274635953
+test_2023,factor,social.conduct,social,Disruptive player conduct,2812414,41049,0.0145956463024,1.45956463024
+test_2023,factor,social.match_availability,social,Human-match availability,2812414,53033,0.0188567543754,1.88567543754
+test_2023,factor,tech.stability,technical,Launch and crash failures,2812414,232169,0.0825515020193,8.25515020193
+test_2023,factor,tech.performance,technical,Performance and loading,2812414,174891,0.062185368157,6.2185368157
+test_2023,factor,tech.platform_compatibility,technical,Compatibility failures,2812414,28624,0.0101777334347,1.01777334347
+test_2023,factor,tech.functionality,technical,Broken functions,2812414,216298,0.0769083072407,7.69083072407
+test_2023,factor,tech.network.session_access,technical,Connection failures,2812414,117668,0.0418387904483,4.18387904483
+test_2023,factor,tech.save_integrity,technical,Save and data loss,2812414,47298,0.0168175809109,1.68175809109
+test_2023,factor,tech.network.responsiveness,technical,Network delay and desync,2812414,15806,0.00562008296076,0.562008296076
+test_2023,factor,ux.localization,user experience,Language and localization,2812414,30723,0.010924067367,1.0924067367
+test_2023,factor,ux.controls,user experience,Controls and input devices,2812414,72337,0.0257206087013,2.57206087013
+test_2023,factor,ux.onboarding,user experience,Guidance and goals,2812414,53749,0.0191113399379,1.91113399379
+test_2023,factor,ux.accessibility,user experience,Perception and comfort,2812414,13615,0.00484103691704,0.484103691704
+test_2023,factor,ux.interface,user experience,Interface and workflow,2812414,72575,0.0258052335111,2.58052335111

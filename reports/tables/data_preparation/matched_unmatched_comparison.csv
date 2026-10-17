@@ -1,0 +1,3 @@
+metadata_matched,review_count,appid_count,positive_share,median_playtime_forever,p90_playtime_forever,median_games_owned,median_reviews_written,median_votes_up,p99_votes_up,p99_votes_funny,median_weighted_vote_score
+false,999736,835,0.8029639824913777,4137,44703,80,5,0,37,8,0.0
+true,14437735,7348,0.8742045757177286,2623,39917,100,5,0,33,7,0.0

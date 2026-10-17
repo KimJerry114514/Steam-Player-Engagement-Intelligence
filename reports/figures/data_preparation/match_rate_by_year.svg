@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-label="Metadata match rate by review year">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="480.0" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="600">Metadata match rate by review year</text>
+<line x1="75" y1="335" x2="930" y2="335" stroke="#555"/>
+<rect x="84.97" y="64.67" width="51.30" height="270.33" fill="#3b82a0"><title>2010: 93.3%</title></rect>
+<text x="110.62" y="353" text-anchor="middle" font-family="Arial" font-size="11">2010</text>
+<rect x="156.22" y="58.99" width="51.30" height="276.01" fill="#3b82a0"><title>2011: 95.3%</title></rect>
+<text x="181.88" y="353" text-anchor="middle" font-family="Arial" font-size="11">2011</text>
+<rect x="227.47" y="56.81" width="51.30" height="278.19" fill="#3b82a0"><title>2012: 96.1%</title></rect>
+<text x="253.12" y="353" text-anchor="middle" font-family="Arial" font-size="11">2012</text>
+<rect x="298.73" y="55.00" width="51.30" height="280.00" fill="#3b82a0"><title>2013: 96.7%</title></rect>
+<text x="324.38" y="353" text-anchor="middle" font-family="Arial" font-size="11">2013</text>
+<rect x="369.98" y="55.43" width="51.30" height="279.57" fill="#3b82a0"><title>2014: 96.5%</title></rect>
+<text x="395.62" y="353" text-anchor="middle" font-family="Arial" font-size="11">2014</text>
+<rect x="441.23" y="63.81" width="51.30" height="271.19" fill="#3b82a0"><title>2015: 93.6%</title></rect>
+<text x="466.88" y="353" text-anchor="middle" font-family="Arial" font-size="11">2015</text>
+<rect x="512.48" y="61.93" width="51.30" height="273.07" fill="#3b82a0"><title>2016: 94.3%</title></rect>
+<text x="538.12" y="353" text-anchor="middle" font-family="Arial" font-size="11">2016</text>
+<rect x="583.73" y="69.22" width="51.30" height="265.78" fill="#3b82a0"><title>2017: 91.8%</title></rect>
+<text x="609.38" y="353" text-anchor="middle" font-family="Arial" font-size="11">2017</text>
+<rect x="654.98" y="63.87" width="51.30" height="271.13" fill="#3b82a0"><title>2018: 93.6%</title></rect>
+<text x="680.62" y="353" text-anchor="middle" font-family="Arial" font-size="11">2018</text>
+<rect x="726.23" y="64.92" width="51.30" height="270.08" fill="#3b82a0"><title>2019: 93.3%</title></rect>
+<text x="751.88" y="353" text-anchor="middle" font-family="Arial" font-size="11">2019</text>
+<rect x="797.48" y="65.63" width="51.30" height="269.37" fill="#3b82a0"><title>2020: 93.0%</title></rect>
+<text x="823.12" y="353" text-anchor="middle" font-family="Arial" font-size="11">2020</text>
+<rect x="868.73" y="63.60" width="51.30" height="271.40" fill="#3b82a0"><title>2021: 93.7%</title></rect>
+<text x="894.38" y="353" text-anchor="middle" font-family="Arial" font-size="11">2021</text>
+<line x1="70" y1="335.00" x2="930" y2="335.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="339.00" text-anchor="end" font-family="Arial" font-size="10">0%</text>
+<line x1="70" y1="279.00" x2="930" y2="279.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="283.00" text-anchor="end" font-family="Arial" font-size="10">19%</text>
+<line x1="70" y1="223.00" x2="930" y2="223.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="227.00" text-anchor="end" font-family="Arial" font-size="10">39%</text>
+<line x1="70" y1="167.00" x2="930" y2="167.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="171.00" text-anchor="end" font-family="Arial" font-size="10">58%</text>
+<line x1="70" y1="111.00" x2="930" y2="111.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="115.00" text-anchor="end" font-family="Arial" font-size="10">77%</text>
+<line x1="70" y1="55.00" x2="930" y2="55.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="59.00" text-anchor="end" font-family="Arial" font-size="10">97%</text>
+</svg>

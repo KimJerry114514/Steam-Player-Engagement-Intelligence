@@ -1,0 +1,610 @@
+{
+  "cards": [
+    {
+      "game": "Counter-Strike",
+      "factor_id": "social.cheating",
+      "title_en": "Frequent cheating and perceived enforcement failures",
+      "what_players_report_en": "Players describe repeatedly encountering cheaters, including a claim of hackers every other game. One reviewer explicitly says officials are not addressing the problem.",
+      "scale_en": "Among the game's negative reviews, sample tier: 20.9% (130 of 622 random negative reviews; 90% CI 18.3%–23.7%). Pooled classifier-adjusted diagnostic: 24.7%; held-out classifier F1: 0.92. Raw classifier-flagged share, not misclassification-adjusted, fell from 29.3% in 2020 to 9.3% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -0.8 pp (90% CI -1.1 to -0.5) in the share whose last play was at least 30 days after the review. This is not a causal effect. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "游戏里挂非常的多官方也不管管",
+          "translation_en": "There are so many cheats in the game, and the officials aren't doing anything about it."
+        },
+        {
+          "quote": "i got hackers every other GAME",
+          "translation_en": "i got hackers every other GAME"
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull match reports and enforcement outcomes around complaint dates, segmented by queue and region.",
+        "Audit a sample of reported encounters against replay evidence and detection records.",
+        "Measure time from report to decision and repeat encounters with reported accounts."
+      ],
+      "owner_team": "Competitive Integrity",
+      "not_established_en": "The packets do not verify cheating in individual encounters, identify enforcement root causes, establish prevalence outside negative reviewers, or estimate repair ROI. The substantial sample and strong classifier support high confidence in the complaint signal.",
+      "confidence": "high"
+    },
+    {
+      "game": "Counter-Strike",
+      "factor_id": "social.sanctions",
+      "title_en": "Disputed bans and cooldowns",
+      "what_players_report_en": "Players report bans and timed restrictions, including a seven-day ban. Some allege that ordinary players are banned without justification.",
+      "scale_en": "Among the game's negative reviews, sample tier: 9.0% (56 of 622 random negative reviews; 90% CI 7.3%–11.1%). Pooled classifier-adjusted diagnostic: 8.2%; held-out classifier F1: 0.81. Raw classifier-flagged share, not misclassification-adjusted, generally declined from 11.5% in 2015 to 3.0% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -8.2 pp (90% CI -8.8 to -7.5) in the share whose last play was at least 30 days after the review. This is not a causal effect: bans can mechanically prevent play on the affected account. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "dostaje bana za nic",
+          "translation_en": "I get banned for nothing."
+        },
+        {
+          "quote": "I got a 7 day ban",
+          "translation_en": "I got a 7 day ban"
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Audit a sample of disputed bans with detection evidence, policy grounds and appeal outcomes.",
+        "Separate temporary cooldowns from permanent bans and measure restriction duration.",
+        "Review punishment notices and ask appellants which reasons or appeal steps were unclear."
+      ],
+      "owner_team": "Enforcement Policy",
+      "not_established_en": "The data do not establish whether bans were wrongful, the source of enforcement errors, the affected-player rate outside negative reviewers, or repair ROI. The sample and classifier support high confidence in the existence of sanction complaints.",
+      "confidence": "high"
+    },
+    {
+      "game": "Counter-Strike",
+      "factor_id": "social.conduct",
+      "title_en": "AFK teammates, trolling and hostile conduct",
+      "what_players_report_en": "Players describe AFK teammates, repeated trolling and a hostile community. Some say the community makes playing intolerable.",
+      "scale_en": "Among the game's negative reviews, sample tier: 6.1% (38 of 622 random negative reviews; 90% CI 4.7%–7.9%). Pooled classifier-adjusted diagnostic: 7.7%; held-out classifier F1: 0.64. Raw classifier-flagged share, not misclassification-adjusted, generally declined from 9.9% in 2015 to 3.5% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +1.7 pp (90% CI +1.3 to +2.1) in the share whose last play was at least 30 days after the review. This is not a causal effect or evidence that disruptive conduct helps retention. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "teammate... was afk",
+          "translation_en": "teammate... was afk"
+        },
+        {
+          "quote": "trollano ogni fottuto match",
+          "translation_en": "They troll every fucking match."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull AFK, griefing and communication reports by queue, region and repeat offender.",
+        "Audit match replays and moderation outcomes for a sample of complaints.",
+        "Measure report resolution, repeat exposure and use of mute or block controls."
+      ],
+      "owner_team": "Player Safety",
+      "not_established_en": "The data do not establish individual misconduct, moderation root causes, prevalence outside negative reviewers, or repair ROI. The modest positive sample and classifier F1 limit confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Counter-Strike",
+      "factor_id": "gameplay.core_loop",
+      "title_en": "Unsatisfying shooting and repetitive play",
+      "what_players_report_en": "Players criticize shooting feel and mechanics, including a complaint about no longer running while scoped. Another describes repeatedly spawning and dying.",
+      "scale_en": "Among the game's negative reviews, sample tier: 1.6% (10 of 622 random negative reviews; 90% CI 1.0%–2.7%). Pooled classifier-adjusted diagnostic: ≈0% (the pooled misclassification correction is uninformative for this title). Prefer the sample tier; this does not mean nobody complains. Held-out classifier F1: 0.62. Raw classifier-flagged share, not misclassification-adjusted, fell from 5.2% in 2013 to 1.1% in 2022, then rose to 2.7% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -1.2 pp (90% CI -1.8 to -0.6) in the share whose last play was at least 30 days after the review. This is not a causal effect. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "THE SHOOTING IS ABSOLUTE TRASH",
+          "translation_en": "THE SHOOTING IS ABSOLUTE TRASH"
+        },
+        {
+          "quote": "Zjevíte se a následně umřete. Tento děj se stále opakuje.",
+          "translation_en": "You spawn and then die. This sequence keeps repeating."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Ask affected players for the build, mode, weapon and exact interaction they disliked.",
+        "Reproduce scoped movement and recoil behavior in the relevant builds.",
+        "Run observed play sessions measuring spawn-to-death sequences and collecting shooting-feel feedback."
+      ],
+      "owner_team": "Core Gameplay Design",
+      "not_established_en": "The data do not identify a mechanical root cause, establish prevalence outside negative reviewers, or estimate repair ROI. Few sample positives and an uninformative pooled correction warrant low confidence in scaled estimates.",
+      "confidence": "low"
+    },
+    {
+      "game": "PUBG",
+      "factor_id": "social.cheating",
+      "title_en": "Widespread reports of cheating",
+      "what_players_report_en": "Players describe cheaters as pervasive and repeatedly encountered. One explicitly says cheating ruined the game.",
+      "scale_en": "Among the game's negative reviews, sample tier: 36.5% (224 of 614 random negative reviews; 90% CI 33.4%–39.7%). Pooled classifier-adjusted diagnostic: 34.8%; held-out classifier F1: 0.92. Raw classifier-flagged share, not misclassification-adjusted, fell from 38.4% in 2019 to 24.6% in 2022, then rebounded to 30.5% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +2.4 pp (90% CI +1.3 to +3.4) in the share whose last play was at least 30 days after the review. This is not a causal effect or evidence that cheating helps retention. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "cheaterzy na każdym kroku",
+          "translation_en": "Cheaters at every turn."
+        },
+        {
+          "quote": "毁了这游戏的确实是外挂",
+          "translation_en": "Cheats really are what ruined this game."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull cheating reports and detection outcomes by mode, region and review period.",
+        "Audit reported encounters using replay evidence and account enforcement history.",
+        "Measure repeat encounters and report-to-action time, including the period of the annual rebound."
+      ],
+      "owner_team": "Competitive Integrity",
+      "not_established_en": "The data do not verify individual cheating incidents, explain enforcement failures, establish prevalence outside negative reviewers, or estimate repair ROI. The large sample and strong classifier support high confidence in the complaint signal.",
+      "confidence": "high"
+    },
+    {
+      "game": "PUBG",
+      "factor_id": "social.sanctions",
+      "title_en": "Alleged wrongful bans and failed appeals",
+      "what_players_report_en": "Players allege bans despite not cheating, including permanent bans. Some say the claimed error was not acknowledged and the ban was not lifted.",
+      "scale_en": "Among the game's negative reviews, sample tier: 20.4% (125 of 614 random negative reviews; 90% CI 17.8%–23.2%). Pooled classifier-adjusted diagnostic: 22.4%; held-out classifier F1: 0.81. Raw classifier-flagged share, not misclassification-adjusted, rose from 5.3% in 2017 to 26.8% in 2020, fell to 10.7% in 2022, then rose to 15.8% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -15.7 pp (90% CI -16.4 to -15.0) in the share whose last play was at least 30 days after the review. This is not a causal effect: bans can mechanically prevent play on the affected account. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "误封不承认，死不解封",
+          "translation_en": "They won't acknowledge the wrongful ban and absolutely refuse to lift it."
+        },
+        {
+          "quote": "被永久误封，那就在也不见",
+          "translation_en": "Wrongfully banned permanently, so goodbye forever."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Audit disputed permanent and temporary bans against detection evidence and policy.",
+        "Pull appeal response times, reversal decisions and repeat contacts.",
+        "Separate time barred from playing from activity after reinstatement when examining retention."
+      ],
+      "owner_team": "Enforcement Policy",
+      "not_established_en": "The data do not establish that bans were wrongful, identify enforcement root causes, establish prevalence outside negative reviewers, or estimate repair ROI. The sample and classifier support high confidence in the complaint signal.",
+      "confidence": "high"
+    },
+    {
+      "game": "PUBG",
+      "factor_id": "tech.performance",
+      "title_en": "Low frame rates and demanding performance",
+      "what_players_report_en": "Players criticize optimization and hardware demands. One reports frame rates only in the teens.",
+      "scale_en": "Among the game's negative reviews, sample tier: 10.6% (65 of 614 random negative reviews; 90% CI 8.7%–12.8%). Pooled classifier-adjusted diagnostic: 12.9%; held-out classifier F1: 0.77. Raw classifier-flagged share, not misclassification-adjusted, fell from 20.0% in 2017 to 3.7% in 2021, then rose to 5.5% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +1.2 pp (90% CI +1.0 to +1.4) in the share whose last play was at least 30 days after the review. This is not a causal effect or evidence that poor performance helps retention. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "帧数只有10多",
+          "translation_en": "The frame rate is only in the teens."
+        },
+        {
+          "quote": "большими системными требованиями",
+          "translation_en": "With high system requirements."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull frame-time and hardware telemetry by patch, map and graphics settings.",
+        "Reproduce low-frame-rate reports on the reported hardware configurations.",
+        "Ask complainants for performance captures and measure CPU, GPU and memory bottlenecks."
+      ],
+      "owner_team": "Performance Engineering",
+      "not_established_en": "The data do not establish optimization as the root cause, identify affected configurations, establish prevalence outside negative reviewers, or estimate repair ROI. Sample uncertainty and imperfect classification warrant medium confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "PUBG",
+      "factor_id": "business.account_security",
+      "title_en": "Stolen accounts and unsatisfactory recovery",
+      "what_players_report_en": "Players report stolen or hacked accounts. One criticizes both account recovery and banning mechanisms.",
+      "scale_en": "Among the game's negative reviews, sample tier: 4.1% (25 of 614 random negative reviews; 90% CI 2.9%–5.6%). Pooled classifier-adjusted diagnostic: 4.1%; held-out classifier F1: 0.71. Raw classifier-flagged share, not misclassification-adjusted, rose from 0.4% in 2017 to 6.6% in 2021, fell to 2.4% in 2022, then rose to 4.3% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -11.4 pp (90% CI -12.7 to -10.0) in the share whose last play was at least 30 days after the review. This is not a causal effect: loss of account access can mechanically prevent the owner from playing, and account activity may not identify who played. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "我的账户被盗用",
+          "translation_en": "My account was used without my authorization."
+        },
+        {
+          "quote": "找回机制封号机制太烂了",
+          "translation_en": "The recovery and banning mechanisms are terrible."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Audit compromise and recovery tickets with authentication and ownership-verification records.",
+        "Measure recovery completion, time without access and repeated support contacts.",
+        "Review cases involving both compromise and bans to trace recovery and appeal handoffs."
+      ],
+      "owner_team": "Identity Services",
+      "not_established_en": "The data do not establish how accounts were compromised, who generated later play activity, prevalence outside negative reviewers, or repair ROI. The modest sample and classifier quality limit confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Apex Legends",
+      "factor_id": "tech.network.session_access",
+      "title_en": "Disconnections and inability to join sessions",
+      "what_players_report_en": "Players report being repeatedly kicked out and being unable to connect or move during session failures. They criticize server reliability, including a claim that network acceleration tools did not help.",
+      "scale_en": "Among the game's negative reviews, sample tier: 15.1% (66 of 436 random negative reviews; 90% CI 12.5%–18.2%). Pooled classifier-adjusted diagnostic: 26.0%; held-out classifier F1: 0.67. Raw classifier-flagged share, not misclassification-adjusted, rose from 14.0% in 2022 to 26.2% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +3.9 pp (90% CI +2.8 to +5.0) in the share whose last play was at least 30 days after the review. This is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "sürekli oyundan atıyor",
+          "translation_en": "It keeps kicking me out of the game."
+        },
+        {
+          "quote": "服务器一坨屎，什么加速器都不行",
+          "translation_en": "The servers are a pile of shit; no network accelerator works."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull join failures, disconnect codes and reconnect outcomes by region, provider and patch.",
+        "Correlate complaint periods with service incident logs and session health metrics.",
+        "Reproduce reported connection paths with and without the network acceleration tools players used."
+      ],
+      "owner_team": "Online Reliability",
+      "not_established_en": "The data do not isolate server, client or network root causes, establish prevalence outside negative reviewers, or estimate repair ROI. The sample/classifier discrepancy, moderate F1 and retention CI caution reduce confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Apex Legends",
+      "factor_id": "tech.stability",
+      "title_en": "Crashes, freezes and inability to start playing",
+      "what_players_report_en": "Players report repeated crashes, freezes during matches and inability to enter the game. One says they have been unable to play for weeks.",
+      "scale_en": "Among the game's negative reviews, sample tier: 6.9% (30 of 436 random negative reviews; 90% CI 5.1%–9.2%). Pooled classifier-adjusted diagnostic: 4.2%; held-out classifier F1: 0.81. Raw classifier-flagged share, not misclassification-adjusted, declined from 7.2% in 2021 to 3.9% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +2.0 pp (90% CI +0.9 to +3.2) in the share whose last play was at least 30 days after the review. This is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "This game crashed for 4 times within 6 hours",
+          "translation_en": "This game crashed for 4 times within 6 hours"
+        },
+        {
+          "quote": "Ive been unable to play for weeks",
+          "translation_en": "Ive been unable to play for weeks"
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull crash signatures, startup failures and freeze reports by patch and hardware.",
+        "Collect logs from prolonged access failures and distinguish client failures from session failures.",
+        "Reproduce common signatures and measure recovery or relaunch success."
+      ],
+      "owner_team": "Client Engineering",
+      "not_established_en": "The data do not identify crash root causes, establish prevalence outside negative reviewers, or estimate repair ROI. The modest sample and retention CI caution lower confidence despite a stronger classifier.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Apex Legends",
+      "factor_id": "service.maintenance",
+      "title_en": "Perceived neglect of fixes and maintenance",
+      "what_players_report_en": "Players allege that problems remain unfixed, including bugs described as persisting since the first season. Some perceive cosmetic sales as receiving more attention than game maintenance.",
+      "scale_en": "Among the game's negative reviews, sample tier: 6.4% (28 of 436 random negative reviews; 90% CI 4.7%–8.6%). Pooled classifier-adjusted diagnostic: 7.6%; held-out classifier F1: 0.71. No clear sustained annual trend in the supplied raw classifier-flagged shares.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +0.3 pp (90% CI -0.3 to +0.8) in the share whose last play was at least 30 days after the review. The interval includes zero; this is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "問題一堆不修",
+          "translation_en": "There are loads of problems that aren't being fixed."
+        },
+        {
+          "quote": "就惦记着你那B皮肤",
+          "translation_en": "All you care about is those fucking skins."
+        },
+        {
+          "quote": "не фиксят баги с первого сезона",
+          "translation_en": "They haven't fixed bugs since the first season."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Ask reviewers which unresolved issues and previous reports they mean.",
+        "Match named issues to bug histories, patch notes, reopenings and time to resolution.",
+        "Audit status communications and ask whether players could tell when fixes shipped."
+      ],
+      "owner_team": "Live Operations",
+      "not_established_en": "The data do not establish actual staffing priorities, abandonment, maintenance root causes, prevalence outside negative reviewers, or repair ROI. The modest sample, imperfect classifier and retention CI caution reduce confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Apex Legends",
+      "factor_id": "gameplay.core_loop",
+      "title_en": "Unsatisfying gunplay and limited mobility",
+      "what_players_report_en": "Players criticize gun handling and combat feel. One reports insufficient mobility, while another criticizes hit feedback.",
+      "scale_en": "Among the game's negative reviews, sample tier: 1.6% (7 of 436 random negative reviews; 90% CI 0.9%–2.9%). Pooled classifier-adjusted diagnostic: ≈0% (the pooled misclassification correction is uninformative for this title). Prefer the sample tier; this does not mean nobody complains. Held-out classifier F1: 0.62. Raw classifier-flagged share, not misclassification-adjusted, declined from 3.5% in 2020 to 1.2% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -8.8 pp (90% CI -10.2 to -7.5) in the share whose last play was at least 30 days after the review. This is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "not enough mobility",
+          "translation_en": "not enough mobility"
+        },
+        {
+          "quote": "Guns in this game feel awful to use",
+          "translation_en": "Guns in this game feel awful to use"
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Ask complainants for specific weapons, movement actions, input devices and builds.",
+        "Observe play sessions focused on shooting, movement and hit feedback.",
+        "Measure input response and animation timing for the interactions players identify."
+      ],
+      "owner_team": "Core Gameplay Design",
+      "not_established_en": "The data do not identify a gameplay root cause, establish prevalence outside negative reviewers, or estimate repair ROI. Few sample positives, an uninformative correction and the retention CI caution warrant low confidence.",
+      "confidence": "low"
+    },
+    {
+      "game": "Apex Legends",
+      "factor_id": "social.sanctions",
+      "title_en": "Disputed bans and abandonment penalties",
+      "what_players_report_en": "Players allege unexplained or wrongful account bans. One attributes a points deduction to being disconnected by a server crash, and another reports an abandonment penalty.",
+      "scale_en": "Among the game's negative reviews, sample tier: 5.3% (23 of 436 random negative reviews; 90% CI 3.8%–7.3%). Pooled classifier-adjusted diagnostic: 6.4%; held-out classifier F1: 0.81. No clear sustained annual trend in the supplied raw classifier-flagged shares.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -8.3 pp (90% CI -11.6 to -5.1) in the share whose last play was at least 30 days after the review. This is not a causal effect: bans can mechanically prevent play on the affected account. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "无缘无故封我号",
+          "translation_en": "They banned my account for no reason."
+        },
+        {
+          "quote": "服務器自己崩潰，被服務器扎出去，一把扣一百一",
+          "translation_en": "The server itself crashed, I was kicked out by the server, and lost one hundred and ten points in a match."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Audit disputed bans with enforcement evidence, notices and appeal outcomes.",
+        "Join abandonment penalties to disconnect reasons and service incident records.",
+        "Reproduce disconnect and reconnect scenarios to check when penalties are applied."
+      ],
+      "owner_team": "Enforcement Policy",
+      "not_established_en": "The data do not verify wrongful bans or server-caused penalties, identify root causes, establish prevalence outside negative reviewers, or estimate repair ROI. The modest sample and retention CI caution lower confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Cyberpunk 2077",
+      "factor_id": "tech.functionality",
+      "title_en": "Persistent bugs and broken functions",
+      "what_players_report_en": "Players describe glitches and bugs that they believe remain unresolved. One reports missing files after downloading and having to download again.",
+      "scale_en": "Among the game's negative reviews, sample tier: 37.2% (156 of 419 random negative reviews; 90% CI 33.4%–41.2%). Pooled classifier-adjusted diagnostic: 49.2%; held-out classifier F1: 0.70. Raw classifier-flagged share, not misclassification-adjusted, dropped from 37.7% in 2020 to 26.7% in 2021 and was 25.7% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +1.1 pp (90% CI +0.5 to +1.8) in the share whose last play was at least 30 days after the review. This is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "下载完又缺少文件，又开始重新下载",
+          "translation_en": "After the download finished, files were missing again, and it started downloading again."
+        },
+        {
+          "quote": "你bug貌似都没修完",
+          "translation_en": "It seems you haven't even finished fixing the bugs."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Ask complainants for exact broken interactions, save files and game builds.",
+        "Pull defect histories and reproduction rates by patch and feature.",
+        "Reproduce the missing-file and repeat-download report using installation and file-verification logs."
+      ],
+      "owner_team": "Gameplay Engineering",
+      "not_established_en": "The data do not identify individual bug root causes, establish prevalence outside negative reviewers, or estimate repair ROI. Despite a substantial sample, the sample/classifier discrepancy and retention CI caution reduce confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Cyberpunk 2077",
+      "factor_id": "tech.stability",
+      "title_en": "Launch failures, black screens and repeated crashes",
+      "what_players_report_en": "Players report being unable to launch or reopen the game, black screens and repeated crashes. One says consecutive crashes make the game unplayable.",
+      "scale_en": "Among the game's negative reviews, sample tier: 15.0% (63 of 419 random negative reviews; 90% CI 12.4%–18.1%). Pooled classifier-adjusted diagnostic: 14.3%; held-out classifier F1: 0.81. Raw classifier-flagged share, not misclassification-adjusted, rose from 7.8% in 2021 to 16.4% in 2022 and 27.4% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +3.9 pp (90% CI +1.0 to +6.8) in the share whose last play was at least 30 days after the review. This is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "退回桌面就再也打不开了",
+          "translation_en": "After returning to the desktop, I couldn't open it again."
+        },
+        {
+          "quote": "3 Crash seguido, não dá pra jogar",
+          "translation_en": "Three crashes in a row; it's impossible to play."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull startup failures and crash signatures by patch, hardware and driver version.",
+        "Reproduce black-screen and reopen failures on reported configurations.",
+        "Measure crash-free sessions and recovery success across the builds associated with the annual increase."
+      ],
+      "owner_team": "Client Engineering",
+      "not_established_en": "The data do not identify crash root causes or prove worsening reliability from the review-share trend, establish prevalence outside negative reviewers, or estimate repair ROI. Interval uncertainty and the retention CI caution lower confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Cyberpunk 2077",
+      "factor_id": "tech.performance",
+      "title_en": "Low frame rates and driving input lag",
+      "what_players_report_en": "Players criticize performance and frame-rate drops. One reports barely reaching the stated frame rate, while another describes input lag when driving.",
+      "scale_en": "Among the game's negative reviews, sample tier: 14.1% (59 of 419 random negative reviews; 90% CI 11.5%–17.1%). Pooled classifier-adjusted diagnostic: 15.9%; held-out classifier F1: 0.77. Raw classifier-flagged share, not misclassification-adjusted, fell from 17.9% in 2020 to 7.1% in 2021 and was 7.9% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +2.0 pp (90% CI +0.7 to +3.4) in the share whose last play was at least 30 days after the review. This is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "I can barely go at 20 fps",
+          "translation_en": "I can barely go at 20 fps"
+        },
+        {
+          "quote": "suffers from input lag when driving",
+          "translation_en": "suffers from input lag when driving"
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull frame-time distributions by patch, hardware, settings and location.",
+        "Reproduce driving input lag and measure input-to-display latency.",
+        "Collect performance traces from affected players to identify CPU, GPU or streaming bottlenecks."
+      ],
+      "owner_team": "Performance Engineering",
+      "not_established_en": "The data do not establish hardware or software root causes, prevalence outside negative reviewers, or repair ROI. Sample uncertainty, imperfect classification and the retention CI caution reduce confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Cyberpunk 2077",
+      "factor_id": "content.narrative",
+      "title_en": "Unengaging story and repetitive dialogue",
+      "what_players_report_en": "Players describe the story as boring or unengaging, and one considers it unfinished. Another criticizes copied NPCs and dialogue.",
+      "scale_en": "Among the game's negative reviews, sample tier: 10.7% (45 of 419 random negative reviews; 90% CI 8.5%–13.5%). Pooled classifier-adjusted diagnostic: 8.8%; held-out classifier F1: 0.82. No clear sustained annual trend in the supplied raw classifier-flagged shares.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -5.4 pp (90% CI -6.6 to -4.1) in the share whose last play was at least 30 days after the review. This is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "wasn't very engaged or interested with the story",
+          "translation_en": "wasn't very engaged or interested with the story"
+        },
+        {
+          "quote": "copy-pasted NPCs and dialogue",
+          "translation_en": "copy-pasted NPCs and dialogue"
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Ask reviewers which quests, characters and dialogue passages lost their interest.",
+        "Pull quest progression and stopping points for relevant cohorts where linkage is available.",
+        "Run narrative playtests and audit the specific repeated dialogue or unfinished arcs players identify."
+      ],
+      "owner_team": "Narrative Design",
+      "not_established_en": "The data do not establish why the story failed expectations, whether content was actually unfinished, prevalence outside negative reviewers, or repair ROI. Sample uncertainty and the retention CI caution lower confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Cyberpunk 2077",
+      "factor_id": "gameplay.core_loop",
+      "title_en": "Awkward controls and unsatisfying combat",
+      "what_players_report_en": "Players criticize awkward controls, combat pacing and boring fights. They also describe poor driving and shooting feel.",
+      "scale_en": "Among the game's negative reviews, sample tier: 6.0% (25 of 419 random negative reviews; 90% CI 4.3%–8.2%). Pooled classifier-adjusted diagnostic: 7.3%; held-out classifier F1: 0.62. No clear sustained annual trend in the supplied raw classifier-flagged shares.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -3.6 pp (90% CI -4.3 to -2.8) in the share whose last play was at least 30 days after the review. This is not a causal effect. Caution: the single-title model has only 12 quarter clusters, so this CI may be too narrow; treat it as descriptive.",
+      "evidence": [
+        {
+          "quote": "controls are clunky and awkward, along with the pacing of combat",
+          "translation_en": "controls are clunky and awkward, along with the pacing of combat"
+        },
+        {
+          "quote": "驾驶手感和射击手感稀烂",
+          "translation_en": "The driving and shooting feel are terrible."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Ask players for the input device, build and specific driving or combat interaction involved.",
+        "Observe driving and combat tasks while collecting control and pacing feedback.",
+        "Measure input response, action interruptions and encounter pacing in the identified scenarios."
+      ],
+      "owner_team": "Core Gameplay Design",
+      "not_established_en": "The data do not identify control or combat root causes, establish prevalence outside negative reviewers, or estimate repair ROI. The modest positive sample, limited classifier quality and retention CI caution warrant low confidence.",
+      "confidence": "low"
+    },
+    {
+      "game": "Terraria",
+      "factor_id": "tech.save_integrity",
+      "title_en": "Lost characters, worlds and saved progress",
+      "what_players_report_en": "Players report characters, worlds or belongings disappearing. One describes discovering the loss after leaving and returning to the game.",
+      "scale_en": "Among the game's negative reviews, sample tier: 6.9% (28 of 408 random negative reviews; 90% CI 5.1%–9.2%). Pooled classifier-adjusted diagnostic: 5.3%; held-out classifier F1: 0.65. No clear sustained annual trend in the supplied raw classifier-flagged shares.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +5.4 pp (90% CI +3.2 to +7.6) in the share whose last play was at least 30 days after the review. This is not a causal effect or evidence that data loss helps retention. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "it deleted all my stuff",
+          "translation_en": "it deleted all my stuff"
+        },
+        {
+          "quote": "我退一下游戏上线一看就没了",
+          "translation_en": "I left the game briefly, and when I came back it was gone."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Collect affected saves, backups and save or sync logs with player consent.",
+        "Reproduce exit-and-reopen flows, interrupted writes and sync conflicts on test saves.",
+        "Audit backup creation and restoration outcomes, separating local and cloud save paths."
+      ],
+      "owner_team": "Persistence Engineering",
+      "not_established_en": "The data do not establish whether loss arose from saving, synchronization or another cause, prevalence outside negative reviewers, or repair ROI. The modest sample and limited classifier quality constrain confidence.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Terraria",
+      "factor_id": "tech.stability",
+      "title_en": "Startup crashes and freezes",
+      "what_players_report_en": "Players report that the game will not launch or crashes when opened. Other quotes describe freezing and inability to launch from the library.",
+      "scale_en": "Among the game's negative reviews, sample tier: 4.7% (19 of 408 random negative reviews; 90% CI 3.2%–6.7%). Pooled classifier-adjusted diagnostic: 3.5%; held-out classifier F1: 0.81. Raw classifier-flagged share, not misclassification-adjusted, declined from 9.9% in 2017 to 3.8% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +8.5 pp (90% CI +7.0 to +10.0) in the share whose last play was at least 30 days after the review. This is not a causal effect or evidence that crashes help retention. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "it crashes when It opens",
+          "translation_en": "it crashes when It opens"
+        },
+        {
+          "quote": "ライブラリからの起動も出来ず",
+          "translation_en": "I can't even launch it from the library."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Pull startup and crash logs by build, operating system and installed modifications.",
+        "Reproduce library launch and freeze reports on affected configurations.",
+        "Measure relaunch and recovery outcomes after the identified failures."
+      ],
+      "owner_team": "Client Engineering",
+      "not_established_en": "The data do not identify startup or crash root causes, establish prevalence outside negative reviewers, or estimate repair ROI. Few sample positives limit confidence despite stronger classifier performance.",
+      "confidence": "medium"
+    },
+    {
+      "game": "Terraria",
+      "factor_id": "gameplay.challenge",
+      "title_en": "Difficulty feels excessive and unfriendly to beginners",
+      "what_players_report_en": "Players describe the game as too difficult and lacking consideration for beginners. One says the difficulty leaves them unable to do anything.",
+      "scale_en": "Among the game's negative reviews, sample tier: 4.2% (17 of 408 random negative reviews; 90% CI 2.8%–6.1%). Pooled classifier-adjusted diagnostic: 3.8%; held-out classifier F1: 0.58, lowering confidence in classifier-tier numbers. No clear sustained annual trend in the supplied raw classifier-flagged shares.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: +3.6 pp (90% CI +1.0 to +6.3) in the share whose last play was at least 30 days after the review. This is not a causal effect; weak classification also limits interpretation of the flagged group. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "这游戏太难了，什么都做不了",
+          "translation_en": "This game is too hard; I can't do anything."
+        },
+        {
+          "quote": "초보한테배려가없는게임",
+          "translation_en": "A game with no consideration for beginners."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Ask players which difficulty mode, progression stage and encounters caused problems.",
+        "Pull deaths, retries and progression stalls by encounter and player experience.",
+        "Observe beginner sessions and manually audit classifier errors separating difficulty from missing guidance."
+      ],
+      "owner_team": "Encounter Design",
+      "not_established_en": "The data do not establish encounter imbalance or its root cause, prevalence outside negative reviewers, or repair ROI. Few sample positives, a relatively wide interval and classifier F1 below the requested threshold warrant low confidence.",
+      "confidence": "low"
+    },
+    {
+      "game": "Terraria",
+      "factor_id": "gameplay.core_loop",
+      "title_en": "Repetitive play and unsatisfying combat",
+      "what_players_report_en": "Players criticize combat and describe play as repetitive or tedious. One describes spending time sitting in a castle and waiting.",
+      "scale_en": "Among the game's negative reviews, sample tier: 2.9% (12 of 408 random negative reviews; 90% CI 1.8%–4.7%). Pooled classifier-adjusted diagnostic: ≈0% (the pooled misclassification correction is uninformative for this title). Prefer the sample tier; this does not mean nobody complains. Held-out classifier F1: 0.62. Raw classifier-flagged share, not misclassification-adjusted, generally declined from 7.3% in 2015 to 3.0% in 2023.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -9.8 pp (90% CI -11.9 to -7.6) in the share whose last play was at least 30 days after the review. This is not a causal effect. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "awful combat",
+          "translation_en": "awful combat"
+        },
+        {
+          "quote": "ele se torna extremamente repetitivo e massante",
+          "translation_en": "It becomes extremely repetitive and tedious."
+        },
+        {
+          "quote": "“you basically just sit there in the castle and wait”",
+          "translation_en": "“you basically just sit there in the castle and wait”"
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Ask reviewers which combat actions and progression loops felt repetitive.",
+        "Observe relevant sessions and measure time spent fighting, repeating tasks and waiting.",
+        "Reproduce the identified encounters and collect feedback by weapon, progression stage and input device."
+      ],
+      "owner_team": "Core Gameplay Design",
+      "not_established_en": "The data do not identify the cause of unsatisfying combat or repetition, establish prevalence outside negative reviewers, or estimate repair ROI. Few sample positives, limited classifier quality and an uninformative correction warrant low confidence.",
+      "confidence": "low"
+    },
+    {
+      "game": "Terraria",
+      "factor_id": "ux.onboarding",
+      "title_en": "Insufficient guidance for new players",
+      "what_players_report_en": "Players describe the game as unfriendly to newcomers and lacking prompts. One says they play with a wiki open alongside the game.",
+      "scale_en": "Among the game's negative reviews, sample tier: 3.4% (14 of 408 random negative reviews; 90% CI 2.2%–5.2%). Pooled classifier-adjusted diagnostic: 4.4%; held-out classifier F1: 0.69. No clear sustained annual trend in the supplied raw classifier-flagged shares.",
+      "retention_signal_en": "Adjusted association among negative reviewers, flagged versus other negative reviewers: -8.5 pp (90% CI -10.8 to -6.2) in the share whose last play was at least 30 days after the review. This is not a causal effect. Additional retention CI caution: not estimated.",
+      "evidence": [
+        {
+          "quote": "没有任何提示",
+          "translation_en": "There are no hints at all."
+        },
+        {
+          "quote": "играть параллельно с открытой википедией",
+          "translation_en": "To play with Wikipedia open alongside."
+        }
+      ],
+      "next_investigation_steps_en": [
+        "Observe first-time players and record unclear goals, failed actions and external lookups.",
+        "Pull early progression and help-interaction logs to locate stalls.",
+        "Ask complainants which missing instructions mattered, then test whether existing guidance answers those questions."
+      ],
+      "owner_team": "Onboarding Design",
+      "not_established_en": "The data do not establish which guidance failures caused disengagement, prevalence outside negative reviewers, or repair ROI. Few sample positives, relative interval width and moderate classifier quality warrant low confidence.",
+      "confidence": "low"
+    }
+  ]
+}

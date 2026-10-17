@@ -1,0 +1,26 @@
+{
+  "elapsed_seconds": 6988.367840583,
+  "fold_assignment_sha256": "954e7e113751f7fe451acd294d57b6122e1478751e3a04b94120c1eb7083caa2",
+  "folds": 10,
+  "full_refits_completed": false,
+  "full_run_completed": true,
+  "models": [
+    "logistic_structured",
+    "logistic_structured_nlp",
+    "lightgbm_structured",
+    "lightgbm_structured_nlp"
+  ],
+  "package_versions": {
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "python": "3.12.14",
+    "sklearn": "1.9.0"
+  },
+  "peak_rss_gb": 13.886917114257812,
+  "positive_rows": 4396310,
+  "rows": 8873576,
+  "run_mode": "full",
+  "source_sha256": "483c6ebe5b8239153eacd58323c7c04f9624b5d40d3d49192b50ced781aacc46",
+  "staging_signature": "3a1fc881c7c3e9a797b14f41461108f17e0278bce9b01235b86a4895a44669a0"
+}

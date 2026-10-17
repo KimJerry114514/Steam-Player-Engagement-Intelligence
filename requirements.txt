@@ -1,0 +1,28 @@
+# Python 3.12; recorded versions for the completed modeling and persona analysis.
+# Notebook execution and interactive analysis
+ipykernel==7.3.0
+ipython==9.17.1
+joblib==1.6.0
+jupyterlab==4.6.3
+nbconvert==7.17.1
+nbformat==5.11.1
+
+# Modeling, scoring, and calibration
+lightgbm==4.7.0
+psutil==7.2.2
+scikit-learn==1.9.0
+threadpoolctl==3.6.0
+scipy==1.18.1
+
+# Shared data preparation and full-history user persona analysis
+# Persona requires LightGBM above plus all six libraries in this group.
+duckdb==1.5.5
+numpy==2.5.3
+pandas==3.0.5
+pyarrow==25.0.1
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# Additional raw data-preparation dependencies
+ijson>=3.4,<4
+pytz>=2025.2

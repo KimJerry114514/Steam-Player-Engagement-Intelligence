@@ -1,0 +1,109 @@
+{
+  "evaluated_at_utc": "2026-10-06T16:30:57+00:00",
+  "rules_frozen_at_utc": "2026-10-06T16:30:18+00:00",
+  "test_2023_all": {
+    "rows": 2154782,
+    "actual_rate": 0.3727,
+    "raw": {
+      "mean_pred": 0.5014,
+      "auc": 0.8235,
+      "ap": 0.7475,
+      "log_loss": 0.5422,
+      "brier": 0.1813
+    },
+    "platt": {
+      "mean_pred": 0.46,
+      "auc": 0.8235,
+      "ap": 0.7475,
+      "log_loss": 0.513,
+      "brier": 0.1706
+    },
+    "ranking": {
+      "top_10pct": {
+        "precision": 0.8871,
+        "recall": 0.238,
+        "lift": 2.38
+      },
+      "top_20pct": {
+        "precision": 0.8078,
+        "recall": 0.4335,
+        "lift": 2.168
+      },
+      "top_50pct": {
+        "precision": 0.5936,
+        "recall": 0.7965,
+        "lift": 1.593
+      }
+    },
+    "calibration_by_decile_platt": [
+      {
+        "decile": 1,
+        "mean_pred": 0.068,
+        "actual": 0.0309
+      },
+      {
+        "decile": 2,
+        "mean_pred": 0.1565,
+        "actual": 0.0994
+      },
+      {
+        "decile": 3,
+        "mean_pred": 0.2106,
+        "actual": 0.1499
+      },
+      {
+        "decile": 4,
+        "mean_pred": 0.2781,
+        "actual": 0.2067
+      },
+      {
+        "decile": 5,
+        "mean_pred": 0.3655,
+        "actual": 0.2714
+      },
+      {
+        "decile": 6,
+        "mean_pred": 0.468,
+        "actual": 0.3492
+      },
+      {
+        "decile": 7,
+        "mean_pred": 0.5776,
+        "actual": 0.4354
+      },
+      {
+        "decile": 8,
+        "mean_pred": 0.7045,
+        "actual": 0.568
+      },
+      {
+        "decile": 9,
+        "mean_pred": 0.8337,
+        "actual": 0.7285
+      },
+      {
+        "decile": 10,
+        "mean_pred": 0.9378,
+        "actual": 0.8871
+      }
+    ]
+  },
+  "test_2023_unedited": {
+    "rows": 1936507,
+    "actual_rate": 0.3484,
+    "raw": {
+      "mean_pred": 0.4941,
+      "auc": 0.824,
+      "ap": 0.7296,
+      "log_loss": 0.5471,
+      "brier": 0.1829
+    },
+    "platt": {
+      "mean_pred": 0.453,
+      "auc": 0.824,
+      "ap": 0.7296,
+      "log_loss": 0.5134,
+      "brier": 0.1705
+    }
+  }
+}

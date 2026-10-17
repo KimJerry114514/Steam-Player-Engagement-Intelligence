@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-label="Candidate-key duplicate groups">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="480.0" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="600">Candidate-key duplicate groups</text>
+<line x1="75" y1="335" x2="930" y2="335" stroke="#555"/>
+<rect x="104.92" y="55.00" width="153.90" height="280.00" fill="#3b82a0"><title>exact_duplicate: 101</title></rect>
+<text x="181.88" y="349" text-anchor="end" transform="rotate(-55 181.88 349)" font-family="Arial" font-size="10">exact_duplicate</text>
+<rect x="318.68" y="268.47" width="153.90" height="66.53" fill="#3b82a0"><title>likely_updated_version: 24</title></rect>
+<text x="395.62" y="349" text-anchor="end" transform="rotate(-55 395.62 349)" font-family="Arial" font-size="10">likely_updated_version</text>
+<rect x="532.42" y="107.67" width="153.90" height="227.33" fill="#3b82a0"><title>other_payload_variant_ambiguous: 82</title></rect>
+<text x="609.38" y="349" text-anchor="end" transform="rotate(-55 609.38 349)" font-family="Arial" font-size="10">other_payload_variant_ambiguous</text>
+<rect x="746.17" y="323.91" width="153.90" height="11.09" fill="#3b82a0"><title>text_variant_same_update_time: 4</title></rect>
+<text x="823.12" y="349" text-anchor="end" transform="rotate(-55 823.12 349)" font-family="Arial" font-size="10">text_variant_same_update_time</text>
+<line x1="70" y1="335.00" x2="930" y2="335.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="339.00" text-anchor="end" font-family="Arial" font-size="10">0</text>
+<line x1="70" y1="279.00" x2="930" y2="279.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="283.00" text-anchor="end" font-family="Arial" font-size="10">20</text>
+<line x1="70" y1="223.00" x2="930" y2="223.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="227.00" text-anchor="end" font-family="Arial" font-size="10">40</text>
+<line x1="70" y1="167.00" x2="930" y2="167.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="171.00" text-anchor="end" font-family="Arial" font-size="10">61</text>
+<line x1="70" y1="111.00" x2="930" y2="111.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="115.00" text-anchor="end" font-family="Arial" font-size="10">81</text>
+<line x1="70" y1="55.00" x2="930" y2="55.00" stroke="#ddd" stroke-width="1"/>
+<text x="65" y="59.00" text-anchor="end" font-family="Arial" font-size="10">101</text>
+</svg>

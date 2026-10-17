@@ -1,0 +1,25 @@
+# Data and locally generated artifacts
+/data/
+/models/
+/runs/
+*.parquet
+*.pt
+*.pkl
+*.joblib
+*.duckdb
+*.db
+# Environments, caches, and operating-system files
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+.env
+.env.*
+credentials*.json

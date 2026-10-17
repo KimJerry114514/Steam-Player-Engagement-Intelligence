@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "rows": 16412862,
+  "date_range_utc": [
+    "2010-10-15 23:40:51+00",
+    "2023-11-03 15:21:26+00"
+  ],
+  "new_predictions": 11474946,
+  "archived_predictions_and_labels_preserved": 4937916,
+  "archived_assignment_mismatches": 0,
+  "preprocessing_reproduction_sample_max_abs_error": 0.0,
+  "training_cutoff_reference_rows": 10763783,
+  "prior_hours_cutoff": 11.78,
+  "score_percentile": 55,
+  "raw_score_cutoffs": {
+    "val": 0.5637073779609005,
+    "test": 0.5315348887810566,
+    "train": 0.6038751510202826
+  },
+  "period_and_model_cohort_counts": [
+    {
+      "split": "test",
+      "model_cohort": "test",
+      "rows": 2154782
+    },
+    {
+      "split": "test",
+      "model_cohort": "unlabeled",
+      "rows": 657632
+    },
+    {
+      "split": "train",
+      "model_cohort": "train",
+      "rows": 10763783
+    },
+    {
+      "split": "train",
+      "model_cohort": "unlabeled",
+      "rows": 38109
+    },
+    {
+      "split": "val",
+      "model_cohort": "unlabeled",
+      "rows": 15422
+    },
+    {
+      "split": "val",
+      "model_cohort": "val",
+      "rows": 2783134
+    }
+  ],
+  "training_predictions": "Final fitted model, in sample for the eligible original training cohort; not out-of-fold predictions or independent evaluation.",
+  "unlabeled_records": "Scored without requiring a binary D30 outcome; the original eligible-cohort cutoff for their period is applied.",
+  "method": "Existing P55 rule extended without retraining or threshold optimization; new training-period cutoff uses the original eligible training cohort scores.",
+  "input_sha256": {
+    "data/processed/negative_reviews_cleaned.parquet": "9d196c7dc70e04dd911dcf12c2956100afc940ab1d5371eeb5d7cfe7c0afb5f0",
+    "data/processed/nlp/nlp_factor_scores_2023.parquet": "f942334c49606cb445d1909ffef4cc4166bada0c0f98e3b55e5b0de4439d6d40",
+    "results/segmentation/review_segments_p55.parquet": "3b1e84424083a49566ce93c8ed6ce500b800c09dd2cb1f9befaae03c7e110e7e",
+    "models/lightgbm/training_full_model.txt": "2051bcc60a21ab7812333623df8b5bf758153799acfa5f64a023df5dc80e8078",
+    "models/lightgbm/training_full_model.json": "d938e86da51cbabcb0cb8c879a8ab2ef1e27b9fd88ffbf65d3ceddb5bae5ec87",
+    "results/segmentation/applied_thresholds.json": "975696b111369a20bd292380a51e6f5bad191cc32dabe8d4a09fdb5a8a1b9f2a",
+    "results/segmentation/selected_segmentation_rules.json": "de181ef29cd82cbc6965a6f7a581ba2002f68b9cb1cd84c638138c12065448b0"
+  },
+  "source_code_sha256": "65e21b669051569cd345d93c1d5b66078074da7c19e613145f0a8e55593b7af4",
+  "output_sha256": "4e81185a856b2552ee71f1c9b18b92469b323e77cf87aff412f4649240201a54",
+  "seconds": 144.5,
+  "stored_raw_cutoff_type": "double, matching the original archived segmentation",
+  "packaged_source_code_sha256": "d75952e5334448d43c9a1e91ecd8feff0747556a75cf8986e38eb8d6377a8fe9",
+  "packaging_note": "Original full-history predictions and numeric rules preserved byte-for-byte. Input paths and package imports were adapted for the self-contained TA project. source_code_sha256 identifies the original generator; packaged_source_code_sha256 identifies the portable generator."
+}

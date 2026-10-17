@@ -1,0 +1,22 @@
+{
+  "rows_checked": 4937916,
+  "source_columns_unchanged": true,
+  "selected_pair_is_grid_winner": true,
+  "checks": [
+    {
+      "split": "val",
+      "rows": 2783134,
+      "every_assignment_correct": true,
+      "raw_calibrated_assignments_equal": true,
+      "all_summaries_correct": true
+    },
+    {
+      "split": "test",
+      "rows": 2154782,
+      "every_assignment_correct": true,
+      "raw_calibrated_assignments_equal": true,
+      "all_summaries_correct": true
+    }
+  ],
+  "status": "passed"
+}

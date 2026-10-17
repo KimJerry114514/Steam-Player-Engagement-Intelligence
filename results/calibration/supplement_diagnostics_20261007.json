@@ -1,0 +1,195 @@
+{
+  "note": "Added 2026-10-07 after audit. Descriptive only; frozen rules and test_evaluation.json unchanged.",
+  "test_period_covered": [
+    "2023-01-01 00:00:03+00:00",
+    "2023-09-05 01:07:33+00:00"
+  ],
+  "test_auc_game_clustered": {
+    "auc": 0.8235,
+    "ci95": [
+      0.7929,
+      0.8504
+    ],
+    "games": 36188,
+    "resamples": 500
+  },
+  "val_auc_game_clustered": {
+    "auc": 0.8244,
+    "ci95": [
+      0.8022,
+      0.8458
+    ],
+    "games": 41979,
+    "resamples": 500
+  },
+  "test_games_seen_vs_new": {
+    "seen_in_training_share_of_rows": 0.5684,
+    "auc_seen": 0.8504,
+    "auc_new": 0.7902
+  },
+  "test_largest_game": {
+    "appid": 2357570,
+    "share_of_rows": 0.0738,
+    "auc_this_game": 0.6671,
+    "auc_without_it": 0.8349
+  },
+  "test_calibration_by_followup_quartile": [
+    {
+      "quartile": "Q1 shortest",
+      "median_days": 81.1,
+      "actual": 0.3049,
+      "mean_platt": 0.4257,
+      "gap_pp": 12.1,
+      "auc": 0.7705
+    },
+    {
+      "quartile": "Q2",
+      "median_days": 137.0,
+      "actual": 0.3565,
+      "mean_platt": 0.4692,
+      "gap_pp": 11.3,
+      "auc": 0.8454
+    },
+    {
+      "quartile": "Q3",
+      "median_days": 209.4,
+      "actual": 0.4001,
+      "mean_platt": 0.467,
+      "gap_pp": 6.7,
+      "auc": 0.8371
+    },
+    {
+      "quartile": "Q4 longest",
+      "median_days": 273.2,
+      "actual": 0.4292,
+      "mean_platt": 0.4783,
+      "gap_pp": 4.9,
+      "auc": 0.8335
+    }
+  ],
+  "test_monthly_auc": {
+    "2023-01": 0.8434,
+    "2023-02": 0.8294,
+    "2023-03": 0.8338,
+    "2023-04": 0.8416,
+    "2023-05": 0.8504,
+    "2023-06": 0.8415,
+    "2023-07": 0.8349,
+    "2023-08": 0.7533,
+    "2023-09": 0.8097
+  },
+  "test_platt_gap_closed": 0.321,
+  "test_unedited_ranking": {
+    "top_10pct": {
+      "precision": 0.8699,
+      "recall": 0.2497,
+      "lift": 2.497
+    },
+    "top_20pct": {
+      "precision": 0.7822,
+      "recall": 0.449,
+      "lift": 2.245
+    },
+    "top_50pct": {
+      "precision": 0.5621,
+      "recall": 0.8067,
+      "lift": 1.613
+    }
+  },
+  "test_unedited_calibration_by_decile": [
+    {
+      "decile": 1,
+      "mean_pred": 0.0653,
+      "actual": 0.0261
+    },
+    {
+      "decile": 2,
+      "mean_pred": 0.1533,
+      "actual": 0.0863
+    },
+    {
+      "decile": 3,
+      "mean_pred": 0.2058,
+      "actual": 0.1339
+    },
+    {
+      "decile": 4,
+      "mean_pred": 0.2705,
+      "actual": 0.1839
+    },
+    {
+      "decile": 5,
+      "mean_pred": 0.3554,
+      "actual": 0.2434
+    },
+    {
+      "decile": 6,
+      "mean_pred": 0.4575,
+      "actual": 0.3173
+    },
+    {
+      "decile": 7,
+      "mean_pred": 0.5667,
+      "actual": 0.4012
+    },
+    {
+      "decile": 8,
+      "mean_pred": 0.6936,
+      "actual": 0.5278
+    },
+    {
+      "decile": 9,
+      "mean_pred": 0.8265,
+      "actual": 0.6946
+    },
+    {
+      "decile": 10,
+      "mean_pred": 0.9355,
+      "actual": 0.8699
+    }
+  ],
+  "segments_2022_frozen_rule": {
+    "hours_cut": 8.42,
+    "prob_median_this_period": 0.5092,
+    "segments": {
+      "Dropout": {
+        "share": 0.0875,
+        "actual_d30": 0.3191
+      },
+      "Hardcore": {
+        "share": 0.4253,
+        "actual_d30": 0.748
+      },
+      "New Blood": {
+        "share": 0.0747,
+        "actual_d30": 0.534
+      },
+      "Nobody": {
+        "share": 0.4125,
+        "actual_d30": 0.2109
+      }
+    }
+  },
+  "segments_2023_frozen_rule": {
+    "hours_cut": 8.42,
+    "prob_median_this_period": 0.4754,
+    "segments": {
+      "Dropout": {
+        "share": 0.0698,
+        "actual_d30": 0.1808
+      },
+      "Hardcore": {
+        "share": 0.4107,
+        "actual_d30": 0.6352
+      },
+      "New Blood": {
+        "share": 0.0893,
+        "actual_d30": 0.4027
+      },
+      "Nobody": {
+        "share": 0.4302,
+        "actual_d30": 0.1469
+      }
+    }
+  }
+}

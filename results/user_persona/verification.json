@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "method": "Independent Arrow/NumPy full-cohort recount; no DuckDB aggregation reused",
+  "records_checked": 16412862,
+  "every_segment_key_matched_once": true,
+  "aggregate_rows_checked": 688,
+  "factor_counts_and_rates_match": true,
+  "domain_union_counts_and_rates_match": true,
+  "overall_baselines_and_percentage_point_differences_match": true,
+  "all_sixteen_top5_lists_rank_correctly": true,
+  "cohort_totals_and_intensity_match": true,
+  "every_numeric_segmentation_assignment_matches": true,
+  "original_scores_cutoffs_and_labels_preserved": 4937916,
+  "new_training_percentile_independently_verified": true,
+  "all_711163_unlabeled_records_included": true
+}

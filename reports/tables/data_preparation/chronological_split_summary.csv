@@ -1,0 +1,10 @@
+design,split,min_date,max_date,advantage,limitation,review_age_bias_remains,review_count,negative_review_count,unique_games,playtime_target_available,genre_coverage
+A: broad historical holdout,train,2010-10-15,2018-12-31,largest training history and a genuinely forward holdout,period and platform shifts; test combines 2020 with partial 2021,true,8052061,1328137,7918,8052061,76
+A: broad historical holdout,validation,2019-01-01,2019-12-31,largest training history and a genuinely forward holdout,period and platform shifts; test combines 2020 with partial 2021,true,2482838,262308,7413,2482838,75
+A: broad historical holdout,test,2020-01-01,2021-04-23,largest training history and a genuinely forward holdout,period and platform shifts; test combines 2020 with partial 2021,true,4902572,422740,7343,4902572,75
+B: recent narrow cohort,train,2019-01-01,2019-12-31,closer review eras and avoids the incomplete 2021 tail,uses less history and still cannot equalize unknown exposure time,true,2482838,262308,7413,2482838,75
+B: recent narrow cohort,validation,2020-01-01,2020-06-30,closer review eras and avoids the incomplete 2021 tail,uses less history and still cannot equalize unknown exposure time,true,1994859,170678,6976,1994859,75
+B: recent narrow cohort,test,2020-07-01,2020-12-31,closer review eras and avoids the incomplete 2021 tail,uses less history and still cannot equalize unknown exposure time,true,1782271,154675,6902,1782271,75
+C: expanding-window example,train,2010-10-15,2018-12-31,supports repeated forward checks when extended to adjacent yearly folds,higher operational complexity and exposure bias persists within every fold,true,8052061,1328137,7918,8052061,76
+C: expanding-window example,validation,2019-01-01,2019-12-31,supports repeated forward checks when extended to adjacent yearly folds,higher operational complexity and exposure bias persists within every fold,true,2482838,262308,7413,2482838,75
+C: expanding-window example,test,2020-01-01,2020-12-31,supports repeated forward checks when extended to adjacent yearly folds,higher operational complexity and exposure bias persists within every fold,true,3777130,325353,7274,3777130,75

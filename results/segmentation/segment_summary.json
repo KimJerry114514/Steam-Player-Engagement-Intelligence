@@ -1,0 +1,58 @@
+[
+  {
+    "split": "val",
+    "segment": "Hardcore",
+    "rows": 1040018,
+    "share": 0.3736859238541874,
+    "observed_d30_proxy": 0.7753404268003053
+  },
+  {
+    "split": "val",
+    "segment": "Dropout",
+    "rows": 229621,
+    "share": 0.08250447157772496,
+    "observed_d30_proxy": 0.3703755318546649
+  },
+  {
+    "split": "val",
+    "segment": "New Blood",
+    "rows": 212392,
+    "share": 0.07631396835366173,
+    "observed_d30_proxy": 0.5828185619044032
+  },
+  {
+    "split": "val",
+    "segment": "Nobody",
+    "rows": 1301103,
+    "share": 0.4674956362144259,
+    "observed_d30_proxy": 0.2313798369537231
+  },
+  {
+    "split": "test",
+    "segment": "Hardcore",
+    "rows": 776923,
+    "share": 0.3605575877281321,
+    "observed_d30_proxy": 0.669677690067098
+  },
+  {
+    "split": "test",
+    "segment": "Dropout",
+    "rows": 141936,
+    "share": 0.06587023652508699,
+    "observed_d30_proxy": 0.21198286551685266
+  },
+  {
+    "split": "test",
+    "segment": "New Blood",
+    "rows": 192729,
+    "share": 0.08944245868027485,
+    "observed_d30_proxy": 0.4355805301744937
+  },
+  {
+    "split": "test",
+    "segment": "Nobody",
+    "rows": 1043194,
+    "share": 0.48412971706650604,
+    "observed_d30_proxy": 0.16167941916843848
+  }
+]

@@ -1,0 +1,3216 @@
+{
+  "design_principles": [
+    "Codebook v1.1 supersedes v1. Only codebook_v1.json and the three specified critic reports were read; human-annotator feedback supplied in the request was incorporated. No files were modified and no web sources were used.",
+    "All factor and domain display labels use English. Multilingual cues are annotation aids, not verified quotations or sufficient keyword rules.",
+    "Factors identify text-supported product complaints, including explicitly attributed evaluations and allegations. They do not establish engineering causes, internal priorities, malicious intent, or historical facts.",
+    "Owner teams are proposed accountable routing roles, not verified organizational assignments. Routing an allegation does not endorse it.",
+    "Preserve universal -> family -> game relationships where substantive distinctions justify them. Families describe reusable mechanisms and may cross genres. Related sandbox world/character-state mechanisms share a family identifier but retain distinct universal parents.",
+    "Annotate original-language evidence spans and complaint propositions. Store the most specific eligible factor as primary; derive ancestors only for roll-up. Never count an ancestor and its descendant as independent complaints.",
+    "Core means ready for annotation calibration, not a validated classifier. Candidate factors remain in calibration and diagnostic records until validated. Watchlist leaves remain non-production hypotheses. Production coding uses a supported core ancestor; if none exists, retain an unresolved record rather than forcing another factor.",
+    "When one proposition explicitly supports multiple non-ancestor factors, preserve linked annotations using one proposition ID. Separate propositions require separately identifiable evidence. Review prevalence counts each review once per factor; proposition totals must deduplicate linked annotations.",
+    "The v1 provenance reports 3,244 records across 31 syntheses before deduplication. approx_support remains a single-code discovery anchor, not a deduplicated count, sum, prevalence estimate, or confidence score. Narrowed definitions require recoding; inherited anchors are not recalculated memberships.",
+    "Omit approx_support when no numerical anchor is available. The owner's 80-review exercise is a sampling denominator, not the number of update-regression complaints. Critic-supplied examples and counts are secondary provenance, not independently inspected reviews.",
+    "Add service.update_regression for explicit complaints that an update, patch, or version transition worsened the experience. An affected subsystem need not be identified. Mere update timing is metadata; explicit deterioration is a complaint factor.",
+    "Update regression is distinct from content availability, maintenance claims, and communication. A patch removing a valued feature may support linked regression and content annotations. Do not infer neglect, bad communication, or a verified causal mechanism.",
+    "Technical coding follows operability and referent: slow or intermittently stalled execution that resumes is performance; failure to launch, termination, or inability to continue until recovery/restart is stability; a named feature or state transition failing is functionality. Duration alone does not resolve an ambiguous freeze.",
+    "Generic bugs must not duplicate a named crash or freeze in the same proposition. Explicit compatibility evidence takes precedence over a bare launch symptom for that proposition. Do not infer an intentional platform prohibition from incompatibility.",
+    "Working but implausible simulated behavior uses gameplay.ai_simulation. Discrete malfunction uses tech.functionality. If unclear, explicit bug/failure wording may support functionality; otherwise preserve ambiguity.",
+    "Human pairing disparity, human-match scarcity, and chosen-group participation barriers are separate. A bot-filled match does not automatically establish an additional skill-matching complaint.",
+    "Cheating requires an explicit unauthorized-advantage or failed-enforcement allegation. Permitted aim assistance uses input balance. Unqualified auto-aim wording remains unresolved.",
+    "Bare boring gameplay is affect and unresolved aspect evaluation. gameplay.core_loop requires an identifiable action, interaction, or cadence referent. Do not infer onboarding failure, completion, or player incompetence.",
+    "Paid randomness requires textual evidence of both payment and uncertain acquisition. Spending without obtaining an item does not establish a random mechanism through outside game knowledge.",
+    "Maintenance factors record the reviewer's explicit stewardship claim. Reported update/fix history is stored separately from inferred priorities or abandonment; neither is independently verified by annotation.",
+    "Participant absence or noncooperation does not establish intent. Administrative abuse, participant misconduct, specific disputed sanctions, public communication, and individual case handling have separate boundaries.",
+    "Steam recommendation, textual polarity, attribution, affect, harm, stated behavior, and observed behavior remain separate. Positive or descriptive aspect mentions do not activate complaint factors.",
+    "Jerry's seed judgments remain design checks, not immutable ground truth. Revise seed labels when the final rules require it; preserve uncertainty where original seed text is unavailable.",
+    "Keep source stratum, discovery code, merged aliases, example IDs, evidence availability, and migration decisions. Crosswalk targets are conditional alternatives; compound codes require span-level recoding and never transfer their full counts to every destination.",
+    "Validate with independent double coding, adjudication, per-language positive agreement, sibling-confusion analysis, and held-out games/time periods. Cluster duplicate templates and reviewer histories across splits. Promote factors using independently worded evidence and operational usefulness.",
+    "Keep future behavior outside factor annotation and classifier inputs. Prespecify follow-up windows, censoring, representative sampling, and weighting. Continued play does not establish low harm; associations do not establish causal effects.",
+    "All critic issues are addressed. Where competing recommendations required a different implementation, the decision and reason are recorded in open_questions."
+  ],
+  "domains": [
+    {
+      "id": "tech",
+      "label": "Technical quality",
+      "description": "Execution, persistent state, online continuity, synchronization, and compatibility."
+    },
+    {
+      "id": "gameplay",
+      "label": "Gameplay systems",
+      "description": "Interaction, challenge, balance, agency, randomness, and simulated behavior."
+    },
+    {
+      "id": "progression",
+      "label": "Progression and investment",
+      "description": "Advancement, rewards, effort, intended losses, and maintenance burdens."
+    },
+    {
+      "id": "content",
+      "label": "Content and presentation",
+      "description": "Content availability, narrative, spatial design, audiovisual expression, and creative identity."
+    },
+    {
+      "id": "social",
+      "label": "Multiplayer and integrity",
+      "description": "Fair competition, participant availability, cooperation, conduct, sanctions, and administrative authority."
+    },
+    {
+      "id": "ux",
+      "label": "Usability and accessibility",
+      "description": "Operating, understanding, perceiving, and localizing the experience."
+    },
+    {
+      "id": "business",
+      "label": "Commerce and access",
+      "description": "Purchases, selling practices, ownership, access requirements, and account/device protection."
+    },
+    {
+      "id": "service",
+      "label": "Release and service",
+      "description": "Release readiness, update deterioration, stewardship claims, representations, communication, and customer remedies."
+    }
+  ],
+  "factors": [
+    {
+      "id": "tech.performance",
+      "label": "Performance and loading",
+      "domain": "tech",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Performance Engineering",
+      "definition": "Local execution is slow, uneven, or excessively resource-intensive while remaining operable or resuming without recovery.",
+      "include_rules": [
+        "Low FPS, stutter, excessive loading, shader delays, identified local input latency, or resource burden.",
+        "Temporary freezes explicitly described as resuming; a stated duration alone does not determine the factor."
+      ],
+      "exclude_rules": [
+        "Failure requiring recovery/restart: tech.stability. Named feature failure: tech.functionality.",
+        "Explicit online delay: tech.network.responsiveness. Bare lag or ambiguous freezing remains unresolved.",
+        "Do not duplicate generic bug wording for the same symptom."
+      ],
+      "multilingual_cues": [
+        "en: FPS drops, stutter",
+        "zh: 掉帧、加载慢",
+        "ru: просадки FPS, фризы"
+      ],
+      "evidence_strata": [
+        "game_pubg:poor_optimization_low_fps=54",
+        "game_cyberpunk:performance_optimization=41"
+      ],
+      "approx_support": 54,
+      "status": "core"
+    },
+    {
+      "id": "tech.stability",
+      "label": "Launch and crash failures",
+      "domain": "tech",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Client Engineering",
+      "definition": "Execution fails to start, terminates, or becomes unusable until recovery or restart.",
+      "include_rules": [
+        "Crashes, launch errors, installation failures preventing execution, persistent black screens, or hangs that prevent continuing.",
+        "Bare failure to launch without explicit compatibility or access-policy evidence."
+      ],
+      "exclude_rules": [
+        "Temporary slowdowns that resume: tech.performance. A named quest or feature failing: tech.functionality.",
+        "Explicit platform integration failure uses tech.platform_compatibility for the same proposition.",
+        "Service outages and objections to mandatory access rules have separate factors; generic bugs do not duplicate a named crash."
+      ],
+      "multilingual_cues": [
+        "en: crashes, won't launch",
+        "zh: 闪退、启动不了、卡死要重启",
+        "ru: вылетает, не запускается"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:crashes_freezes=22; freeze boundary requires recoding",
+        "family_pve_coop_shooter_looter:launch_or_runtime_crashes=13"
+      ],
+      "approx_support": 22,
+      "status": "core"
+    },
+    {
+      "id": "tech.functionality",
+      "label": "Broken functions",
+      "domain": "tech",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Gameplay Engineering",
+      "definition": "A feature, interaction, state transition, or feedback function malfunctions.",
+      "include_rules": [
+        "Quest blockers, collision glitches, missing combat sounds, unrecorded rewards, or discrete AI malfunctions.",
+        "Explicit nonspecific bug/failure claims only when they are not a restatement of a more specific technical symptom."
+      ],
+      "exclude_rules": [
+        "Working but implausible simulated behavior: gameplay.ai_simulation.",
+        "Crashes, performance, persistence, and input-device failures use their specific factors.",
+        "Unclear defect-versus-design wording without an explicit failure claim remains unresolved."
+      ],
+      "multilingual_cues": [
+        "en: bugged, quest won't trigger",
+        "zh: 任务触发不了、穿模",
+        "ru: баг, квест сломан"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:technical_bugs=67; narrowed boundary requires recoding",
+        "game_apex:audio_defects=12"
+      ],
+      "approx_support": 67,
+      "status": "core"
+    },
+    {
+      "id": "tech.save_integrity",
+      "label": "Save and data loss",
+      "domain": "tech",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Persistence Engineering",
+      "definition": "State that should persist is technically lost, corrupted, overwritten, or inaccessible.",
+      "include_rules": [
+        "Broken saving/loading, cloud overwrites, character/world corruption, or technical inventory rollback."
+      ],
+      "exclude_rules": [
+        "Designed resets, death penalties, checkpoint limits, account theft, and entitlement policy restrictions."
+      ],
+      "multilingual_cues": [
+        "en: save corrupted, progress lost",
+        "zh: 坏档、丢档",
+        "ru: слетели сохранения"
+      ],
+      "evidence_strata": [
+        "game_terraria:save_data_loss_or_inaccessibility=18",
+        "family_strategy:save_data_loss_or_corruption=4"
+      ],
+      "approx_support": 18,
+      "status": "core"
+    },
+    {
+      "id": "tech.network.responsiveness",
+      "label": "Network delay and desync",
+      "domain": "tech",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Netcode Engineering",
+      "definition": "Online state arrives late or inconsistently during an established session.",
+      "include_rules": [
+        "Ping, packet loss, rubber-banding, desync, tick-rate complaints, or explicitly network-attributed hit registration."
+      ],
+      "exclude_rules": [
+        "Connection loss, local FPS problems, and missed hits without networking evidence."
+      ],
+      "multilingual_cues": [
+        "en: desync, packet loss",
+        "zh: 丢包、回拉、不同步",
+        "ru: пинг, рассинхрон"
+      ],
+      "evidence_strata": [
+        "game_pubg:network_desync=14",
+        "family_military_large_scale_shooter:network_lag_and_desync=9"
+      ],
+      "approx_support": 14,
+      "status": "core"
+    },
+    {
+      "id": "tech.network.session_access",
+      "label": "Connection failures",
+      "domain": "tech",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Online Reliability",
+      "definition": "Technical service failure prevents joining, maintaining, or rejoining an online session.",
+      "include_rules": [
+        "Outages, disconnects, failed room joining, reconnect failures, or service-wide authentication failures."
+      ],
+      "exclude_rules": [
+        "Functioning queues, insufficient players, account-specific recovery, sanctions, and intentional restrictions."
+      ],
+      "multilingual_cues": [
+        "en: disconnected, server down",
+        "zh: 掉线、连接失败",
+        "ru: отключает, сервер недоступен"
+      ],
+      "evidence_strata": [
+        "family_hero_arena_shooter:online_connectivity_and_server_availability=8",
+        "game_apex:server_instability_or_latency=70; compound, not allocated"
+      ],
+      "approx_support": 8,
+      "status": "core"
+    },
+    {
+      "id": "tech.platform_compatibility",
+      "label": "Compatibility failures",
+      "domain": "tech",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Platform Integration",
+      "definition": "Explicit incompatibility or integration failure involving a named operating system, runtime, platform, mod, or distribution interface obstructs use.",
+      "include_rules": [
+        "Reported Linux/Proton or other OS/runtime incompatibility, broken Workshop integration, mod incompatibility, or platform interoperability failure.",
+        "Record whether official support is stated, denied, or unknown; do not infer it."
+      ],
+      "exclude_rules": [
+        "Explicit mandatory launcher/account/online rules or platform prohibitions: business.access_requirements.",
+        "Bare failure to launch without integration evidence: tech.stability.",
+        "Patch size, download burden, or disliked update frequency alone is not compatibility failure."
+      ],
+      "multilingual_cues": [
+        "en: incompatible, mods broken",
+        "zh: 不兼容、模组失效",
+        "ru: несовместимость, моды не работают"
+      ],
+      "evidence_strata": [
+        "family_survival_sandbox_multiplayer:platform_or_anticheat_incompatibility=3",
+        "family_other_non_game:vr_headset_compatibility_failure=2"
+      ],
+      "approx_support": 3,
+      "status": "candidate"
+    },
+    {
+      "id": "gameplay.core_loop",
+      "label": "Interaction and play rhythm",
+      "domain": "gameplay",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Core Gameplay Design",
+      "definition": "An identified recurring action, interaction, or cadence is criticized as repetitive, awkward, unsatisfying, or slow.",
+      "include_rules": [
+        "Repeated fetch actions, disliked combat or movement interaction, long recovery animations, or forced action downtime.",
+        "Clunky combat identifies an interaction referent and defaults here unless device/input or difficulty evidence supports a different factor."
+      ],
+      "exclude_rules": [
+        "Bare boring gameplay, solo boredom, or not fun without an action/interaction/cadence referent: affect and unresolved aspect evaluation.",
+        "Content quantity, input mapping/device problems, spatial layout, and difficulty without interaction criticism."
+      ],
+      "multilingual_cues": [
+        "en: repetitive fetch tasks, clunky combat",
+        "zh: 反复跑腿、战斗手感别扭",
+        "ru: однообразные действия, неуклюжий бой"
+      ],
+      "evidence_strata": [
+        "game_terraria:gameplay_boredom_or_repetition=14; compound upper bound requiring recoding",
+        "family_military_large_scale_shooter:unsatisfying_gunplay=5"
+      ],
+      "approx_support": 14,
+      "status": "core"
+    },
+    {
+      "id": "gameplay.balance",
+      "label": "Balance and counterplay",
+      "domain": "gameplay",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Balance Design",
+      "definition": "Working rules give options, roles, equipment, or sides disproportionate power or inadequate counterplay.",
+      "include_rules": [
+        "Overpowered weapons/heroes, weak roles, map-side advantage, permitted input disparities, or imported equipment power imbalance."
+      ],
+      "exclude_rules": [
+        "Human skill matching, unauthorized tools, and difficulty alone. Paid power uses business.paid_advantage without automatic duplication."
+      ],
+      "multilingual_cues": [
+        "en: overpowered, no counterplay",
+        "zh: 超模、不平衡",
+        "ru: имба, дисбаланс"
+      ],
+      "evidence_strata": [
+        "game_apex:gameplay_balance_problems=16",
+        "family_moba:role_hero_power_imbalance=4"
+      ],
+      "approx_support": 16,
+      "status": "core"
+    },
+    {
+      "id": "gameplay.challenge",
+      "label": "Difficulty and encounter fairness",
+      "domain": "gameplay",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Encounter Design",
+      "definition": "Stated execution demands, hazards, enemy pressure, or difficulty curves fail the desired challenge experience.",
+      "include_rules": [
+        "Too hard/easy, difficulty spikes, unreadable attacks, unfair enemy pressure, or poor solo scaling."
+      ],
+      "exclude_rules": [
+        "Do not infer incompetence or difficulty from clunky combat. Pairing disparities, guidance gaps, input operation, and retry cost are separate."
+      ],
+      "multilingual_cues": [
+        "en: too easy, unfair difficulty",
+        "zh: 太简单、难度陡增",
+        "ru: слишком сложно, слишком легко"
+      ],
+      "evidence_strata": [
+        "game_terraria:unfair_difficulty_and_hidden_hazards=7",
+        "family_soulslike_hardcore_action:poor_enemy_placement_or_crowding=5"
+      ],
+      "approx_support": 7,
+      "status": "core"
+    },
+    {
+      "id": "gameplay.ai_simulation",
+      "label": "AI and simulation quality",
+      "domain": "gameplay",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Simulation Design",
+      "definition": "An identifiable working behavior of computer-controlled actors or modeled systems is criticized as inept or implausible.",
+      "include_rules": [
+        "Irrational decisions, ineffective companion behavior, unrealistic traffic, vehicle physics, wildlife, or working crime-response rules."
+      ],
+      "exclude_rules": [
+        "Discrete malfunction: tech.functionality. Unwanted bots replacing humans: social.match_availability.",
+        "Unclear broken-AI wording uses functionality only for an explicit failure claim; otherwise retain defect_vs_design uncertainty.",
+        "A supported game leaf is primary; this ancestor is derived."
+      ],
+      "multilingual_cues": [
+        "en: irrational AI, unrealistic physics",
+        "zh: AI决策很蠢、物理不真实",
+        "ru: тупой ИИ, нереалистичная физика"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:npc_ai_living_world_deficits=26; boundary requires recoding",
+        "family_strategy:strategy_ai_incompetent_or_illogical=10"
+      ],
+      "approx_support": 26,
+      "status": "core"
+    },
+    {
+      "id": "gameplay.agency",
+      "label": "Meaningful choices",
+      "domain": "gameplay",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Systems Design",
+      "definition": "Available mechanical decisions offer insufficient depth, freedom, or meaningful influence.",
+      "include_rules": [
+        "Shallow builds, mandatory solutions, restrictive customization/construction, or inconsequential strategic decisions."
+      ],
+      "exclude_rules": [
+        "Narrative consequences, explicit randomness, simple power imbalance, and content quantity alone."
+      ],
+      "multilingual_cues": [
+        "en: no build freedom, choices meaningless",
+        "zh: 流派浅、没得选",
+        "ru: нет свободы билдов"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:shallow_rpg_builds=18",
+        "family_singleplayer_rpg_arpg:build_and_party_composition_are_overconstrained=2"
+      ],
+      "approx_support": 18,
+      "status": "core"
+    },
+    {
+      "id": "gameplay.randomness",
+      "label": "Nonpaid randomness",
+      "domain": "gameplay",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Random Systems Design",
+      "definition": "Nonpaid chance is perceived as biased, excessively decisive, or obstructive.",
+      "include_rules": [
+        "Rigged draws/dice allegations, random build viability, unwanted drop variance, or chance-dominated combat."
+      ],
+      "exclude_rules": [
+        "Paid acquisition chances and grind without explicit randomness. Alleged rigging is not verified fact."
+      ],
+      "multilingual_cues": [
+        "en: rigged RNG, all luck",
+        "zh: 全靠运气、概率被操控",
+        "ru: подкрученный рандом"
+      ],
+      "evidence_strata": [
+        "family_card_autobattler_board:perceived_biased_rng=8",
+        "family_roguelike_roguelite:excessive_rng_outcomes=3"
+      ],
+      "approx_support": 8,
+      "status": "core"
+    },
+    {
+      "id": "progression.effort_reward",
+      "label": "Effort, rewards, and loss",
+      "domain": "progression",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Progression Design",
+      "definition": "Required effort, advancement, rewards, or retained investment feel disproportionate.",
+      "include_rules": [
+        "Grind, weak rewards, time gates, intended resets, death losses, retry costs, or maintenance burdens."
+      ],
+      "exclude_rules": [
+        "Technical loss, unrecorded rewards, and payment mechanisms without an independent effort/reward complaint."
+      ],
+      "multilingual_cues": [
+        "en: grind, unrewarding, punishing loss",
+        "zh: 太肝、奖励少、损失太重",
+        "ru: гринд, слабые награды"
+      ],
+      "evidence_strata": [
+        "game_terraria:grind_heavy_progression=6",
+        "family_survival_sandbox_multiplayer:shallow_or_repetitive_progression=5"
+      ],
+      "approx_support": 6,
+      "status": "core"
+    },
+    {
+      "id": "content.scope_variety",
+      "label": "Content breadth and availability",
+      "domain": "content",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Content Production",
+      "definition": "Activities, modes, features, or authored material lack breadth, variety, or availability.",
+      "include_rules": [
+        "Short campaigns, repetitive mission templates, missing/removed modes, insufficient endgame, or restricted map availability.",
+        "A promised feature supports this factor when the proposition explicitly criticizes its absence; link to service.marketing_trust if the same proposition also asserts misrepresentation."
+      ],
+      "exclude_rules": [
+        "Story quality, repetitive actions alone, defective functions, or copying/series identity alone.",
+        "Update regression requires an explicit worsening transition; content absence alone does not establish it.",
+        "A promise breach without an independent availability harm uses service.marketing_trust."
+      ],
+      "multilingual_cues": [
+        "en: no content, removed mode",
+        "zh: 内容少、模式删了",
+        "ru: мало контента, убрали режим"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:repetitive_side_activities=15",
+        "game_cs:legacy_content_removed=11"
+      ],
+      "approx_support": 15,
+      "status": "core"
+    },
+    {
+      "id": "content.narrative",
+      "label": "Story and characters",
+      "domain": "content",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Narrative Design",
+      "definition": "Writing, characters, themes, endings, or story consequences fail expectations.",
+      "include_rules": [
+        "Weak plot, flat characters, incoherent endings, rejected in-game themes, or inconsequential dialogue choices."
+      ],
+      "exclude_rules": [
+        "Voice performance, missing skip controls, and external political/company protests."
+      ],
+      "multilingual_cues": [
+        "en: weak story, bad ending",
+        "zh: 剧情烂、烂尾",
+        "ru: слабый сюжет, плохая концовка"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:weak_story_writing=24",
+        "family_action_adventure_platformer:weak_or_incoherent_story=17"
+      ],
+      "approx_support": 24,
+      "status": "core"
+    },
+    {
+      "id": "content.world_level",
+      "label": "World and level design",
+      "domain": "content",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Level Design",
+      "definition": "Spatial layout or environmental interactivity makes exploration and encounter flow unsatisfying.",
+      "include_rules": [
+        "Empty worlds, poor routes, needless traversal, inaccessible environments, or poor encounter placement."
+      ],
+      "exclude_rules": [
+        "Unclear instructions, map count alone, and competitive side-power complaints without a spatial-design proposition."
+      ],
+      "multilingual_cues": [
+        "en: empty world, bad layout",
+        "zh: 世界空洞、地图设计差",
+        "ru: пустой мир, плохой дизайн карты"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:open_world_interactivity_content_deficit=27",
+        "game_apex:poor_map_design=9"
+      ],
+      "approx_support": 27,
+      "status": "core"
+    },
+    {
+      "id": "content.audiovisual",
+      "label": "Audiovisuals and atmosphere",
+      "domain": "content",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Creative Direction",
+      "definition": "Visual/audio expression fails aesthetically or fails to produce the intended atmosphere.",
+      "include_rules": [
+        "Unappealing graphics, skins, animation, music, voice performance, or atmosphere."
+      ],
+      "exclude_rules": [
+        "Broken assets/audio, perceptual barriers, physical discomfort, and cosmetic prices."
+      ],
+      "multilingual_cues": [
+        "en: ugly skins, awful music",
+        "zh: 皮肤丑、音乐难听",
+        "ru: плохая графика, ужасная музыка"
+      ],
+      "evidence_strata": [
+        "family_horror:unscary_horror=10",
+        "long_tail:poor_visual_quality=6"
+      ],
+      "approx_support": 10,
+      "status": "core"
+    },
+    {
+      "id": "content.franchise_identity",
+      "label": "Originality and series identity",
+      "domain": "content",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Creative Direction",
+      "definition": "The reviewer explicitly objects to perceived copying or departure from an established series, remake, or genre identity.",
+      "include_rules": [
+        "Alleged derivative design, a remake failing to preserve the original identity, or a sequel abandoning defining series/genre characteristics."
+      ],
+      "exclude_rules": [
+        "A competitor name, generic inferior sequel judgment, personal genre dislike, missing content, or boring gameplay without identity/copying evidence."
+      ],
+      "multilingual_cues": [
+        "en: a copy, lost the series identity",
+        "zh: 抄袭换皮、失去系列特色、重制没原味",
+        "ru: копия, потеряла дух серии"
+      ],
+      "evidence_strata": [
+        "completeness critic: game_terraria:perceived_minecraft_derivative=14; rids 1242358,40965,1240526",
+        "completeness critic: family_horror:series_identity_departure=4; rids 8753688,14120971",
+        "completeness critic: long_tail:derivative_or_copied_game=4; rids 14522909,15257977,2473424",
+        "completeness critic: family_singleplayer_rpg_arpg:remake_fails_to_preserve_original_identity=3; rids 15202723,15204158,15201603",
+        "completeness critic: game_apex:titanfall_abandonment_and_derivative_identity=3; compound, rids 13720190,14023274,13743013"
+      ],
+      "approx_support": 14,
+      "status": "candidate"
+    },
+    {
+      "id": "social.cheating",
+      "label": "Cheating and failed enforcement",
+      "domain": "social",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Competitive Integrity",
+      "definition": "An explicit allegation of unauthorized advantage or failed integrity enforcement compromises legitimate play.",
+      "include_rules": [
+        "Alleged cheats, prohibited software/scripts/converters, illicit collusion, exploit abuse, or ineffective cheat prevention/reporting."
+      ],
+      "exclude_rules": [
+        "Permitted aim assist and mixed-input balance: fam.competitive_shooter.input_balance.",
+        "Auto-aim without a permitted-input or unauthorized-tool referent remains unresolved.",
+        "Ordinary smurf disparities, disputed bans, and invasive anti-cheat deployment use other factors."
+      ],
+      "multilingual_cues": [
+        "en: aimbot cheat, anti-cheat does nothing",
+        "zh: 外挂、违规转换器、举报外挂没用",
+        "ru: читеры, античит не работает"
+      ],
+      "evidence_strata": [
+        "game_cs:cheating_unchecked=88",
+        "game_pubg:cheaters_weak_enforcement=76",
+        "game_apex:cheaters_not_effectively_controlled=39"
+      ],
+      "approx_support": 88,
+      "status": "core"
+    },
+    {
+      "id": "social.skill_matchmaking",
+      "label": "Skill and team matching",
+      "domain": "social",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Matchmaking Design",
+      "definition": "Human player assignment creates inappropriate skill, experience, headcount, or premade-team disparities.",
+      "include_rules": [
+        "Novices versus veterans, smurf stomping, rank tanking, solos versus premades, or explicitly unequal human-team composition."
+      ],
+      "exclude_rules": [
+        "Missing humans due to stated scarcity or bot substitution: social.match_availability.",
+        "Rules preventing a chosen group from playing together: social.cooperation.",
+        "An unexplained missing teammate does not establish pairing disparity. Co-code scarcity and disparity only when separate clauses establish both."
+      ],
+      "multilingual_cues": [
+        "en: smurfs, solo versus stacks",
+        "zh: 炸鱼、匹配不公、单排打车队",
+        "ru: смурфы, соло против пати"
+      ],
+      "evidence_strata": [
+        "game_apex:skill_mismatched_matchmaking=40",
+        "game_cs:smurfing_boosting=21"
+      ],
+      "approx_support": 40,
+      "status": "core"
+    },
+    {
+      "id": "social.match_availability",
+      "label": "Human-match availability",
+      "domain": "social",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Matchmaking Operations",
+      "definition": "Players cannot obtain timely participation in the expected human multiplayer population.",
+      "include_rules": [
+        "Long functioning queues, empty servers, population fragmentation, explicitly unfilled population demand, or unwanted bots replacing humans."
+      ],
+      "exclude_rules": [
+        "Technical joining failures, AI competence, pairing disparity alone, and inferred developer responsibility for low population."
+      ],
+      "multilingual_cues": [
+        "en: dead game, all bots",
+        "zh: 鬼服、排不到人、全是人机",
+        "ru: онлайн мёртв, одни боты"
+      ],
+      "evidence_strata": [
+        "family_military_large_scale_shooter:low_multiplayer_population=8",
+        "game_pubg:bots_in_matches=8"
+      ],
+      "approx_support": 8,
+      "status": "core"
+    },
+    {
+      "id": "social.cooperation",
+      "label": "Group play and coordination",
+      "domain": "social",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Social Systems Design",
+      "definition": "Participation rules or missing tools obstruct playing and coordinating with a chosen group.",
+      "include_rules": [
+        "Party limits, host dependence, missing communication tools, friend-group dependence, or shared-progression restrictions."
+      ],
+      "exclude_rules": [
+        "Teammate misconduct, technical joining defects, payment gates, population scarcity, assigned-team disparities, and solo difficulty alone."
+      ],
+      "multilingual_cues": [
+        "en: host only, no party tools",
+        "zh: 只有房主能操作、组队受限",
+        "ru: только хост, нет координации"
+      ],
+      "evidence_strata": [
+        "family_party_casual_social:social_game_requires_own_friend_group=3",
+        "family_military_large_scale_shooter:poor_social_and_clan_features=1"
+      ],
+      "approx_support": 3,
+      "status": "core"
+    },
+    {
+      "id": "social.conduct",
+      "label": "Disruptive player conduct",
+      "domain": "social",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Player Safety",
+      "definition": "Reported participant behavior disrupts play or creates hostility, with inadequate protection where stated.",
+      "include_rules": [
+        "Harassment, reported griefing, team-killing, exclusion, AFK, abandonment, observed noncooperation, or failed behavior moderation."
+      ],
+      "exclude_rules": [
+        "Do not infer deliberate intent from absence or noncooperation; explicit intent allegations belong in attribution metadata.",
+        "Cheats, structural coordination barriers, own disputed sanctions, and abuse of administrative authority use separate factors."
+      ],
+      "multilingual_cues": [
+        "en: toxic, griefers, AFK",
+        "zh: 喷人、队伤、挂机秒退、不配合",
+        "ru: токсичность, гриферство, ливают"
+      ],
+      "evidence_strata": [
+        "game_cs:toxic_disruptive_players=41",
+        "game_apex:afk_or_uncooperative_teammates=7"
+      ],
+      "approx_support": 41,
+      "status": "core"
+    },
+    {
+      "id": "social.sanctions",
+      "label": "Disputed punishments",
+      "domain": "social",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Enforcement Policy",
+      "definition": "A particular ban, kick, cooldown, or enforcement procedure is alleged to be unjustified, disproportionate, or opaque.",
+      "include_rules": [
+        "Alleged false bans, abusive kicks, disproportionate penalties, missing rationale, or denied appeal rights.",
+        "Disputed punishment triggered by a reported crash/disconnect; annotate the technical event separately only when independently evidenced."
+      ],
+      "exclude_rules": [
+        "Criticism of handling a submitted appeal: service.support; use both only for distinct spans.",
+        "Ordinary designed ranked participation costs or forced spectating: fam.ranked_competitive.rating.",
+        "Broader administrative abuse without a specific contested penalty: social.governance.",
+        "Authentication errors without punishment and account theft."
+      ],
+      "multilingual_cues": [
+        "en: false ban, unfair cooldown",
+        "zh: 误封、乱封、掉线被罚",
+        "ru: ложный бан, несправедливая блокировка"
+      ],
+      "evidence_strata": [
+        "game_pubg:wrongful_account_bans=43",
+        "game_cs:false_vac_ban=22; mixed authentication/sanctions, not allocated wholesale",
+        "game_apex:unfair_disconnect_or_abandon_penalty=14; migrated compound evidence"
+      ],
+      "approx_support": 43,
+      "status": "core"
+    },
+    {
+      "id": "social.governance",
+      "label": "Administrative abuse",
+      "domain": "social",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Community Governance",
+      "definition": "A server host, GM, moderator, or official community operator is alleged to exercise authority arbitrarily, discriminatorily, or abusively.",
+      "include_rules": [
+        "Admin favoritism, coercive rule enforcement, misuse of privileged powers, retaliatory censorship, or exclusion through administrative action."
+      ],
+      "exclude_rules": [
+        "A recipient's specific disputed ban/kick alone: social.sanctions.",
+        "Hostile statements, unclear notices, or ignored public feedback without an exercise-of-power complaint: service.communication.",
+        "Ordinary player misconduct: social.conduct. Broader abuse and a particular sanction require distinct propositions."
+      ],
+      "multilingual_cues": [
+        "en: admin abuse, GM favoritism",
+        "zh: 管理员滥权、GM偏袒、删帖打压",
+        "ru: произвол администрации"
+      ],
+      "evidence_strata": [
+        "completeness critic: family_mmorpg:dismissive_or_punitive_player_management=7; compound, rids 4385993,6583457,12562307",
+        "completeness critic: family_military_large_scale_shooter:server_administration_abuse=3; rids 8357575,10417774,15956356",
+        "completeness critic: family_survival_sandbox_multiplayer:gm_admin_abuse=3; rids 9265163,10212349,14603598"
+      ],
+      "approx_support": 7,
+      "status": "candidate"
+    },
+    {
+      "id": "ux.interface",
+      "label": "Interface and workflow",
+      "domain": "ux",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Interface Design",
+      "definition": "Menus, information organization, or interaction steps make routine operation difficult.",
+      "include_rules": [
+        "Confusing menus, inventory friction, excessive steps, or missing skip/playback controls."
+      ],
+      "exclude_rules": [
+        "Missing rules knowledge, input mapping, commercial intrusion alone, and intentional inventory-economy limits."
+      ],
+      "multilingual_cues": [
+        "en: confusing UI, can't skip",
+        "zh: 界面复杂、不能跳过",
+        "ru: неудобный интерфейс"
+      ],
+      "evidence_strata": [
+        "family_card_autobattler_board:poor_interface_navigation=3",
+        "game_terraria:poor_crafting_and_interface_usability=6; overlaps guidance"
+      ],
+      "approx_support": 3,
+      "status": "core"
+    },
+    {
+      "id": "ux.controls",
+      "label": "Controls and input devices",
+      "domain": "ux",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Input Systems",
+      "definition": "An identified device, mapping, camera, input-feedback, or action-execution problem obstructs intended player actions.",
+      "include_rules": [
+        "Missing rebinding, broken controller/wheel/HOTAS support, unusable mappings, camera-control obstruction, or explicitly poor controller operation."
+      ],
+      "exclude_rules": [
+        "Bare clunky combat or intended movement weight: gameplay.core_loop. Stated difficulty: gameplay.challenge. Competitive assistance: input balance. Latency alone: technical factors."
+      ],
+      "multilingual_cues": [
+        "en: can't rebind, wheel unsupported",
+        "zh: 不能改键、手柄不能用",
+        "ru: нельзя переназначить, геймпад не работает"
+      ],
+      "evidence_strata": [
+        "family_sports_racing:racing_peripheral_support_broken=4",
+        "game_terraria:controller_support_unusable=3"
+      ],
+      "approx_support": 4,
+      "status": "core"
+    },
+    {
+      "id": "ux.onboarding",
+      "label": "Guidance and goals",
+      "domain": "ux",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Onboarding Design",
+      "definition": "Players lack understandable guidance about rules, actions, goals, or progression.",
+      "include_rules": [
+        "Missing tutorials, obscure prerequisites, unclear objectives, contradictory instructions, or required external guides."
+      ],
+      "exclude_rules": [
+        "Understood difficulty, technical tutorial blockers, and cumbersome but comprehensible UI."
+      ],
+      "multilingual_cues": [
+        "en: no tutorial, need a wiki",
+        "zh: 不知道干什么、必须查攻略",
+        "ru: нет обучения, нужна вики"
+      ],
+      "evidence_strata": [
+        "game_terraria:unclear_onboarding_and_progression=23",
+        "family_simulation_management:inadequate_in_game_guidance=5"
+      ],
+      "approx_support": 23,
+      "status": "core"
+    },
+    {
+      "id": "ux.localization",
+      "label": "Language and localization",
+      "domain": "ux",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Localization",
+      "definition": "Unavailable, inaccurate, incomplete, or unusable language support obstructs use.",
+      "include_rules": [
+        "Missing translations, poor localization, script/font problems, or language-switch friction."
+      ],
+      "exclude_rules": [
+        "Story criticism independent of translation, teammate language mismatch, and voice acting quality alone."
+      ],
+      "multilingual_cues": [
+        "en: bad translation",
+        "zh: 没中文、机翻、乱码",
+        "ru: нет русского, плохой перевод"
+      ],
+      "evidence_strata": [
+        "family_action_adventure_platformer:missing_or_incomplete_localization=8",
+        "family_mmorpg:localization_quality_or_availability=7"
+      ],
+      "approx_support": 8,
+      "status": "core"
+    },
+    {
+      "id": "ux.accessibility",
+      "label": "Perception and comfort",
+      "domain": "ux",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Accessibility",
+      "definition": "Presentation or missing accommodations impede comfortable perception or physical use.",
+      "include_rules": [
+        "Unreadable text, obscured enemies, motion sickness, inaccessible contrast, or missing relevant display options."
+      ],
+      "exclude_rules": [
+        "Aesthetic dislike, technically missing sounds, and difficulty without an access barrier."
+      ],
+      "multilingual_cues": [
+        "en: motion sickness, unreadable",
+        "zh: 晕3D、看不清、字太小",
+        "ru: укачивает, нечитаемый текст"
+      ],
+      "evidence_strata": [
+        "game_apex:visual_clutter_or_poor_enemy_visibility=4",
+        "long_tail:insufficient_visibility_options=4"
+      ],
+      "approx_support": 4,
+      "status": "core"
+    },
+    {
+      "id": "business.price_value",
+      "label": "Price and value",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Pricing",
+      "definition": "Monetary cost or pricing treatment is explicitly criticized relative to value or affordability.",
+      "include_rules": [
+        "Overpriced games/cosmetics/DLC, regional affordability, discount unfairness, purchase devaluation, or explicitly excessive spending for the received value."
+      ],
+      "exclude_rules": [
+        "A monetary amount, payment, missing item, or refund intent alone. Do not infer paid randomness from high spending."
+      ],
+      "multilingual_cues": [
+        "en: overpriced, not worth it",
+        "zh: 太贵、不值、背刺",
+        "ru: дорого, не стоит денег"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:poor_value_for_price=21",
+        "game_pubg:no_sale_discount=21; template-sensitive, not added"
+      ],
+      "approx_support": 21,
+      "status": "core"
+    },
+    {
+      "id": "business.paid_advantage",
+      "label": "Paid power and boosts",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Monetization Economy",
+      "definition": "Spending buys gameplay strength or progression acceleration relative to nonpayment.",
+      "include_rules": [
+        "Pay-to-win equipment, premium economic advantages, or purchasable grind bypasses."
+      ],
+      "exclude_rules": [
+        "Cosmetics without power, access-only purchases, and grind without purchasable relief."
+      ],
+      "multilingual_cues": [
+        "en: pay to win, buy power",
+        "zh: 氪金变强、付费碾压",
+        "ru: донат решает"
+      ],
+      "evidence_strata": [
+        "family_vehicle_combat_sim:pay_to_win_power_creep=13",
+        "family_mmorpg:paid_progression_or_combat_advantage=10"
+      ],
+      "approx_support": 13,
+      "status": "core"
+    },
+    {
+      "id": "business.paywall",
+      "label": "Paid access barriers",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Commerce Product",
+      "definition": "Payment boundaries restrict desired functionality, content, or participation.",
+      "include_rules": [
+        "Core features sold separately, subscription gates, paid hosting, or locked playable content."
+      ],
+      "exclude_rules": [
+        "Price alone, failed delivery of an owned entitlement, and optional external workarounds that do not gate native access."
+      ],
+      "multilingual_cues": [
+        "en: paywall, subscription required",
+        "zh: 付费门槛、本体拆卖",
+        "ru: платный доступ, нужна подписка"
+      ],
+      "evidence_strata": [
+        "family_strategy:core_features_paywalled_as_dlc=4",
+        "family_pve_coop_shooter_looter:dlc_gates_or_withholds_core_content=4"
+      ],
+      "approx_support": 4,
+      "status": "core"
+    },
+    {
+      "id": "business.paid_randomness",
+      "label": "Paid random rewards",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Monetization Economy",
+      "definition": "The text identifies payment for uncertain acquisition and criticizes its odds, duplicates, or acquisition burden.",
+      "include_rules": [
+        "Paid gacha, purchased random packs/boxes, paid draws, or explicitly uncertain rewards bought with money or purchased currency."
+      ],
+      "exclude_rules": [
+        "Payment and uncertainty must both be text-supported; packs/boxes alone do not establish payment or randomness in every context.",
+        "Spent a large amount but did not receive an heirloom does not alone establish paid chance.",
+        "Free drops, direct sales, and nonrandom passes. Unspecified commercial mechanisms remain unresolved."
+      ],
+      "multilingual_cues": [
+        "en: paid random packs, purchase odds",
+        "zh: 氪金抽卡、付费开箱概率",
+        "ru: платные случайные награды"
+      ],
+      "evidence_strata": [
+        "family_mmorpg:exploitative_gacha_or_random_rewards=3; payment/uncertainty require recoding",
+        "game_apex:costly_random_cosmetic_acquisition=1; insufficient mechanism evidence flagged by overlap critic"
+      ],
+      "approx_support": 3,
+      "status": "core"
+    },
+    {
+      "id": "business.sales_pressure",
+      "label": "Intrusive selling",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Monetization Product",
+      "definition": "Promotions, advertisements, or selling practices intrude on participation or pressure spending.",
+      "include_rules": [
+        "Store pop-ups, ads in paid games, criticized offer frequency, or purchase FOMO."
+      ],
+      "exclude_rules": [
+        "High prices, ugly skins, skins-over-fixes claims, and bare greed/cash-grab insults without an identifiable selling practice."
+      ],
+      "multilingual_cues": [
+        "en: intrusive ads, constant offers",
+        "zh: 商城弹窗、广告太多、限时逼氪",
+        "ru: навязчивая реклама"
+      ],
+      "evidence_strata": [
+        "family_fighting:intrusive_ads_in_paid_game=2",
+        "game_pubg:advertising_in_paid_game=2",
+        "family_battle_royale:aggressive_monetization=8; broader code, not allocated"
+      ],
+      "approx_support": 2,
+      "status": "core"
+    },
+    {
+      "id": "business.access_requirements",
+      "label": "Access requirements",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Platform Product",
+      "definition": "Explicitly stated dependencies or access policies constrain use of the product.",
+      "include_rules": [
+        "Mandatory launcher/account, always-online rule, regional block, explicitly prohibited platform, required external service, or forced product replacement."
+      ],
+      "exclude_rules": [
+        "Do not infer deliberate prohibition from Linux/Proton incompatibility or a failure to launch. Technical failures, sanctions, payment gates, and owned-item transfer restrictions have separate factors."
+      ],
+      "multilingual_cues": [
+        "en: forced launcher, always online",
+        "zh: 强制启动器、必须联网、锁区",
+        "ru: обязательный лаунчер, региональная блокировка"
+      ],
+      "evidence_strata": [
+        "family_open_world_action_rpg:mandatory_publisher_launcher_or_account=9",
+        "family_action_adventure_platformer:forced_launcher_or_account_linking=8"
+      ],
+      "approx_support": 9,
+      "status": "core"
+    },
+    {
+      "id": "business.ownership",
+      "label": "Ownership and delivery",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Entitlements Product",
+      "definition": "Players cannot receive, retain, transfer, or use goods or benefits they regard as owned.",
+      "include_rules": [
+        "Undelivered paid items, revoked DLC, item trade limits, or account/platform entitlement-transfer restrictions."
+      ],
+      "exclude_rules": [
+        "Technical save corruption, new purchase gates, and launcher failure without entitlement evidence."
+      ],
+      "multilingual_cues": [
+        "en: paid items missing, cannot trade",
+        "zh: 买了没到账、不能交易",
+        "ru: купленное не выдали, нельзя передать"
+      ],
+      "evidence_strata": [
+        "family_mmorpg:paid_items_or_currency_not_delivered=3",
+        "game_pubg:cosmetics_not_tradeable=23; template-sensitive"
+      ],
+      "approx_support": 3,
+      "status": "core"
+    },
+    {
+      "id": "business.account_security",
+      "label": "Account security and recovery",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Identity Services",
+      "definition": "Account-specific compromise, authentication, or recovery prevents control of an account.",
+      "include_rules": [
+        "Theft, phishing, recovery failures, or account-specific verification barriers."
+      ],
+      "exclude_rules": [
+        "Service-wide login outages, dislike of account requirements, sanctions, and device/privacy objections."
+      ],
+      "multilingual_cues": [
+        "en: account stolen, cannot recover",
+        "zh: 盗号、账号找不回",
+        "ru: украли аккаунт, не восстановить"
+      ],
+      "evidence_strata": [
+        "game_pubg:account_theft_security=12",
+        "family_hero_arena_shooter:account_recovery_failure=1"
+      ],
+      "approx_support": 12,
+      "status": "core"
+    },
+    {
+      "id": "business.privacy_security",
+      "label": "Privacy and device security",
+      "domain": "business",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Security and Privacy",
+      "definition": "Software or service practices allegedly expose personal data or devices to unwanted risk.",
+      "include_rules": [
+        "Intrusive telemetry, kernel anti-cheat objections, alleged malware/mining, or device vulnerabilities."
+      ],
+      "exclude_rules": [
+        "Account recovery, weak cheat detection, and anti-cheat FPS costs without a security/privacy proposition."
+      ],
+      "multilingual_cues": [
+        "en: spyware, invasive anti-cheat",
+        "zh: 隐私泄露、挖矿、反作弊侵入系统",
+        "ru: сбор данных, руткит, майнер"
+      ],
+      "evidence_strata": [
+        "family_singleplayer_rpg_arpg:intrusive_anti_cheat_rootkit_privacy_risk=3",
+        "family_military_large_scale_shooter:online_rce_security_vulnerability=2"
+      ],
+      "approx_support": 3,
+      "status": "core"
+    },
+    {
+      "id": "service.maintenance",
+      "label": "Perceived maintenance neglect",
+      "domain": "service",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Live Operations",
+      "definition": "The reviewer explicitly criticizes maintenance cadence, repeated non-remediation, abandonment, or perceived development priorities.",
+      "include_rules": [
+        "Explicit claims that longstanding defects remain unfixed, updates are inadequate, the game is abandoned, or cosmetics are prioritized over repairs.",
+        "Store inferred priorities/abandonment as attributed claims and cited update/fix history in reported_maintenance_history."
+      ],
+      "exclude_rules": [
+        "A current defect, low population, or an update regression alone does not establish neglect.",
+        "Individual tickets, public statements, release incompleteness, and misrepresentation have separate factors.",
+        "Never treat the factor as verified resource allocation or maintenance causation."
+      ],
+      "multilingual_cues": [
+        "en: abandoned, skins instead of fixes",
+        "zh: 一直不修、只顾卖皮肤",
+        "ru: забросили, скины вместо исправлений"
+      ],
+      "evidence_strata": [
+        "game_cs:cosmetics_over_fixes=22",
+        "game_pubg:developer_neglect_stagnation=31; includes feedback complaints"
+      ],
+      "approx_support": 22,
+      "status": "core"
+    },
+    {
+      "id": "service.marketing_trust",
+      "label": "Misleading product claims",
+      "domain": "service",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Publishing",
+      "definition": "A concrete product representation, disclosure, or review practice is alleged to mislead customers.",
+      "include_rules": [
+        "Broken advertised promises, misleading requirements/editions, late material disclosures, or alleged review manipulation.",
+        "If one span explicitly asserts both a broken promise and unavailable content, link this annotation with content.scope_variety under one proposition ID."
+      ],
+      "exclude_rules": [
+        "Unstated expectations, missing features alone, generic unfinished judgments, vague scam insults, and unrelated corporate protests."
+      ],
+      "multilingual_cues": [
+        "en: false advertising, manipulated reviews",
+        "zh: 虚假宣传、画饼、刷好评",
+        "ru: ложная реклама, накрутка отзывов"
+      ],
+      "evidence_strata": [
+        "long_tail:review_incentives_or_astroturfing=4",
+        "game_cyberpunk:unfulfilled_marketing_missing_features=56; compound upper bound"
+      ],
+      "approx_support": 4,
+      "status": "core"
+    },
+    {
+      "id": "service.communication",
+      "label": "Official communication",
+      "domain": "service",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Community Management",
+      "definition": "Official public statements, notices, responses, or feedback handling are absent, unclear, or dismissive.",
+      "include_rules": [
+        "Unclear maintenance notices, ignored public feedback, absent explanations, or hostile official statements without an administrative-action complaint."
+      ],
+      "exclude_rules": [
+        "Retaliatory censorship or other abuse of authority: social.governance.",
+        "Individual tickets: service.support. Defects or updates alone do not establish communication failure.",
+        "Player abuse, failed cheat enforcement alone, and unrelated company conduct."
+      ],
+      "multilingual_cues": [
+        "en: no notice, ignores public feedback",
+        "zh: 没公告、无视反馈、官方回应敷衍",
+        "ru: нет уведомлений, игнорируют отзывы"
+      ],
+      "evidence_strata": [
+        "family_survival_sandbox_multiplayer:unreliable_maintenance_communication=3",
+        "family_vehicle_combat_sim:criticism_censorship=5; former anchor transferred to governance where supported"
+      ],
+      "approx_support": 3,
+      "status": "core"
+    },
+    {
+      "id": "service.support",
+      "label": "Support and remedies",
+      "domain": "service",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Customer Support",
+      "definition": "Seeking individual assistance or remedy encounters ineffective, inaccessible, or obstructive case handling.",
+      "include_rules": [
+        "Ignored submitted tickets/appeals, template responses, unresolved purchase cases, or refund-process barriers."
+      ],
+      "exclude_rules": [
+        "Sanction validity, proportionality, rationale, or the right to appeal: social.sanctions.",
+        "Apply support and sanctions together only for distinct evidence spans.",
+        "Refund desire alone and public developer silence."
+      ],
+      "multilingual_cues": [
+        "en: support ignores tickets",
+        "zh: 客服不处理、申诉没人回、退款受阻",
+        "ru: поддержка не помогает"
+      ],
+      "evidence_strata": [
+        "family_mmorpg:support_fails_to_resolve_cases=10",
+        "game_pubg:ban_appeal_support_failures=18; mixed case handling/sanction procedure"
+      ],
+      "approx_support": 10,
+      "status": "core"
+    },
+    {
+      "id": "service.release_readiness",
+      "label": "Unfinished release",
+      "domain": "service",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Release Management",
+      "definition": "The product is alleged to have been released or sold in a materially incomplete or insufficiently polished state.",
+      "include_rules": [
+        "Explicit sold unfinished, launched half-baked, or not ready for release judgments.",
+        "Criticism that a paid early-access offering is materially unready; early-access status alone is not a complaint."
+      ],
+      "exclude_rules": [
+        "A discrete defect alone: technical factors. A missing advertised feature alone: service.marketing_trust.",
+        "Subsequent abandonment: service.maintenance. A worse update: service.update_regression.",
+        "Unfinished without a release/sale-state referent remains unresolved. Add concrete defects or deception only when separately stated."
+      ],
+      "multilingual_cues": [
+        "en: sold unfinished, not ready to launch",
+        "zh: 半成品就卖、没做完就上线",
+        "ru: выпустили недоделанной"
+      ],
+      "evidence_strata": [
+        "completeness critic: game_cyberpunk:unfinished_release=23; rids 5925058,6130637,6443181",
+        "completeness critic: family_strategy:incomplete_product_sold_at_launch=12; rids 10219579,1418065",
+        "completeness critic: long_tail:unfinished_or_broken_release=9; compound, rids 10016164,12848171,4665895",
+        "completeness critic: game_cs:unfinished_buggy=8; compound, rids 12932360,13039433,13887620",
+        "completeness critic: family_simulation_management:incomplete_release_state=6; rids 3784317,15265287,1692808"
+      ],
+      "approx_support": 23,
+      "status": "core"
+    },
+    {
+      "id": "service.update_regression",
+      "label": "Updates made it worse",
+      "domain": "service",
+      "level": "universal",
+      "family": "",
+      "game_appid": 0,
+      "parent_id": "",
+      "owner_team": "Release Management",
+      "definition": "The reviewer explicitly attributes a worse experience to an update, patch, redesign, or version transition relative to an earlier state.",
+      "include_rules": [
+        "The patch ruined the game, each update makes it worse, or the previous version was better in an explicit update/version comparison.",
+        "New or worsened defects after a patch, unwanted redesigns, or changed/removed features that make the updated experience worse.",
+        "The update-level deterioration claim is sufficient even when the affected mechanism is unspecified.",
+        "When a concrete symptom or content loss is also stated, retain the specific factor and link shared evidence under one proposition ID."
+      ],
+      "exclude_rules": [
+        "A review date, patch mention, or current defect without an asserted worsening transition.",
+        "Missing content without an update/worsening claim: content.scope_variety.",
+        "Sparse updates, repeated non-remediation, or perceived priorities without deterioration: service.maintenance.",
+        "Missing announcements or poor public responses: service.communication.",
+        "Initial-release incompleteness, neutral changes, successor comparisons without a version-transition complaint, or patch download burden alone."
+      ],
+      "multilingual_cues": [
+        "en: patch made it worse, unwanted redesign",
+        "zh: 越更新越差、更新改废了、旧版更好",
+        "ru: обновление испортило игру, раньше было лучше"
+      ],
+      "evidence_strata": [
+        "user human-annotator feedback: repeatedly needed during 80 random negative reviews; complaint count unavailable",
+        "v1 discovery lineage: patch_regression; updates_regress_quality; patches_cause_regressions; updates_perceived_to_regress_quality; patch_volatility_hinders_learning; counts unavailable",
+        "overlap critic: rid 14032391 reports update-associated bugs/crashes; original review not inspected"
+      ],
+      "approx_support": 0,
+      "status": "core"
+    },
+    {
+      "id": "fam.battle_royale.loot",
+      "label": "Battle-royale loot fairness",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "battle_royale",
+      "game_appid": 0,
+      "parent_id": "gameplay.randomness",
+      "owner_team": "Battle Royale Systems",
+      "definition": "Random or uneven in-match equipment distribution makes survival excessively dependent on loot opportunity.",
+      "include_rules": [
+        "Unviable landing loot, gear lottery, or unfair resource distribution."
+      ],
+      "exclude_rules": [
+        "Paid loot boxes, weapon strength independent of availability, and ordinary progression drops."
+      ],
+      "multilingual_cues": [
+        "en: loot RNG",
+        "zh: 落地没枪、搜物资靠脸",
+        "ru: рандом лута"
+      ],
+      "evidence_strata": [
+        "game_apex:loot_rng_imbalance=5",
+        "game_pubg:loot_rng_imbalance=5",
+        "family_battle_royale:poor_loot_distribution=2"
+      ],
+      "approx_support": 5,
+      "status": "core"
+    },
+    {
+      "id": "fam.battle_royale.encounter_flow",
+      "label": "Battle-royale encounter flow",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "battle_royale",
+      "game_appid": 0,
+      "parent_id": "gameplay.core_loop",
+      "owner_team": "Battle Royale Mode Design",
+      "definition": "Dropping, looting, rotating, fighting, and elimination create unsatisfying encounter timing.",
+      "include_rules": [
+        "Long downtime followed by abrupt elimination, repeated third-party pressure, or explicitly criticized zone-driven flow."
+      ],
+      "exclude_rules": [
+        "Generic bad maps, connection delays, loot quality alone, and inferred zone complaints."
+      ],
+      "multilingual_cues": [
+        "en: loot then die, constant third parties",
+        "zh: 搜半天秒死、一直被劝架",
+        "ru: долго лутаешься и сразу умираешь"
+      ],
+      "evidence_strata": [
+        "game_apex:map_design_causes_third_party_overload=6",
+        "game_pubg:battle_royale_pacing_punishment=5"
+      ],
+      "approx_support": 6,
+      "status": "core"
+    },
+    {
+      "id": "fam.competitive_shooter.input_balance",
+      "label": "Input-method balance",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "competitive_shooter",
+      "game_appid": 0,
+      "parent_id": "gameplay.balance",
+      "owner_team": "Combat Balance",
+      "definition": "Permitted input assistance or mixed-input competition creates unequal competitive capabilities.",
+      "include_rules": [
+        "Controller-versus-mouse assistance explicitly discussed as a built-in/allowed input rule, or mixed-input pools with stated advantage."
+      ],
+      "exclude_rules": [
+        "Alleged prohibited converters/scripts: social.cheating. Bare auto-aim without a clear input-rule or prohibited-tool referent remains unresolved. Broken device support uses ux.controls."
+      ],
+      "multilingual_cues": [
+        "en: controller aim-assist advantage",
+        "zh: 手柄内置辅瞄太强",
+        "ru: преимущество помощи в прицеливании"
+      ],
+      "evidence_strata": [
+        "game_apex:controller_aim_assist_imbalance=15",
+        "family_military_large_scale_shooter:controller_aim_assist_advantage=2"
+      ],
+      "approx_support": 15,
+      "status": "core"
+    },
+    {
+      "id": "fam.hero_team.role_balance",
+      "label": "Hero and role balance",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "hero_team",
+      "game_appid": 0,
+      "parent_id": "gameplay.balance",
+      "owner_team": "Hero Systems",
+      "definition": "Hero/class power or role interactions undermine viable compositions and participation.",
+      "include_rules": [
+        "Overpowered heroes, useless roles, or explicit composition counterplay failures."
+      ],
+      "exclude_rules": [
+        "Teammate skill, missing teammates, paid hero locks, and cooperation tools."
+      ],
+      "multilingual_cues": [
+        "en: useless role, overpowered hero",
+        "zh: 英雄超模、职业没用",
+        "ru: имбовый герой, бесполезная роль"
+      ],
+      "evidence_strata": [
+        "family_moba:role_hero_power_imbalance=4",
+        "family_hero_arena_shooter:unbalanced_heroes_or_classes=4"
+      ],
+      "approx_support": 4,
+      "status": "candidate"
+    },
+    {
+      "id": "fam.ranked_competitive.rating",
+      "label": "Ranked rules and incentives",
+      "domain": "progression",
+      "level": "family",
+      "family": "ranked_competitive",
+      "game_appid": 0,
+      "parent_id": "progression.effort_reward",
+      "owner_team": "Ranked Systems",
+      "definition": "Rank scoring, qualification, resets, or designed participation costs impose unwanted effort or reward achievement poorly.",
+      "include_rules": [
+        "Unfair rank gains/losses, disliked scoring incentives, repeated calibration, or ordinary post-death exit rules requiring unwanted spectating."
+      ],
+      "exclude_rules": [
+        "Opponent strength, technically unrecorded points, and reward absence without rank-rule evidence.",
+        "A particular erroneous, opaque, or disproportionate enforcement action, including punishment after technical failure: social.sanctions."
+      ],
+      "multilingual_cues": [
+        "en: unfair rank points, forced spectating",
+        "zh: 排位积分不合理、死后还得观战",
+        "ru: несправедливые рейтинговые очки, обязуют наблюдать"
+      ],
+      "evidence_strata": [
+        "game_cs:rank_progression_unfair=12",
+        "game_apex:ranked_system_redesign_disliked=11",
+        "game_pubg:ranked_early_leave_penalty=1; new boundary example"
+      ],
+      "approx_support": 12,
+      "status": "core"
+    },
+    {
+      "id": "fam.rpg.choice_consequence",
+      "label": "Narrative choice effects",
+      "domain": "content",
+      "level": "family",
+      "family": "branching_narrative_rpg",
+      "game_appid": 0,
+      "parent_id": "content.narrative",
+      "owner_team": "Narrative Systems",
+      "definition": "Backgrounds, dialogue, or role choices produce insufficient narrative differences.",
+      "include_rules": [
+        "Illusory story branches or inconsequential role/background choices."
+      ],
+      "exclude_rules": [
+        "Mechanical build depth and plot quality without choice evidence."
+      ],
+      "multilingual_cues": [
+        "en: choices change nothing",
+        "zh: 选项没影响",
+        "ru: выбор ничего не меняет"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:shallow_rpg_agency_and_lifepaths=19",
+        "family_open_world_action_rpg:choice_system_has_no_meaningful_impact=2",
+        "family_anime_gacha_visual_novel:choices_lack_narrative_impact=1"
+      ],
+      "approx_support": 19,
+      "status": "core"
+    },
+    {
+      "id": "fam.rpg.build_depth",
+      "label": "RPG build depth",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "rpg",
+      "game_appid": 0,
+      "parent_id": "gameplay.agency",
+      "owner_team": "RPG Systems",
+      "definition": "Character advancement offers shallow, constrained, or poorly differentiated builds.",
+      "include_rules": [
+        "Inconsequential perks, restricted respec/loadouts, or forced build paths."
+      ],
+      "exclude_rules": [
+        "Narrative choices, grind alone, and a strong option without a build-freedom complaint."
+      ],
+      "multilingual_cues": [
+        "en: shallow builds",
+        "zh: 流派没深度",
+        "ru: поверхностные билды"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:shallow_rpg_builds=18",
+        "family_singleplayer_rpg_arpg:build_and_party_composition_are_overconstrained=2"
+      ],
+      "approx_support": 18,
+      "status": "core"
+    },
+    {
+      "id": "fam.open_world.interactivity",
+      "label": "Open-world interaction",
+      "domain": "content",
+      "level": "family",
+      "family": "open_world",
+      "game_appid": 0,
+      "parent_id": "content.world_level",
+      "owner_team": "World Systems",
+      "definition": "An explorable world lacks meaningful accessible interactions relative to its apparent scale.",
+      "include_rules": [
+        "Decorative-only spaces, inaccessible environments, or lifeless exploration."
+      ],
+      "exclude_rules": [
+        "AI behavior alone, total content length, and simple route inconvenience."
+      ],
+      "multilingual_cues": [
+        "en: decorative world, nothing interacts",
+        "zh: 只能看不能互动",
+        "ru: мир-декорация"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:open_world_interactivity_content_deficit=27",
+        "family_open_world_action_rpg:empty_or_lifeless_open_world=6"
+      ],
+      "approx_support": 27,
+      "status": "core"
+    },
+    {
+      "id": "fam.sandbox.building_freedom",
+      "label": "Sandbox building freedom",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "sandbox_construction",
+      "game_appid": 0,
+      "parent_id": "gameplay.agency",
+      "owner_team": "Construction Systems",
+      "definition": "Construction capabilities constrain desired creations independently of settlement population rules.",
+      "include_rules": [
+        "Restrictive object-building eligibility, unavailable blueprint transfer, or limited construction customization."
+      ],
+      "exclude_rules": [
+        "NPC housing/settlement eligibility: fam.sandbox.settlement_rules. Tool usability, unclear requirements, resource grind, and technical placement defects."
+      ],
+      "multilingual_cues": [
+        "en: restrictive building tools",
+        "zh: 建造功能受限、蓝图不能转移",
+        "ru: ограничения строительства"
+      ],
+      "evidence_strata": [
+        "family_sandbox_crafting_building:missing_survival_blueprints=1",
+        "game_terraria:restrictive_npc_town_rules=3; transferred to settlement_rules, not current support"
+      ],
+      "approx_support": 1,
+      "status": "candidate"
+    },
+    {
+      "id": "fam.sandbox.state_transfer",
+      "label": "Cross-world transfer balance",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "sandbox_world_character_state",
+      "game_appid": 0,
+      "parent_id": "gameplay.balance",
+      "owner_team": "World and Character Systems",
+      "definition": "Rules allowing character, inventory, or equipment state to cross worlds/sessions create an explicit power or progression imbalance.",
+      "include_rules": [
+        "Imported advanced equipment overpowering a fresh shared world or persistent characters bypassing its intended power constraints."
+      ],
+      "exclude_rules": [
+        "Save corruption, entitlement transfer restrictions, ordinary veteran skill, and prohibited item generation. Transfer alone is not imbalance."
+      ],
+      "multilingual_cues": [
+        "en: imported endgame gear breaks balance",
+        "zh: 跨世界带装备破坏平衡",
+        "ru: перенос вещей нарушает баланс"
+      ],
+      "evidence_strata": [
+        "v1 prior-taxonomy lineage: shared.sandbox_world_character_state",
+        "game_terraria:multiplayer_gear_transfer_undermines_balance=1",
+        "seeds:C05; design check, not added"
+      ],
+      "approx_support": 1,
+      "status": "candidate"
+    },
+    {
+      "id": "fam.sandbox.environmental_maintenance",
+      "label": "World-state upkeep burden",
+      "domain": "progression",
+      "level": "family",
+      "family": "sandbox_world_character_state",
+      "game_appid": 0,
+      "parent_id": "progression.effort_reward",
+      "owner_team": "World Simulation Systems",
+      "definition": "Designed environmental state changes threaten retained building investment or impose unwanted recurring upkeep.",
+      "include_rules": [
+        "Spreading environmental hazards that require containment or repeatedly threaten player-built areas."
+      ],
+      "exclude_rules": [
+        "Save corruption, generic resource grind, combat difficulty, and one-time destruction without an environmental-maintenance referent."
+      ],
+      "multilingual_cues": [
+        "en: spreading hazard keeps ruining builds",
+        "zh: 环境蔓延毁家、反复清理太累",
+        "ru: распространение угроз требует постоянного ухода"
+      ],
+      "evidence_strata": [
+        "v1 prior-taxonomy lineage: shared.sandbox_world_character_state",
+        "game_terraria:corruption_spread_threatens_builds=3"
+      ],
+      "approx_support": 3,
+      "status": "candidate"
+    },
+    {
+      "id": "fam.sandbox.settlement_rules",
+      "label": "Settlement rule constraints",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "sandbox_world_character_state",
+      "game_appid": 0,
+      "parent_id": "gameplay.agency",
+      "owner_team": "Settlement Systems",
+      "definition": "Designed housing, population, happiness, or settlement-eligibility rules restrict desired layouts or resident arrangements.",
+      "include_rules": [
+        "Unwanted NPC separation, housing eligibility, or settlement service requirements constraining a chosen layout."
+      ],
+      "exclude_rules": [
+        "Unclear rules alone: ux.onboarding. Generic construction capability: fam.sandbox.building_freedom. Malfunctioning eligibility: tech.functionality."
+      ],
+      "multilingual_cues": [
+        "en: housing rules force unwanted layouts",
+        "zh: 住房规则限制布局、居民必须分开",
+        "ru: правила поселения ограничивают планировку"
+      ],
+      "evidence_strata": [
+        "v1 prior-taxonomy lineage: shared.sandbox_world_character_state",
+        "game_terraria:restrictive_npc_town_rules=3; upper bound includes guidance-only cases"
+      ],
+      "approx_support": 3,
+      "status": "candidate"
+    },
+    {
+      "id": "fam.action.boss_challenge",
+      "label": "Boss encounter difficulty",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "boss_based_action",
+      "game_appid": 0,
+      "parent_id": "gameplay.challenge",
+      "owner_team": "Boss Encounter Design",
+      "definition": "Boss attacks, readability, health, or difficulty fail to provide satisfying challenge.",
+      "include_rules": [
+        "Unfair patterns, excessive boss health/damage, or trivial bosses."
+      ],
+      "exclude_rules": [
+        "Resummoning/runback cost alone and technical boss blockers."
+      ],
+      "multilingual_cues": [
+        "en: unfair boss",
+        "zh: Boss难度不合理",
+        "ru: нечестный босс"
+      ],
+      "evidence_strata": [
+        "game_terraria:moon_lord_difficulty_unbalanced=2",
+        "family_roguelike_roguelite:hand_of_king_balance=1"
+      ],
+      "approx_support": 2,
+      "status": "candidate"
+    },
+    {
+      "id": "fam.action.retry_cost",
+      "label": "Checkpoint and retry cost",
+      "domain": "progression",
+      "level": "family",
+      "family": "retry_based_action",
+      "game_appid": 0,
+      "parent_id": "progression.effort_reward",
+      "owner_team": "Checkpoint Systems",
+      "definition": "Designed retry requirements impose excessive repetition, travel, or resource cost.",
+      "include_rules": [
+        "Long runbacks, sparse checkpoints, restrictive manual saving, or tedious boss resummoning."
+      ],
+      "exclude_rules": [
+        "Technical save failures, boss difficulty alone, and permanent account loss."
+      ],
+      "multilingual_cues": [
+        "en: long runback, bad checkpoints",
+        "zh: 跑尸太远、存档点太少",
+        "ru: долгий путь к боссу"
+      ],
+      "evidence_strata": [
+        "family_singleplayer_rpg_arpg:poor_save_and_autosave_design=4; duplicated source entry counted once",
+        "game_terraria:tedious_boss_resummoning=1"
+      ],
+      "approx_support": 4,
+      "status": "core"
+    },
+    {
+      "id": "fam.card.draw_fairness",
+      "label": "Draw and pool fairness",
+      "domain": "gameplay",
+      "level": "family",
+      "family": "card_autobattler_board",
+      "game_appid": 0,
+      "parent_id": "gameplay.randomness",
+      "owner_team": "Card Systems",
+      "definition": "Draws, deals, dice, or rotating unit pools allegedly overwhelm strategic agency or favor outcomes unfairly.",
+      "include_rules": [
+        "Rigged hands, biased dice, or unavailable needed units in random shops."
+      ],
+      "exclude_rules": [
+        "Paid acquisition, rule-resolution bugs, and imbalance independent of randomness."
+      ],
+      "multilingual_cues": [
+        "en: rigged draw",
+        "zh: 发牌被操控、刷不到棋子",
+        "ru: подкрученная раздача"
+      ],
+      "evidence_strata": [
+        "family_card_autobattler_board:perceived_biased_rng=8",
+        "family_card_autobattler_board:needed_autobattler_unit_unavailable=1"
+      ],
+      "approx_support": 8,
+      "status": "core"
+    },
+    {
+      "id": "fam.horror.fear_tension",
+      "label": "Horror fear and tension",
+      "domain": "content",
+      "level": "family",
+      "family": "horror",
+      "game_appid": 0,
+      "parent_id": "content.audiovisual",
+      "owner_team": "Horror Experience Design",
+      "definition": "The authored experience fails to evoke expected fear, suspense, or sustained tension.",
+      "include_rules": [
+        "Unscary horror, predictable scares, or mechanics explicitly undermining atmosphere."
+      ],
+      "exclude_rules": [
+        "Resource balance or difficulty alone and generic dislike of horror."
+      ],
+      "multilingual_cues": [
+        "en: not scary",
+        "zh: 不恐怖、没有紧张感",
+        "ru: не страшно"
+      ],
+      "evidence_strata": [
+        "family_horror:unscary_horror=10",
+        "family_horror:horror_puzzle_mechanic_undermines_atmosphere=1"
+      ],
+      "approx_support": 10,
+      "status": "core"
+    },
+    {
+      "id": "game.cs.free_account_cheating",
+      "label": "Free accounts blamed for cheating",
+      "domain": "social",
+      "level": "game",
+      "family": "competitive_shooter",
+      "game_appid": 730,
+      "parent_id": "social.cheating",
+      "owner_team": "CS Competitive Integrity",
+      "definition": "The reviewer explicitly attributes recurring CS cheating to free access or cheap replacement accounts.",
+      "include_rules": [
+        "A stated free-access/cheap-replacement-to-cheating link; retain its attribution span."
+      ],
+      "exclude_rules": [
+        "General cheating, purchase devaluation, Prime price, and external workaround payment alone. The claim is not causal evidence."
+      ],
+      "multilingual_cues": [
+        "en: free accounts let cheaters return",
+        "zh: 免费后外挂泛滥",
+        "ru: после бесплатного перехода больше читеров"
+      ],
+      "evidence_strata": [
+        "game_cs:f2p_integrity=18"
+      ],
+      "approx_support": 18,
+      "status": "core"
+    },
+    {
+      "id": "game.cs.forced_replacement",
+      "label": "Forced CS:GO replacement",
+      "domain": "business",
+      "level": "game",
+      "family": "competitive_shooter",
+      "game_appid": 730,
+      "parent_id": "business.access_requirements",
+      "owner_team": "CS Platform Product",
+      "definition": "Replacement by CS2 removes access to the preferred CS:GO product.",
+      "include_rules": [
+        "Objection to compulsory replacement or inability to retain the former product."
+      ],
+      "exclude_rules": [
+        "Missing maps alone and generic sequel dislike. Add linked service.update_regression only for an explicit worsening transition, not compulsion alone."
+      ],
+      "multilingual_cues": [
+        "en: give back CS:GO",
+        "zh: 强制换CS2、还我CSGO",
+        "ru: верните CS:GO"
+      ],
+      "evidence_strata": [
+        "game_cs:csgo_replaced=20"
+      ],
+      "approx_support": 20,
+      "status": "core"
+    },
+    {
+      "id": "game.cs.per_map_rank",
+      "label": "CS per-map calibration",
+      "domain": "progression",
+      "level": "game",
+      "family": "ranked_competitive",
+      "game_appid": 730,
+      "parent_id": "fam.ranked_competitive.rating",
+      "owner_team": "CS Ranked Systems",
+      "definition": "Separate map-specific qualification creates unwanted repeated rank-calibration effort.",
+      "include_rules": [
+        "Explicit repeated qualification across maps; retain as a diagnostic hypothesis."
+      ],
+      "exclude_rules": [
+        "Generic rank grind and unfair opponents. Production uses fam.ranked_competitive.rating."
+      ],
+      "multilingual_cues": [
+        "en: qualify on every map",
+        "zh: 每张图重新定级",
+        "ru: калибровка на каждой карте"
+      ],
+      "evidence_strata": [
+        "game_cs:per_map_rank_grind=2"
+      ],
+      "approx_support": 2,
+      "status": "watchlist"
+    },
+    {
+      "id": "game.apex.ranked_incentives",
+      "label": "Apex ranked incentives",
+      "domain": "progression",
+      "level": "game",
+      "family": "ranked_competitive",
+      "game_appid": 1172470,
+      "parent_id": "fam.ranked_competitive.rating",
+      "owner_team": "Apex Ranked Systems",
+      "definition": "Apex scoring rewards unwanted strategies or misrepresents achievement.",
+      "include_rules": [
+        "Explicit ranked scoring, incentive, or scoring-redesign criticism."
+      ],
+      "exclude_rules": [
+        "Hard lobbies, missing rewards without scoring evidence, and point-recording bugs. Explicit update deterioration may receive a linked regression annotation."
+      ],
+      "multilingual_cues": [
+        "en: ranked rewards the wrong play",
+        "zh: 排位机制鼓励苟分",
+        "ru: рейтинговая система поощряет не то"
+      ],
+      "evidence_strata": [
+        "game_apex:ranked_system_redesign_disliked=11"
+      ],
+      "approx_support": 11,
+      "status": "candidate"
+    },
+    {
+      "id": "game.apex.third_party_flow",
+      "label": "Apex third-party pressure",
+      "domain": "gameplay",
+      "level": "game",
+      "family": "battle_royale",
+      "game_appid": 1172470,
+      "parent_id": "fam.battle_royale.encounter_flow",
+      "owner_team": "Apex Map Design",
+      "definition": "Encounter convergence repeatedly brings additional squads into ongoing fights.",
+      "include_rules": [
+        "Excessive third parties attributed to map or fight flow."
+      ],
+      "exclude_rules": [
+        "Ordinary multi-team combat without complaint and generic map quality."
+      ],
+      "multilingual_cues": [
+        "en: constantly third-partied",
+        "zh: 一直被劝架",
+        "ru: постоянно приходит третья команда"
+      ],
+      "evidence_strata": [
+        "game_apex:map_design_causes_third_party_overload=6"
+      ],
+      "approx_support": 6,
+      "status": "candidate"
+    },
+    {
+      "id": "game.cyberpunk.quest_state",
+      "label": "Cyberpunk quest blockers",
+      "domain": "tech",
+      "level": "game",
+      "family": "rpg",
+      "game_appid": 1091500,
+      "parent_id": "tech.functionality",
+      "owner_team": "Cyberpunk Quest Engineering",
+      "definition": "A mission interaction or scripted state transition fails and blocks progression.",
+      "include_rules": [
+        "Broken objectives, triggers, quest interactions, or scripted tutorials."
+      ],
+      "exclude_rules": [
+        "Unclear directions, story dislike, slow advancement, and runtime freezes without a quest-state failure."
+      ],
+      "multilingual_cues": [
+        "en: quest cannot progress",
+        "zh: 任务触发不了",
+        "ru: квест не проходится из-за бага"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:progression_blocking_bugs=21"
+      ],
+      "approx_support": 21,
+      "status": "core"
+    },
+    {
+      "id": "game.cyberpunk.lifepath",
+      "label": "Cyberpunk lifepath effects",
+      "domain": "content",
+      "level": "game",
+      "family": "branching_narrative_rpg",
+      "game_appid": 1091500,
+      "parent_id": "fam.rpg.choice_consequence",
+      "owner_team": "Cyberpunk Narrative Systems",
+      "definition": "Lifepaths, backgrounds, or dialogue choices provide insufficient consequential differentiation.",
+      "include_rules": [
+        "Explicit lifepath or branching-role consequence complaints."
+      ],
+      "exclude_rules": [
+        "Generic poor writing and mechanical perk depth."
+      ],
+      "multilingual_cues": [
+        "en: lifepath changes nothing",
+        "zh: 出身选择没影响",
+        "ru: предыстория ничего не меняет"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:shallow_rpg_agency_and_lifepaths=19"
+      ],
+      "approx_support": 19,
+      "status": "core"
+    },
+    {
+      "id": "game.cyberpunk.city_interactivity",
+      "label": "Night City interaction",
+      "domain": "content",
+      "level": "game",
+      "family": "open_world",
+      "game_appid": 1091500,
+      "parent_id": "fam.open_world.interactivity",
+      "owner_team": "Cyberpunk World Systems",
+      "definition": "Night City's apparent density exceeds its accessible, meaningful world interactions.",
+      "include_rules": [
+        "Decorative city spaces or unavailable everyday interactions."
+      ],
+      "exclude_rules": [
+        "Police behavior alone and general performance or story complaints."
+      ],
+      "multilingual_cues": [
+        "en: Night City is a facade",
+        "zh: 夜之城只能看",
+        "ru: Найт-Сити — декорация"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:open_world_interactivity_content_deficit=27"
+      ],
+      "approx_support": 27,
+      "status": "core"
+    },
+    {
+      "id": "game.cyberpunk.police_response",
+      "label": "Cyberpunk police response",
+      "domain": "gameplay",
+      "level": "game",
+      "family": "open_world",
+      "game_appid": 1091500,
+      "parent_id": "gameplay.ai_simulation",
+      "owner_team": "Cyberpunk World AI",
+      "definition": "Working crime-response, police-spawn, or pursuit behavior is criticized as implausible or systemically shallow.",
+      "include_rules": [
+        "Arbitrary police appearance or implausible pursuit explicitly criticized as simulated behavior."
+      ],
+      "exclude_rules": [
+        "Discrete malfunction uses tech.functionality; unrelated NPC behavior uses gameplay.ai_simulation.",
+        "During calibration store this leaf as primary and derive its ancestor. Production uses gameplay.ai_simulation until promotion."
+      ],
+      "multilingual_cues": [
+        "en: police spawn behind me",
+        "zh: 警察凭空刷出",
+        "ru: полиция появляется из ниоткуда"
+      ],
+      "evidence_strata": [
+        "game_cyberpunk:broken_police_crime_response=14; design/defect boundary requires recoding"
+      ],
+      "approx_support": 14,
+      "status": "candidate"
+    },
+    {
+      "id": "game.pubg.accelerator_dependency",
+      "label": "PUBG accelerator requirement",
+      "domain": "business",
+      "level": "game",
+      "family": "battle_royale",
+      "game_appid": 578080,
+      "parent_id": "business.access_requirements",
+      "owner_team": "PUBG Regional Platform Product",
+      "definition": "Usable access allegedly requires a designated external network accelerator.",
+      "include_rules": [
+        "Explicit imposed accelerator dependency or blocked alternatives."
+      ],
+      "exclude_rules": [
+        "Voluntary latency workarounds, generic high ping, and inferred exclusivity."
+      ],
+      "multilingual_cues": [
+        "en: forced accelerator",
+        "zh: 强制指定加速器",
+        "ru: требуется определённый ускоритель"
+      ],
+      "evidence_strata": [
+        "game_pubg:forced_network_accelerator=25; repeated Chinese verse makes support template-sensitive"
+      ],
+      "approx_support": 25,
+      "status": "candidate"
+    },
+    {
+      "id": "game.pubg.map_selection",
+      "label": "PUBG map-choice limits",
+      "domain": "content",
+      "level": "game",
+      "family": "battle_royale",
+      "game_appid": 578080,
+      "parent_id": "content.scope_variety",
+      "owner_team": "PUBG Playlist Product",
+      "definition": "Selection or rotation rules prevent access to desired PUBG maps or modes.",
+      "include_rules": [
+        "Removed map choice, unwanted forced rotation, or inaccessible preferred playlists."
+      ],
+      "exclude_rules": [
+        "Map layout, queue failures, and assumed ranked context. Explicit update worsening may receive a linked regression annotation."
+      ],
+      "multilingual_cues": [
+        "en: cannot choose maps",
+        "zh: 不能选地图",
+        "ru: нельзя выбрать карту"
+      ],
+      "evidence_strata": [
+        "game_pubg:map_selection_unavailable=9"
+      ],
+      "approx_support": 9,
+      "status": "core"
+    },
+    {
+      "id": "game.pubg.ranked_exit_penalty",
+      "label": "PUBG post-death exit rules",
+      "domain": "progression",
+      "level": "game",
+      "family": "ranked_competitive",
+      "game_appid": 578080,
+      "parent_id": "fam.ranked_competitive.rating",
+      "owner_team": "PUBG Ranked Systems",
+      "definition": "Designed ranked participation rules impose a cost for leaving after death or require unwanted spectating.",
+      "include_rules": [
+        "Explicit post-death leave-rule or forced-spectating criticism in ranked play; retain as a diagnostic hypothesis."
+      ],
+      "exclude_rules": [
+        "A specific allegedly erroneous or opaque enforcement action: social.sanctions.",
+        "Technical disconnect punishment, general elimination pacing, and inferred ranked loot tables.",
+        "Production uses fam.ranked_competitive.rating."
+      ],
+      "multilingual_cues": [
+        "en: watch after death or lose rank",
+        "zh: 死了退出还扣分、必须观战",
+        "ru: штраф за выход после смерти"
+      ],
+      "evidence_strata": [
+        "game_pubg:ranked_early_leave_penalty=1"
+      ],
+      "approx_support": 1,
+      "status": "watchlist"
+    },
+    {
+      "id": "game.terraria.boss_difficulty",
+      "label": "Terraria boss difficulty",
+      "domain": "gameplay",
+      "level": "game",
+      "family": "boss_based_action",
+      "game_appid": 105600,
+      "parent_id": "fam.action.boss_challenge",
+      "owner_team": "Terraria Encounter Design",
+      "definition": "A Terraria boss presents an unsatisfying or disproportionate challenge.",
+      "include_rules": [
+        "Explicit boss attack, tuning, or difficulty complaints; diagnostic only."
+      ],
+      "exclude_rules": [
+        "Resummoning cost alone. Production uses gameplay.challenge while the family remains candidate."
+      ],
+      "multilingual_cues": [
+        "en: Moon Lord difficulty unfair",
+        "zh: 月总难度不合理",
+        "ru: несправедливая сложность Лунного лорда"
+      ],
+      "evidence_strata": [
+        "game_terraria:moon_lord_difficulty_unbalanced=2"
+      ],
+      "approx_support": 2,
+      "status": "watchlist"
+    },
+    {
+      "id": "game.terraria.cross_world_gear",
+      "label": "Terraria imported gear imbalance",
+      "domain": "gameplay",
+      "level": "game",
+      "family": "sandbox_world_character_state",
+      "game_appid": 105600,
+      "parent_id": "fam.sandbox.state_transfer",
+      "owner_team": "Terraria Character Systems",
+      "definition": "Imported equipped characters or endgame items bypass a shared world's intended power progression.",
+      "include_rules": [
+        "Explicit imported-gear imbalance in multiplayer; diagnostic only."
+      ],
+      "exclude_rules": [
+        "Cheating without prohibited-behavior evidence, data corruption, and veteran skill alone. Production uses gameplay.balance while the family remains candidate."
+      ],
+      "multilingual_cues": [
+        "en: bring endgame gear from another world",
+        "zh: 跨世界带毕业装备",
+        "ru: приносят мощные вещи из другого мира"
+      ],
+      "evidence_strata": [
+        "game_terraria:multiplayer_gear_transfer_undermines_balance=1",
+        "seeds:C05; design check, not added"
+      ],
+      "approx_support": 1,
+      "status": "watchlist"
+    },
+    {
+      "id": "game.terraria.town_rules",
+      "label": "Terraria settlement limits",
+      "domain": "gameplay",
+      "level": "game",
+      "family": "sandbox_world_character_state",
+      "game_appid": 105600,
+      "parent_id": "fam.sandbox.settlement_rules",
+      "owner_team": "Terraria Settlement Systems",
+      "definition": "NPC happiness or pylon eligibility constrains desired settlement layouts.",
+      "include_rules": [
+        "Unwanted housing separation or layout requirements; diagnostic only."
+      ],
+      "exclude_rules": [
+        "Unclear pylon rules alone: ux.onboarding. Production uses gameplay.agency while the family remains candidate."
+      ],
+      "multilingual_cues": [
+        "en: happiness restricts towns",
+        "zh: 幸福度限制城镇布局",
+        "ru: счастье NPC ограничивает строительство"
+      ],
+      "evidence_strata": [
+        "game_terraria:restrictive_npc_town_rules=3; upper bound includes guidance-only cases"
+      ],
+      "approx_support": 3,
+      "status": "watchlist"
+    },
+    {
+      "id": "game.terraria.biome_spread",
+      "label": "Terraria biome upkeep",
+      "domain": "progression",
+      "level": "game",
+      "family": "sandbox_world_character_state",
+      "game_appid": 105600,
+      "parent_id": "fam.sandbox.environmental_maintenance",
+      "owner_team": "Terraria Biome Systems",
+      "definition": "Hostile biome spread threatens building investment or imposes unwanted recurring maintenance.",
+      "include_rules": [
+        "Unwanted corruption/crimson spread threatening player-built areas; diagnostic only."
+      ],
+      "exclude_rules": [
+        "Save-file corruption, ordinary combat difficulty, and biome names without complaint. Production uses progression.effort_reward while the family remains candidate."
+      ],
+      "multilingual_cues": [
+        "en: corruption spread ruins builds",
+        "zh: 腐化蔓延毁家",
+        "ru: распространение порчи угрожает постройкам"
+      ],
+      "evidence_strata": [
+        "game_terraria:corruption_spread_threatens_builds=3"
+      ],
+      "approx_support": 3,
+      "status": "watchlist"
+    }
+  ],
+  "review_level_fields": [
+    {
+      "name": "steam_recommendation",
+      "values": [
+        "recommended",
+        "not_recommended",
+        "unknown"
+      ],
+      "definition": "Platform recommendation flag, independent of textual polarity and factor presence."
+    },
+    {
+      "name": "content_polarity",
+      "values": [
+        "negative",
+        "mixed",
+        "neutral",
+        "positive",
+        "uncertain"
+      ],
+      "definition": "Overall semantic polarity after interpreting sarcasm and context."
+    },
+    {
+      "name": "factor_mentions",
+      "values": [
+        "negative",
+        "positive",
+        "neutral_descriptive",
+        "uncertain"
+      ],
+      "definition": "Repeated records of factor_id when identifiable, original span, aspect/entity, valence, interpretation, coder, confidence, and proposition ID. An unspecified aspect mention need not receive a factor_id. Only supported negative propositions activate eligible complaint factors."
+    },
+    {
+      "name": "attributability",
+      "values": [
+        "specific_product_issue",
+        "broad_unresolved_product_issue",
+        "external_company_protest",
+        "personal_consequence_only",
+        "uninformative_rant",
+        "joke_or_spam",
+        "uncertain"
+      ],
+      "definition": "Span-level attribution; several values may occur in one review. No player-blame residual."
+    },
+    {
+      "name": "target_scope",
+      "values": [
+        "game",
+        "non_game_software",
+        "publisher_service",
+        "external_company_conduct",
+        "steam_platform",
+        "third_party_service",
+        "uncertain"
+      ],
+      "definition": "Object of criticism. External protests do not automatically enter game-factor prevalence."
+    },
+    {
+      "name": "unresolved_complaint",
+      "values": [
+        "local_vs_network_lag",
+        "freeze_vs_stutter",
+        "defect_vs_design",
+        "hit_detection_cause",
+        "commercial_mechanism_unspecified",
+        "unfinished_unspecified",
+        "aspect_evaluation_without_referent",
+        "input_assistance_vs_cheating",
+        "match_composition_vs_population",
+        "patch_delivery_burden",
+        "candidate_only_no_core_ancestor",
+        "non_game_task_effectiveness",
+        "other",
+        "none"
+      ],
+      "definition": "Preserve the original span and candidate interpretations. Explicit update-level worsening uses service.update_regression even if the affected subsystem is unknown. Unfinished release-state claims use service.release_readiness; unfinished with no release referent remains unresolved."
+    },
+    {
+      "name": "reported_behavior",
+      "values": [
+        "quit_intent",
+        "stopped_playing_reported",
+        "refund_intent",
+        "refund_requested",
+        "refund_received",
+        "continued_play_reported",
+        "return_intent",
+        "none_stated"
+      ],
+      "definition": "Self-reported actions and intentions, distinct from observed behavior."
+    },
+    {
+      "name": "reported_affect_and_consequence",
+      "values": [
+        "anger",
+        "frustration",
+        "boredom",
+        "enjoyment",
+        "compulsive_engagement",
+        "productivity_or_time_cost",
+        "physical_discomfort",
+        "immersion_loss",
+        "none_stated"
+      ],
+      "definition": "Explicit personal experiences; do not infer a psychiatric diagnosis or defective mechanism. Bare gameplay boredom belongs here."
+    },
+    {
+      "name": "experienced_harm",
+      "values": [
+        "cannot_start",
+        "session_interrupted",
+        "progress_blocked",
+        "progress_lost",
+        "competitive_disadvantage",
+        "financial_loss_reported",
+        "reduced_enjoyment",
+        "unspecified"
+      ],
+      "definition": "Explicit consequences without automatic numerical severity or causal verification."
+    },
+    {
+      "name": "claim_status",
+      "values": [
+        "first_person_report",
+        "observation_of_others",
+        "allegation_or_inference",
+        "request_or_preference",
+        "hypothetical",
+        "uncertain"
+      ],
+      "definition": "Attach to propositions. Claimed cheating, wrongful sanctions, copying, administrative abuse, motives, stewardship priorities, and update causation remain attributed claims."
+    },
+    {
+      "name": "experience_context",
+      "values": [
+        "solo",
+        "public_match",
+        "premade_group",
+        "private_server",
+        "ranked",
+        "casual",
+        "new_player",
+        "returning_player",
+        "unknown"
+      ],
+      "definition": "Multi-valued context. Store game, mode, map, boss, hero, platform, hardware, input, region, and playtime as typed entities."
+    },
+    {
+      "name": "mechanism_facets",
+      "values": [
+        "free_text_supported_mechanism",
+        "unknown"
+      ],
+      "definition": "Preserves queue/population/bot facets, enforcement/reporting facets, sanction types, trigger details, and named systems without multiplying factors."
+    },
+    {
+      "name": "commercial_mechanism",
+      "values": [
+        "base_purchase",
+        "dlc",
+        "direct_cosmetic_sale",
+        "subscription",
+        "battle_pass",
+        "paid_random_reward",
+        "paid_power_or_boost",
+        "advertising",
+        "third_party_workaround",
+        "unknown"
+      ],
+      "definition": "Commercial object independent of dissatisfaction. A pass is not inherently random; spending without an item does not establish paid chance."
+    },
+    {
+      "name": "change_context",
+      "values": [
+        "post_update_regression",
+        "feature_removal",
+        "free_to_play_transition",
+        "forced_replacement",
+        "sequel_or_remaster_comparison",
+        "longstanding_issue",
+        "none_stated"
+      ],
+      "definition": "Temporal/comparative context. Retain alongside service.update_regression when worsening is explicit; this field no longer substitutes for that complaint factor. Other change events do not automatically activate regression."
+    },
+    {
+      "name": "version_attribution",
+      "values": [
+        "explicit_build_or_update",
+        "explicit_game_era",
+        "timestamp_inferred",
+        "retrospective_or_edited",
+        "unknown"
+      ],
+      "definition": "Store creation/edit dates, claimed play date, build/era, and uncertainty. A review timestamp alone does not verify exposure."
+    },
+    {
+      "name": "language_and_expression",
+      "values": [
+        "en",
+        "zh",
+        "ru",
+        "other",
+        "mixed_language",
+        "sarcasm",
+        "quoted_speech",
+        "meme_or_template"
+      ],
+      "definition": "Actual language codes plus expression flags; contextual annotation is required."
+    },
+    {
+      "name": "coding_confidence",
+      "values": [
+        "high",
+        "medium",
+        "low",
+        "adjudication_required"
+      ],
+      "definition": "Per-proposition confidence with rationale. Keep model probabilities separate and calibrate thresholds."
+    },
+    {
+      "name": "source_provenance",
+      "values": [
+        "discovery_synthesis",
+        "architect_proposal",
+        "seed_design_check",
+        "adjudicated_review",
+        "critic_report",
+        "human_annotator_feedback"
+      ],
+      "definition": "Store source file/stratum, code, aliases, example IDs, evidence-span availability, mapping action, and codebook version. Distinguish supplied summaries from inspected original reviews."
+    },
+    {
+      "name": "duplicate_and_sampling_metadata",
+      "values": [
+        "unique_text",
+        "near_duplicate_cluster",
+        "template_cluster",
+        "cross_stratum_overlap_unknown"
+      ],
+      "definition": "Store review/reviewer identifiers, sampling frame, inclusion probabilities if known, cluster ID, and cohort. Example IDs do not establish complete memberships."
+    },
+    {
+      "name": "observed_play_30d",
+      "values": [
+        "played_in_prespecified_window",
+        "no_play_with_complete_coverage",
+        "not_yet_observable",
+        "missing_or_private",
+        "censored"
+      ],
+      "definition": "Proposed behavioral endpoint; finalize the window before analysis. Retain timestamps and distinguish follow-up play from activity near day 30. Omit when no observation data were supplied."
+    },
+    {
+      "name": "observed_play_90d",
+      "values": [
+        "played_in_prespecified_window",
+        "no_play_with_complete_coverage",
+        "not_yet_observable",
+        "missing_or_private",
+        "censored"
+      ],
+      "definition": "Analogous day-90 endpoint. Missing visibility is not quitting; no observed play is not necessarily permanent churn. Omit when no observation data were supplied."
+    },
+    {
+      "name": "analysis_eligibility",
+      "values": [
+        "attributable_negative",
+        "mixed_with_negative_factor",
+        "nonnegative_aspect_record",
+        "nonattributable_record",
+        "external_target_record",
+        "behavior_followup_unavailable",
+        "calibration_only"
+      ],
+      "definition": "Separate complaint, scope, calibration, and behavior denominators. Retain excluded records for audits."
+    },
+    {
+      "name": "proposition_linkage",
+      "values": [
+        "independent",
+        "same_proposition_multiple_factors",
+        "reported_event_consequence",
+        "derived_ancestor"
+      ],
+      "definition": "Store proposition ID, span IDs, primary factor IDs, derived ancestors, and linked proposition IDs. Shared promise/absence or update/symptom annotations count once in proposition totals; derived ancestors are never new complaints."
+    },
+    {
+      "name": "reported_maintenance_history",
+      "values": [
+        "update_dates_or_intervals_cited",
+        "unfixed_duration_cited",
+        "repeated_non_remediation_cited",
+        "release_sequence_cited",
+        "no_history_cited"
+      ],
+      "definition": "Store the reviewer's stated dates, versions, duration, recurrence, and history spans. These are reported observations, not verified history; keep them separate from priority or abandonment inferences."
+    },
+    {
+      "name": "attribution_metadata",
+      "values": [
+        "developer_priority_claim",
+        "abandonment_claim",
+        "participant_intent_claim",
+        "free_account_cheating_claim",
+        "update_worsening_claim",
+        "administrative_abuse_claim",
+        "other_explicit_attribution",
+        "none_stated"
+      ],
+      "definition": "Record the claimed actor, causal/intent relation, and exact attribution span. Never infer intent from AFK or infer causal validation from a factor label."
+    },
+    {
+      "name": "diagnostic_factor_ids",
+      "values": [
+        "candidate",
+        "watchlist",
+        "none"
+      ],
+      "definition": "Store supported candidate/watchlist IDs separately from production primary factors. Use the nearest supported core ancestor in production, or unresolved_complaint=candidate_only_no_core_ancestor when none exists."
+    },
+    {
+      "name": "platform_support_claim",
+      "values": [
+        "support_explicitly_claimed",
+        "support_explicitly_denied",
+        "support_unspecified"
+      ],
+      "definition": "Records what the review says about official platform support. Named incompatibility does not prove official support, deliberate exclusion, or policy intent."
+    }
+  ],
+  "mapping_from_codex19": [
+    {
+      "codex_id": "core.technical",
+      "action": "retire",
+      "targets": [
+        "domain:tech"
+      ],
+      "reason": "Organizing domain, not an annotation target."
+    },
+    {
+      "codex_id": "core.technical.reliability",
+      "action": "split",
+      "targets": [
+        "tech.stability",
+        "tech.functionality",
+        "tech.save_integrity",
+        "tech.platform_compatibility"
+      ],
+      "reason": "Distinguish execution, named function failure, persistence, and explicit integration failure. Apply operability and same-proposition rules."
+    },
+    {
+      "codex_id": "core.technical.performance",
+      "action": "rename",
+      "targets": [
+        "tech.performance"
+      ],
+      "reason": "Preserve local execution performance; ambiguous lag/freezing remains unresolved."
+    },
+    {
+      "codex_id": "core.technical.connectivity",
+      "action": "split",
+      "targets": [
+        "tech.network.responsiveness",
+        "tech.network.session_access",
+        "social.match_availability",
+        "social.skill_matchmaking",
+        "business.access_requirements",
+        "business.account_security"
+      ],
+      "reason": "Select from online delay, connection failure, population, pairing, explicit access rules, and account-specific barriers."
+    },
+    {
+      "codex_id": "core.usability",
+      "action": "split",
+      "targets": [
+        "ux.interface",
+        "ux.controls",
+        "ux.accessibility",
+        "ux.localization"
+      ],
+      "reason": "Workflow, input operation, perception, and language require distinct evidence."
+    },
+    {
+      "codex_id": "core.usability.onboarding_goal_clarity",
+      "action": "rename",
+      "targets": [
+        "ux.onboarding"
+      ],
+      "reason": "Retain guidance; separate understood difficulty and technical tutorial failures."
+    },
+    {
+      "codex_id": "core.challenge_fairness",
+      "action": "split",
+      "targets": [
+        "gameplay.challenge",
+        "gameplay.balance",
+        "gameplay.randomness",
+        "social.skill_matchmaking",
+        "progression.effort_reward"
+      ],
+      "reason": "Separate difficulty, power, chance, pairing, and retry/investment cost."
+    },
+    {
+      "codex_id": "core.gameplay_system",
+      "action": "split",
+      "targets": [
+        "gameplay.core_loop",
+        "gameplay.agency",
+        "gameplay.ai_simulation",
+        "gameplay.randomness",
+        "content.world_level"
+      ],
+      "reason": "Require an identifiable action/system referent. Bare boring gameplay remains an unresolved evaluation and affect field."
+    },
+    {
+      "codex_id": "core.gameplay_system.balance_integrity",
+      "action": "split",
+      "targets": [
+        "gameplay.balance",
+        "social.cheating",
+        "social.skill_matchmaking",
+        "social.sanctions"
+      ],
+      "reason": "Working-rule inequality, prohibited advantage, pairing, and contested enforcement are distinct."
+    },
+    {
+      "codex_id": "core.progression_rewards",
+      "action": "rename",
+      "targets": [
+        "progression.effort_reward"
+      ],
+      "reason": "Retain advancement and investment; payment and technical recording failures use their own factors."
+    },
+    {
+      "codex_id": "core.content_world",
+      "action": "split",
+      "targets": [
+        "content.scope_variety",
+        "content.narrative",
+        "content.world_level",
+        "content.audiovisual",
+        "content.franchise_identity"
+      ],
+      "reason": "Separate breadth, writing, space, expression, and explicit originality/identity complaints; identity is calibration-only until validated."
+    },
+    {
+      "codex_id": "core.multiplayer_social",
+      "action": "split",
+      "targets": [
+        "social.cooperation",
+        "social.conduct",
+        "social.match_availability",
+        "social.skill_matchmaking",
+        "social.sanctions",
+        "social.governance"
+      ],
+      "reason": "Distinguish chosen-group tools/rules, behavior, population, pairing, specific penalties, and broader authority abuse. Governance remains candidate."
+    },
+    {
+      "codex_id": "core.value_monetization",
+      "action": "split",
+      "targets": [
+        "business.price_value",
+        "business.paywall",
+        "business.paid_advantage",
+        "business.paid_randomness",
+        "business.sales_pressure",
+        "business.access_requirements",
+        "business.ownership",
+        "service.marketing_trust",
+        "service.release_readiness"
+      ],
+      "reason": "Choose the stated commercial or seller-readiness complaint. Sold-unfinished claims now have an explicit destination; missing features alone do not prove deception or release unfitness."
+    },
+    {
+      "codex_id": "core.experience_outcome",
+      "action": "demote_to_field",
+      "targets": [
+        "field:reported_behavior",
+        "field:reported_affect_and_consequence",
+        "field:experienced_harm",
+        "field:observed_play_30d",
+        "field:observed_play_90d"
+      ],
+      "reason": "Consequences and future behavior do not substitute for product complaint factors."
+    },
+    {
+      "codex_id": "shared.battle_royale.drop_loot_zone",
+      "action": "split",
+      "targets": [
+        "fam.battle_royale.loot",
+        "fam.battle_royale.encounter_flow",
+        "content.world_level"
+      ],
+      "reason": "Equipment opportunity, encounter timing, and layout differ; no standalone zone factor is justified."
+    },
+    {
+      "codex_id": "shared.sandbox_world_character_state",
+      "action": "split",
+      "targets": [
+        "fam.sandbox.state_transfer",
+        "fam.sandbox.environmental_maintenance",
+        "fam.sandbox.settlement_rules",
+        "fam.sandbox.building_freedom",
+        "tech.save_integrity",
+        "business.ownership"
+      ],
+      "reason": "Restore reusable state-transfer, environmental-maintenance, and settlement-rule families under the shared sandbox_world_character_state family identifier. Their parents preserve balance, investment, and agency distinctions. Technical loss, construction capabilities, and entitlement rights retain separate destinations. Sparse Terraria leaves are diagnostic descendants, not default migration targets."
+    },
+    {
+      "codex_id": "cyberpunk.quest_progression",
+      "action": "rename",
+      "targets": [
+        "game.cyberpunk.quest_state"
+      ],
+      "reason": "Retain quest-state blockers; derive tech.functionality instead of separately coding it."
+    },
+    {
+      "codex_id": "apex.legend_team_composition",
+      "action": "split",
+      "targets": [
+        "fam.hero_team.role_balance",
+        "gameplay.agency",
+        "social.cooperation",
+        "social.skill_matchmaking",
+        "social.match_availability",
+        "business.paywall"
+      ],
+      "reason": "Select actual power, choice, chosen-group barriers, human-team assignment, missing-human population, or paid-access evidence. Missing teammates alone do not establish every destination."
+    },
+    {
+      "codex_id": "pubg.ranked_ruleset",
+      "action": "split",
+      "targets": [
+        "fam.ranked_competitive.rating",
+        "game.pubg.ranked_exit_penalty",
+        "game.pubg.map_selection",
+        "fam.battle_royale.loot",
+        "gameplay.balance"
+      ],
+      "reason": "Designed ranked exit costs now descend from ranked rules/incentives. The PUBG leaf is watchlist-only; production uses its family. Maps, loot, and balance require their own evidence. Specific erroneous enforcement is separately recoded to social.sanctions."
+    }
+  ],
+  "jerry_cards_coding": [
+    {
+      "card": "C01",
+      "factors": [
+        "tech.performance",
+        "tech.network.responsiveness",
+        "game.cs.free_account_cheating"
+      ],
+      "fields": "content_polarity=mixed; attributability=specific_product_issue; version_attribution=explicit_game_era(CS:GO,2020-12); commercial_mechanism=third_party_workaround(ESEA); claim_status includes allegation_or_inference; attribution_metadata=free_account_cheating_claim; behavioral endpoints omitted.",
+      "note": "Preserve frame-rate, server-lag, and explicitly attributed free-account cheating complaints. Derive social.cheating. ESEA does not establish native pay-to-win, Prime failure, or a native payment gate."
+    },
+    {
+      "card": "C02",
+      "factors": [
+        "tech.save_integrity"
+      ],
+      "fields": "content_polarity=negative; attributability=specific_product_issue; reported_behavior=refund_intent; experienced_harm=progress_lost; claim_status=first_person_report; behavioral endpoints omitted.",
+      "note": "Repeated reset to level 3 supports failed persistence. Cloud overwrite, corruption, and account-sharing explanations remain hypotheses. No duplicate generic-bug label."
+    },
+    {
+      "card": "C03",
+      "factors": [
+        "content.narrative",
+        "gameplay.core_loop",
+        "ux.interface"
+      ],
+      "fields": "content_polarity=negative; attributability=specific_product_issue; experience_context entities=story,combat,cutscene_skip; behavioral endpoints omitted.",
+      "note": "The v1 summary identifies story criticism, an explicit combat-interaction referent, and missing skip controls. Retain those three factors without inferring input-device failure, difficulty, or franchise decline. If original wording lacks the summarized combat referent, recode that portion as unresolved affect."
+    },
+    {
+      "card": "C04",
+      "factors": [],
+      "fields": "content_polarity=negative; attributability=uninformative_rant; reported_affect_and_consequence=anger; reported_behavior=none_stated; behavioral endpoints omitted.",
+      "note": "Profanity supplies no identifiable product mechanism and does not establish quitting."
+    },
+    {
+      "card": "C05",
+      "factors": [
+        "gameplay.balance"
+      ],
+      "fields": "content_polarity=negative; attributability=specific_product_issue,broad_unresolved_product_issue; reported_behavior=stopped_playing_reported; reported_affect_and_consequence=boredom; unresolved_complaint=aspect_evaluation_without_referent for solo boredom; experience_context=solo,public_match; diagnostic_factor_ids=watchlist(game.terraria.cross_world_gear),candidate(fam.sandbox.state_transfer); behavioral endpoints omitted.",
+      "note": "Imported equipment imbalance supports the core ancestor. The Terraria leaf and reusable transfer family remain diagnostic. Remove gameplay.core_loop for bare solo boredom; no repeated action or cadence is established by the v1 summary. Do not infer onboarding failure, completion, cheating, or observed abandonment."
+    },
+    {
+      "card": "C06",
+      "factors": [],
+      "fields": "content_polarity=positive; attributability=personal_consequence_only; reported_affect_and_consequence=enjoyment,productivity_or_time_cost,compulsive_engagement; behavioral endpoints omitted.",
+      "note": "Enjoyment and regretted productivity loss coexist. No defective engagement mechanism or clinical condition is established."
+    },
+    {
+      "card": "U01",
+      "factors": [],
+      "fields": "content_polarity=neutral; factor_mentions=positive(content.scope_variety,progression.effort_reward),uncertain(ux.interface); coding_confidence=adjudication_required for UI valence; behavioral endpoints omitted.",
+      "note": "Preserve the experience-sharing interpretation. Comparative complexity activates ux.interface only if the text establishes an unwanted usability problem."
+    },
+    {
+      "card": "U02",
+      "factors": [],
+      "fields": "content_polarity=positive; factor_mentions=positive(content.narrative,fam.rpg.build_depth,fam.open_world.interactivity); behavioral endpoints omitted.",
+      "note": "Positive preferences do not become complaint factors because the Steam recommendation is negative."
+    },
+    {
+      "card": "U03",
+      "factors": [
+        "social.cheating"
+      ],
+      "fields": "content_polarity=negative; attributability=specific_product_issue; language_and_expression=zh,sarcasm; claim_status=allegation_or_inference; behavioral endpoints omitted.",
+      "note": "The source expression meaning \"support\" is sarcastic, and the expression meaning \"legitimate players\" refers to players who do not cheat. Failed anti-cheat enforcement is included; no independent official-communication complaint is established."
+    },
+    {
+      "card": "U04",
+      "factors": [
+        "social.cheating",
+        "fam.competitive_shooter.input_balance",
+        "social.skill_matchmaking",
+        "progression.effort_reward",
+        "service.maintenance",
+        "content.audiovisual",
+        "content.scope_variety"
+      ],
+      "fields": "content_polarity=negative; attributability=specific_product_issue; language_and_expression=zh; experience_context=solo,ranked,new_player; entities=Diamond,controller,mouse,XIM,Cronus,skins,heirlooms; claim_status includes allegation_or_inference; attribution_metadata=developer_priority_claim; reported_maintenance_history=no_history_cited in the available summary; behavioral endpoints omitted.",
+      "note": "Retain separate illicit-converter allegations and permitted aim-assist criticism only where their respective spans establish those referents. Bare auto-aim would remain unresolved. Preserve unfair matching, absent rewards, attributed skins-over-fixes priorities, ugly cosmetics, and recycled content. Do not infer paid randomness, high prices, update regression, or ranked scoring rules."
+    }
+  ],
+  "retired_or_merged_discovery_codes": [
+    {
+      "code": "cheating_unchecked; cheaters_unchecked; unchecked_cheating; cheaters_weak_enforcement; cheaters_not_effectively_controlled; cheating_and_anticheat_failure; unchecked_cheating_and_exploits; no_hacker_reporting_tools",
+      "fate": "Merge supported unauthorized-advantage or enforcement complaints into social.cheating; retain encounter, prevention, enforcement, and reporting facets.",
+      "reason": "Missing reporting alone does not establish actual cheater prevalence."
+    },
+    {
+      "code": "false_vac_ban; anti_cheat_false_positive_launch_block; account_login_or_launch_blocked",
+      "fate": "Recode to social.sanctions, tech.stability, tech.network.session_access, or business.account_security according to the span.",
+      "reason": "The CS source combines punishment and authentication errors; its 22 records are not 22 confirmed sanction complaints."
+    },
+    {
+      "code": "wrongful_account_bans; unjustified_account_ban; unjust_or_opaque_account_bans; unfair_chat_enforcement; unfair_or_overly_punitive_moderation",
+      "fate": "Specific contested penalties -> social.sanctions; broader abuse of administrative authority -> social.governance when explicitly supported.",
+      "reason": "Preserve sanction type and alleged unfairness without inferring guilt or duplicating the same sanction as governance."
+    },
+    {
+      "code": "account_theft_security; account_recovery_failure; account_security_ban_without_recovery; account_theft_ban",
+      "fate": "Use business.account_security; add social.sanctions or service.support only for independently evidenced propositions.",
+      "reason": "Compromise, punishment, and attempted remedy are separable."
+    },
+    {
+      "code": "unwanted_security_sensitive_anticheat; intrusive_anti_cheat_rootkit_privacy_risk; anti_cheat_not_removed_on_uninstall; security_or_anti_cheat_blocks_access; platform_or_anticheat_incompatibility; anti_cheat_performance_burden; anti_cheat_restricts_modding",
+      "fate": "Privacy risk -> business.privacy_security; explicit incompatibility -> tech.platform_compatibility; FPS burden -> tech.performance; technical blockers -> specific technical factors; explicit policy requirements -> business.access_requirements.",
+      "reason": "A component name does not identify one failure mechanism or establish policy intent."
+    },
+    {
+      "code": "performance_stability; poor_game_performance_or_crashes; technical_performance_or_crash_reliability; performance_lag_or_desync; multiplayer_performance_or_sync_problems; multiplayer_instability; poor_performance_or_lag; server_reliability; server_instability_or_latency",
+      "fate": "Retire compound targets and recode technical spans using operability, named feature, and networking evidence.",
+      "reason": "Do not allocate composite counts wholesale or duplicate generic bugs and specific symptoms."
+    },
+    {
+      "code": "hit_registration; unreliable_hit_registration; unreliable_hit_registration_or_ability_detection; poor_physics_netcode_hitboxes; poor_hitboxes",
+      "fate": "Explicit synchronization -> tech.network.responsiveness; discrete failed detection -> tech.functionality; disliked working rules -> gameplay.balance; unclear cause -> unresolved_complaint.",
+      "reason": "A missed hit does not prove netcode failure."
+    },
+    {
+      "code": "graphics_settings_trigger_crashes; post_update_crashes; post_update_crash; character_creation_crash; world_creation_crash; startup_gray_screen",
+      "fate": "Crash/launch symptoms -> tech.stability. Explicit new or worsened behavior after an update also supports linked service.update_regression; chronology alone remains change_context.",
+      "reason": "Preserve the symptom and genuine deterioration claim without double-counting one proposition."
+    },
+    {
+      "code": "shader_compilation_delay; slow_loading; excessive_resource_usage; performance_regression; building_complexity_causes_lag; oversized_low_value_updates",
+      "fate": "Local symptoms -> tech.performance; explicit update-caused worsening -> linked service.update_regression; explicit maintenance-value criticism -> service.maintenance; patch size/download burden alone -> unresolved_complaint=patch_delivery_burden.",
+      "reason": "Patch burden is no longer folded into compatibility. Concrete installation/integration failures use their supported technical factor."
+    },
+    {
+      "code": "save_or_progress_loss; save_data_loss_or_corruption; cloud_save_failure_loses_progress; save_data_loss_or_inaccessibility; co_op_save_restart_bug; progress_lost_after_crashes; crash_causes_lost_progress",
+      "fate": "Persistence failure -> tech.save_integrity; separately evidenced crashes -> tech.stability, linked as event/consequence where appropriate.",
+      "reason": "Retain stored-state harm without inventing a storage cause."
+    },
+    {
+      "code": "poor_save_and_autosave_design; poor_checkpoint_design; long_boss_runbacks; restricted_manual_saving; tedious_boss_resummoning",
+      "fate": "Designed retry burden -> fam.action.retry_cost; malfunction -> tech.save_integrity or tech.functionality.",
+      "reason": "Count the duplicated RPG source entry once. Terraria resummoning is not automatically boss difficulty."
+    },
+    {
+      "code": "smurfing; smurfing_boosting; rank_tanking; unfair_new_player_matchmaking; skill_mismatched_matchmaking; solo_players_matched_against_premades; incomplete_or_undermanned_team_match",
+      "fate": "Human assignment disparity -> social.skill_matchmaking; stated scarcity/bot substitution -> social.match_availability; unexplained missing teammate -> unresolved_complaint=match_composition_vs_population.",
+      "reason": "Incomplete teams do not automatically prove a pairing mechanism."
+    },
+    {
+      "code": "high_new_player_skill_barrier; new_player_skill_gap; new_player_onboarding_and_matchmaking_failure",
+      "fate": "Select gameplay.challenge, ux.onboarding, or social.skill_matchmaking from actual evidence.",
+      "reason": "Newcomer difficulty alone does not identify its mechanism."
+    },
+    {
+      "code": "controller_aim_assist_imbalance; controller_input_advantage; controller_aim_assist_advantage; undetected_input_exploits; unaddressed_movement_exploits",
+      "fate": "Permitted assistance/input-pool rules -> fam.competitive_shooter.input_balance; alleged prohibited abuse -> social.cheating; ambiguous auto-aim -> unresolved_complaint=input_assistance_vs_cheating.",
+      "reason": "Do not infer authorization or prohibition from ambiguous wording."
+    },
+    {
+      "code": "low_player_population; low_multiplayer_population; long_matchmaking_queue; low_or_platform_fragmented_playerbase; bot_filled_matches; bots_in_matches; low_population_and_bots; empty_or_broken_matchmaking",
+      "fate": "Human availability -> social.match_availability; actual connection failure -> tech.network.session_access; explicit interoperability failure -> tech.platform_compatibility.",
+      "reason": "Scarcity does not imply neglect; a functioning queue is not a server outage."
+    },
+    {
+      "code": "afk_or_uncooperative_teammates; unpunished_match_abandonment; toxic_player_community; racial_harassment_and_reporting_failure; poor_social_and_clan_features",
+      "fate": "Reported behavior -> social.conduct; missing tools/participation affordances -> social.cooperation.",
+      "reason": "Do not infer deliberate intent from AFK or noncooperation."
+    },
+    {
+      "code": "aggressive_monetization; exploitative_monetization; aggressive_cosmetic_monetization; excessive_microtransactions; pay_to_win_or_predatory_monetization; paid_lootboxes_keys_passes",
+      "fate": "Recode to business.price_value, business.paywall, business.paid_advantage, business.paid_randomness, or business.sales_pressure only with mechanism evidence.",
+      "reason": "Broad commercial hostility does not establish every monetization mechanism."
+    },
+    {
+      "code": "pay_to_win_power_creep; pay_to_win_card_progression; paid_progression_or_combat_advantage; pay_to_win_paid_content; microtransactions_grant_early_power; progression_paywall",
+      "fate": "Purchased power/acceleration -> business.paid_advantage; access-only gates -> business.paywall.",
+      "reason": "Check what payment actually purchases in the text."
+    },
+    {
+      "code": "real_money_rng_cosmetics; rng_lootbox_monetization; exploitative_gacha_or_random_rewards; exploitative_lootbox_monetization; costly_random_cosmetic_acquisition; gacha_rewards_too_sparse; lootboxes_as_progression",
+      "fate": "Text-supported paid chance -> business.paid_randomness; nonpaid chance -> gameplay.randomness; reward value -> progression.effort_reward; explicit price/value criticism -> business.price_value; otherwise unresolved commercial mechanism.",
+      "reason": "Both payment and uncertain acquisition must be established. Rid 13774295's reported spending without an heirloom does not alone justify paid_randomness."
+    },
+    {
+      "code": "revoked_earned_currency; reduced_rewards; low_value_free_rewards; grindy_earnable_currency; event_currency_rewards_missing",
+      "fate": "Intended reward rules -> progression.effort_reward; technical non-award -> tech.functionality; purchased entitlement failure -> business.ownership. Explicit update worsening may add a linked regression annotation.",
+      "reason": "Earning rules, recording failures, and owned benefits differ."
+    },
+    {
+      "code": "intrusive_cosmetic_store_ui; intrusive_purchase_advertising; advertising_in_paid_game; intrusive_ads_in_paid_game; overpriced_cosmetics; excessive_cosmetic_price",
+      "fate": "Selling intrusion -> business.sales_pressure; explicit excessive prices -> business.price_value.",
+      "reason": "Cosmetic prices and intrusive selling are separate."
+    },
+    {
+      "code": "core_features_paywalled_as_dlc; paywall_for_playing_with_friends; misleading_or_restrictive_subscription_access; purchased_dlc_access_revoked; cosmetics_not_tradeable; missing_purchased_content",
+      "fate": "New payment gates -> business.paywall; owned entitlement/transfer restrictions -> business.ownership; explicit deception -> service.marketing_trust.",
+      "reason": "Separate acquisition from retaining or using owned benefits."
+    },
+    {
+      "code": "forced_launcher_or_account_linking; mandatory_publisher_launcher_or_account; mandatory_online_access; regional_access_restricted; modern_windows_incompatibility; updates_break_mods",
+      "fate": "Explicit access policy -> business.access_requirements; named incompatibility/integration -> tech.platform_compatibility; bare launch failure -> tech.stability. Mods newly broken by a patch may support linked service.update_regression.",
+      "reason": "Do not infer policy intent from technical incompatibility."
+    },
+    {
+      "code": "cosmetics_over_fixes; monetization_prioritized_over_fixes; developer_prioritizes_events_over_fixes; perceived_development_priority_mismatch; premature_paid_expansions",
+      "fate": "Explicit priority criticism -> service.maintenance with attribution_metadata; separately store reported maintenance history.",
+      "reason": "Reviewer priority claims do not establish internal allocation or a coercive purchase."
+    },
+    {
+      "code": "developer_neglect_stagnation; developer_support_and_community_practices; developer_abandonment_or_inadequate_support; abandoned_game_and_unresponsive_support; developer_ignores_feedback; unresolved_recurring_bugs; persistent_unresolved_defects",
+      "fate": "Explicit repeated non-remediation/cadence/abandonment -> service.maintenance; public feedback -> service.communication; individual cases -> service.support; defects alone -> supported technical factor.",
+      "reason": "Do not infer service failure from a present defect alone."
+    },
+    {
+      "code": "support_fails_to_resolve_cases; unresponsive_support; ban_appeal_support_failures; ban_appeal_support",
+      "fate": "Submitted-case handling -> service.support; sanction validity/rationale/proportionality or appeal rights -> social.sanctions.",
+      "reason": "Both require distinct evidence spans; an ignored appeal is not automatically a second sanction complaint."
+    },
+    {
+      "code": "unfulfilled_marketing_missing_features; misleading_marketing_or_undelivered_promises; misleading_localization_claim; unfinished_release; unfinished_or_broken_release; incomplete_product_sold_at_launch; unfinished_low_quality_release; unfinished_buggy; incomplete_release_state",
+      "fate": "Explicit representation harm -> service.marketing_trust; actual omission harm -> content.scope_variety or ux.localization; discrete defect -> technical factor; product sold/released incomplete -> service.release_readiness.",
+      "reason": "Release readiness now has a home. Shared promise/absence propositions receive linked annotations. Unfinished without a release-state referent remains unresolved."
+    },
+    {
+      "code": "review_incentives_or_astroturfing; incentivized_positive_reviews; review_vote_manipulation; legacy_reviews_merged; criticism_censorship; developer_censorship_and_dmca; hostile_community_management",
+      "fate": "Representation manipulation -> service.marketing_trust; abusive suppression through authority -> social.governance; hostile public statements without governance action -> service.communication.",
+      "reason": "Retain actor, scope, and allegation status; censorship is no longer automatically a communication factor."
+    },
+    {
+      "code": "weak_or_incoherent_story; weak_story_writing; weak_ending; choices_lack_narrative_impact",
+      "fate": "Use content.narrative or its supported choice-consequence descendants.",
+      "reason": "Narrative consequences differ from mechanical build freedom."
+    },
+    {
+      "code": "poor_graphics; poor_visual_quality; disliked_soundtrack; poor_cosmetic_design; poor_localization_voiceover",
+      "fate": "Aesthetics -> content.audiovisual; translation -> ux.localization; perceptual barriers -> ux.accessibility; broken assets -> tech.functionality.",
+      "reason": "A presentation entity can support different complaint propositions."
+    },
+    {
+      "code": "forced_party_or_unskippable_presentation; janky_ui_or_controls; clunky_controls_and_combat; forced_unwanted_mode_for_event_rewards",
+      "fate": "Recode participation rules, UI affordances, device/input operation, combat interaction, and reward conditions separately.",
+      "reason": "Bare clunky combat defaults to gameplay.core_loop; controls and challenge require their own evidence."
+    },
+    {
+      "code": "unscary_horror; predictable_padded_horror; horror_puzzle_mechanic_undermines_atmosphere; weak_survival_tension",
+      "fate": "Explicit fear/tension failure -> fam.horror.fear_tension; stated resource/difficulty mechanisms use their factors.",
+      "reason": "Do not invent a resource-balance cause from atmosphere alone."
+    },
+    {
+      "code": "perceived_biased_rng; needed_autobattler_unit_unavailable; excessive_rng_outcomes; rng_gated_item_acquisition",
+      "fate": "Card/draw mechanisms -> fam.card.draw_fairness; other nonpaid chance -> gameplay.randomness.",
+      "reason": "Keep unpaid randomness separate from paid acquisition."
+    },
+    {
+      "code": "poor_loot_distribution; loot_rng_imbalance; battle_royale_pacing_punishment; oversized_maps_and_slow_pacing; map_design_causes_third_party_overload",
+      "fate": "Equipment opportunity -> fam.battle_royale.loot; match rhythm -> fam.battle_royale.encounter_flow; game.apex.third_party_flow remains a candidate diagnostic.",
+      "reason": "Separate resources, spatial layout, and encounter timing; candidate leaves do not enter production before validation."
+    },
+    {
+      "code": "prime_ineffective",
+      "fate": "Retire the proposed Prime leaf; select social.cheating, social.skill_matchmaking, or social.conduct with Prime/Trust Factor entities.",
+      "reason": "The 14-record source spans cheats, smurfs, and toxicity; narrow membership is unavailable."
+    },
+    {
+      "code": "f2p_integrity; free_to_play_transition_disliked; purchase_devalued_by_free_to_play_change; csgo_replaced",
+      "fate": "Explicit attributed CS free-access cheating -> game.cs.free_account_cheating; value resentment -> business.price_value; compulsory replacement -> game.cs.forced_replacement; transition context -> change_context; explicit version worsening -> linked service.update_regression.",
+      "reason": "A business/version event supports only the harms actually asserted; the free-account claim is not verified causation."
+    },
+    {
+      "code": "low_tickrate; low_server_tick_rate; audio_defects; missing_enemy_footsteps; poor_combat_audio; unclear_onboarding_and_progression; external_wiki_required_for_progression",
+      "fate": "Use tech.network.responsiveness, tech.functionality, content.audiovisual, or ux.onboarding according to evidence; retain retirement of redundant CS tick-rate, Apex audio, and Terraria guidance leaves.",
+      "reason": "Game identity alone adds no reusable mechanism."
+    },
+    {
+      "code": "legacy_content_removed; movement_mechanic_removal; shallow_rpg_builds; combat_builds_do_not_support_varied_play",
+      "fate": "Use content.scope_variety, gameplay.core_loop, gameplay.agency, or fam.rpg.build_depth as supported. Add linked service.update_regression for an explicit worsened update transition.",
+      "reason": "Removal/content harm and update deterioration are distinct annotations but may share one proposition."
+    },
+    {
+      "code": "forced_network_accelerator; no_sale_discount; cosmetics_not_tradeable; third_person_peeking_advantage; ranked_early_leave_penalty",
+      "fate": "Accelerator dependency -> candidate game.pubg.accelerator_dependency; post-death ranked-rule cost -> fam.ranked_competitive.rating with watchlist game.pubg.ranked_exit_penalty; other supported mechanisms -> business.price_value, business.ownership, or gameplay.balance.",
+      "reason": "Do not route an ordinary designed ranked rule to sanctions. PUBG template repetition weakens independent support."
+    },
+    {
+      "code": "moon_lord_difficulty_unbalanced; restrictive_npc_town_rules; corruption_spread_threatens_builds; multiplayer_gear_transfer_undermines_balance",
+      "fate": "Retain Terraria leaves as watchlist. Their family destinations are fam.action.boss_challenge, fam.sandbox.settlement_rules, fam.sandbox.environmental_maintenance, and fam.sandbox.state_transfer. While those families remain candidate, production uses gameplay.challenge, gameplay.agency, progression.effort_reward, and gameplay.balance respectively; guidance-only town cases use ux.onboarding.",
+      "reason": "Anchors of 2, 3, 3, and 1 do not validate game-specific classifiers. Environmental corruption is not save corruption."
+    },
+    {
+      "code": "braindance_feature_is_noninteractive; angler_npc_or_quest_frustration; master_mode_lacks_distinct_design; overpowered_engineer; hand_of_king_balance; lighthouse_progression_blocker",
+      "fate": "Use supported content, interaction, balance, challenge, or functional-defect factors and retain entities.",
+      "reason": "Sparse named mechanics do not automatically merit game leaves."
+    },
+    {
+      "code": "patch_regression; updates_regress_quality; patches_cause_regressions; updates_perceived_to_regress_quality; patch_volatility_hinders_learning",
+      "fate": "Restore explicit update deterioration to universal service.update_regression; retain change_context and version_attribution. Add specific affected factors only when evidenced, linking shared propositions.",
+      "reason": "Human annotation revealed a repeated completeness gap. Update-level worsening is codable without a named subsystem; mere timing remains metadata."
+    },
+    {
+      "code": "perceived_minecraft_derivative; derivative_or_copied_game; derivative_battle_royale_design; inferior_to_series_predecessors; genre_expectation_mismatch; sandbox_format_mismatch; series_identity_departure; remake_fails_to_preserve_original_identity; titanfall_abandonment_and_derivative_identity",
+      "fate": "Explicit copying or established-identity departure -> candidate content.franchise_identity. Mere comparison/preference remains context or unresolved; separately stated gameplay/content harms use their factors.",
+      "reason": "Creative identity is a distinct complaint, but a competitor name or inferior-sequel judgment alone is insufficient."
+    },
+    {
+      "code": "generic_rant_no_specific_cause; vague_personal_dislike; core_experience_not_enjoyable; excessive_time_consumption; addictive_repetitive_loop; difficulty_frustration; low_immersion",
+      "fate": "Rants -> attributability; affect/time/immersion -> consequence fields; bare boring gameplay -> unresolved_complaint=aspect_evaluation_without_referent; explicit action repetition or difficulty -> corresponding factors.",
+      "reason": "Do not substitute an outcome for a product referent. low_immersion was unsupported in the v1 fighting provenance."
+    },
+    {
+      "code": "offtopic_valve_protest; external_company_conduct_against_chinese_players; corporate_labor_and_customer_misconduct; developer_external_conduct_objection; negative_review_joke_spam",
+      "fate": "Use target_scope and attributability; product factors require separately stated product/service propositions.",
+      "reason": "Preserve external protests without turning them into gameplay failures or verified manipulation."
+    },
+    {
+      "code": "stagnant_content_and_outdated_ui; weak_horror_puzzle_platform_story; richman10_restricted_items_and_weaker_visuals; mission_design_and_vehicle_handling",
+      "fate": "Retire compound targets and recode component spans.",
+      "reason": "Co-occurrence does not establish one complaint mechanism."
+    },
+    {
+      "code": "ineffective_aim_training; misaligned_game_sensitivity_and_fov; multi_runtime_vr_interoperability_failure",
+      "fate": "Preserve non-game scope; use ux.controls or tech.platform_compatibility where supported and unresolved_complaint=non_game_task_effectiveness for utility-only claims.",
+      "reason": "Do not force software effectiveness into entertainment enjoyment."
+    },
+    {
+      "code": "dismissive_or_punitive_player_management; server_administration_abuse; gm_admin_abuse",
+      "fate": "Abusive authority -> candidate social.governance; specific disputed punishment -> social.sanctions; dismissive statements alone -> service.communication.",
+      "reason": "The administrative-power gap is addressed without duplicating sanctions or ordinary communication complaints."
+    },
+    {
+      "code": "game.apex.technical_failure_penalty; unfair_disconnect_or_abandon_penalty",
+      "fate": "Retire the v1 game leaf. Recode explicit technical failure to tech.stability or tech.network.session_access and contested punishment to social.sanctions; preserve the reported trigger relation in proposition_linkage.",
+      "reason": "The mechanism is not uniquely Apex. Authorized evidence does not establish a cross-game technical-failure-penalty family; do not create a compound replacement factor."
+    },
+    {
+      "code": "per_map_rank_grind",
+      "fate": "Production -> fam.ranked_competitive.rating; retain game.cs.per_map_rank only as a watchlist diagnostic.",
+      "reason": "Two discovery records do not validate a separate game classifier."
+    },
+    {
+      "code": "All merged_from aliases attached to the discovery codes above",
+      "fate": "Inherit the canonical source code's revised decision and retain each stratum-qualified alias in source_provenance.",
+      "reason": "Alias lineage survives consolidation. A split requires reannotation, not automatic multilabel assignment."
+    }
+  ],
+  "open_questions": [
+    "The update-regression factor has repeated human-annotator support, but its complaint count within the 80-review exercise is unknown. Its approx_support=0 is an unknown-count sentinel, not evidence of zero support; exclude that value from support rankings and replace it with a real anchor when available.",
+    "The PvE co-op synthesis reportedly lists seven codes while retaining 92 additional original codes. Definitions, aliases, and counts for omitted entries cannot be reconstructed from the four authorized files; a complete discovery-level crosswalk remains unavailable.",
+    "Original-language review spans and full memberships are needed to deduplicate strata, separate compound sources, and verify migrations. Critic examples and v1 summaries are insufficient for review-level recoding.",
+    "The sports/racing prose reportedly mentions mechanisms absent from its listed codes; preserve these as uncounted qualitative leads.",
+    "How much independent PUBG evidence remains after clustering repeated Chinese verse, especially for accelerator dependency, trading restrictions, and discounts?",
+    "Confirm actual ownership for the proposed release-management, platform, entitlements, governance, privacy, and enforcement/support queues.",
+    "Calibrate explicit update worsening versus neutral temporal context, especially feature removal, ranked redesigns, forced replacement, and predecessor comparisons. Linked annotations must not inflate complaint-proposition totals.",
+    "Calibrate release-readiness claims against missing features, generic bugs, maintenance neglect, and early-access expectations without treating early-access status itself as a defect.",
+    "Calibration must test the narrowed core-loop rule against bare boredom and explicit combat-interaction evaluations. C03 retains its summarized combat referent; C05 loses the unsupported core-loop label. Original seeds are needed to confirm exact spans.",
+    "Collect independently worded, deduplicated examples and sibling-confusion results before promoting the six sparse game watchlists or their candidate sandbox/boss families.",
+    "Implementation decision on validity's sandbox issue: preserve shared.sandbox_world_character_state as a reusable family identifier through three mechanism-specific family factors, rather than creating one omnibus factor with incompatible balance, agency, and investment parents. This retains the prior lineage while keeping roll-ups interpretable.",
+    "Rejected the overlap report's recommendation to retain game.apex.technical_failure_penalty as a primary leaf: the validity report identifies a reusable event/consequence combination, and the authorized evidence does not justify a new cross-game compound family. The leaf is retired; separately evidenced technical failure and sanction remain linked.",
+    "No separate patch-distribution factor is added yet. The validity report's conditional recommendation is addressed by removing patch burden from compatibility and preserving unresolved patch-delivery complaints. Existing evidence does not establish a calibrated boundary or reliable numerical anchor.",
+    "Platform compatibility remains candidate. Named incompatibility is recorded without assuming either official support or deliberate prohibition; verify how annotators handle support-unspecified Linux/Proton statements.",
+    "Decide whether non-game software effectiveness needs a future family extension and whether external-company protests need a separate dashboard.",
+    "Prespecify representative sampling, weighting, follow-up windows, and censoring before ranking complaints or identifying dissatisfied-but-engaged cohorts.",
+    "Run multilingual adjudication on U01's comparative UI valence and U04's permitted assistance versus illicit converters, aesthetic criticism, recycled content, and attributed maintenance priorities."
+  ]
+}

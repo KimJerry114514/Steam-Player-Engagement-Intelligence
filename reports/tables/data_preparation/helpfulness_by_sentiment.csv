@@ -1,0 +1,3 @@
+voted_up,review_count,votes_up_nulls,votes_up_zero_share,votes_up_median,votes_up_p90,votes_up_p99,votes_up_max,votes_funny_nulls,votes_funny_zero_share,votes_funny_p99,votes_funny_max,weighted_score_nulls,weighted_score_zero_share,weighted_score_median,weighted_score_p99,weighted_score_max
+false,2013185,0,0.3771327523302627,1,9,94,19711,0,0.7074213249154946,14,4294967295,0,0.2621050723107911,0.4610124842983361,0.7149372249653049,0.985423743724823
+true,13424286,0,0.7006622922068257,0,2,24,29612,0,0.8934110909138855,6,4294967295,0,0.6661934943877089,0.0,0.6688736611354668,0.9896133542060852

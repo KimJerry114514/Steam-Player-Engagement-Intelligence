@@ -1,0 +1,7 @@
+# Optional historical NLP/GPU workflow; not needed for the supplied scores,
+# model benchmark, calibration or final segmentation. CUDA must match the host.
+-r nlp_inference.txt
+sentence-transformers
+statsmodels
+adjustText
+requests

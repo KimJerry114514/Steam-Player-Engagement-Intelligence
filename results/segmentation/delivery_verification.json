@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "rows_verified": 4937916,
+  "selected_percentiles": [
+    55,
+    55
+  ],
+  "p55_assignments_and_summary_values_unchanged": true,
+  "unit_tests_passed": 4,
+  "report_pages_visually_checked": 4,
+  "package_language": "English",
+  "shared_google_document_modified": false,
+  "kmeans_evidence_scope": "Exploratory context for dimensions, not independent validation of quadrants or thresholds"
+}
